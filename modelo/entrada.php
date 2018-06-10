@@ -7,7 +7,7 @@ class Profesor {
     public $mail;
     public $tlf;
 
-    function __construct($id, $titulo, $contenido, $autor, $imagen, $altimagen, $fecha, $publico, $slug) {
+    public function __construct($id, $titulo, $contenido, $autor, $imagen, $altimagen, $fecha, $publico, $slug) {
         $this->id = $id;
         $this->titulo = $titulo;
         $this->contenido = $contenido;
