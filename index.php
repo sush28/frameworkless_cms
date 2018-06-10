@@ -1,5 +1,12 @@
 <?php
 
+if (isset($_GET['apartado'])) {
+    $apartado = $_GET['apartado'];
+} else {
+    // DEfault
+    $apartado = 'publico';
+}
+
 $apartado    = $_GET['apartado'];
 $controlador = 'Controlador' . $_GET['controlador'];
 $accion      = $_GET['accion'];
