@@ -20,9 +20,7 @@ class ControladorBlog {
         // @todo una vista...
         // La vista esta en: /vista/privado/Blog/listado.php
 
-        $vista = file_get_contents('vista/privado/Blog/listado.php');
-
-        echo $vista;
+        include 'vista/privado/Blog/listado.php';
         die();
     }
 
