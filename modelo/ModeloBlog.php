@@ -3,7 +3,7 @@
 /**
  * Class Blog
  */
-class Blog
+class ModeloBlog
 {
     public function obtenerPosts()
     {
