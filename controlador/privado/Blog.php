@@ -5,13 +5,11 @@ include '../../modelo/Blog.php';
 /**
  * Class Blog
  */
-class Blog
-{
+class Blog{
 
-    // @todo Este controlador pone deacuerdo modelos y vistas... coge datos de los modelos y los muestra en las vistas...
+    // @todo Este controlador pone de acuerdo modelos y vistas... coge datos de los modelos y los muestra en las vistas...
 
-    public function listado()
-    {
+    public function listado(){
         // @todo coger datos desde el modelo y guardarlos en un array (para pasarlo a la vista)
         // El modelo esta en: /modelo/Blog.php
         $blog = new Blog();
@@ -26,18 +24,19 @@ class Blog
         die();
     }
 
-    public function creacion()
-    {
+    public function crear(){
 
     }
 
-    public function borrado($postId)
-    {
+    public function modificar($postId){
 
     }
 
-    public function moderarComentarios($postId)
-    {
+    public function borrar($postId){
+
+    } 
+
+    public function moderarComentarios($postId){
 
     }
 }
