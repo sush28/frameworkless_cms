@@ -22,7 +22,8 @@ class Blog
         // @todo una vista...
         // La vista esta en: /vista/privado/Blog/listado.php
 
-        echo '../../vista/privado/Blog/listado.php';
+        header("Location: ../../vista/privado/Blog/listado.php");
+        die();
     }
 
     public function creacion()
