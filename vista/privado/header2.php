@@ -10,6 +10,26 @@
 </head>
 <body>
     <div id="Top"></div>
+
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <aside class="col-12 col-md-2 p-0 bg-dark">
+                <nav class="navbar navbar-expand navbar-dark bg-dark flex-md-column flex-row align-items-start">
+                    <div class="collapse navbar-collapse">
+                        <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
+                            <li class="nav-item">
+                                <a class="nav-link pl-0" href="#">Link</a>
+                            </li>
+                            ..
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+            <main class="col">
+            </main>
+        </div>
+    </div>
+<!--
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="MenuPrincipal">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="index.html">Coldplay</a>
@@ -43,10 +63,14 @@
         </div>
       </div>
     </nav>
+    <div></div>
+
+    -->
     
     <script src="../../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="../../assets/vendor/js/popper.min.js"></script>
     <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
     <script src="../../assets/js/scripts.js"></script>
+
 </body>
 </html>
