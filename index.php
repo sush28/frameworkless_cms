@@ -6,7 +6,7 @@ if (isset($_GET['apartado'])) {
     // DEfault
     $apartado = 'publico';
 }
-
+/*
 $apartado    = $_GET['apartado'];
 $controlador = 'Controlador' . $_GET['controlador'];
 $accion      = $_GET['accion'];
@@ -19,5 +19,5 @@ include 'controlador/' . $apartado . '/' . $controlador . '.php';
 $controlador = new $controlador();
 
 $controlador->$accion();
-
+*/
 ?>

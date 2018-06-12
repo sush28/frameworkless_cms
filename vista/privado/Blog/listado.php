@@ -1,4 +1,3 @@
-// @todo extiende base.php
 
 <!DOCTYPE html>
 <html lang="es">
@@ -14,7 +13,7 @@
 
     <?php
         foreach($posts as $key => $post) {
-            echo $post['id']; // @todo Se supone que post es un objeto no un array, pero es guarrero ;)
+            echo $post['titulo']; 
         }
     ?>
 
