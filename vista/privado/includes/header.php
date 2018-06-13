@@ -10,12 +10,11 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="listado-entradas.php">Listado de entradas</a>
-                    <a class="dropdown-item" href="crear-entrada.php">Crear entrada</a>
+                    <a class="dropdown-item" href="listado-entradas.php">Entradas</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Moderar comentarios</a>
+                    <a class="dropdown-item" href="listado-comentarios.php">Comentarios</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="listado-categorias.php">Listado de categorías</a>
+                    <a class="dropdown-item" href="listado-categorias.php">Categorías</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -25,7 +24,7 @@
               <a class="nav-link" href="zona-fan.php">Zona fan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="videos.php">Galería</a>
+              <a class="nav-link" href="galeria.php">Galería</a>
             </li>
           </ul>
         </div>

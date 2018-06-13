@@ -8,10 +8,17 @@
     <?php include 'includes/header.php'; ?>
         
     <div class="container c-formulario c-formulario--categoria">
-        <div class="btn-crear">
+        <div class="header-cms">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Categorías</h1>
+                </div>
+            </div>
+        </div>
+        <div class="c-desplegable">
             <div class="row">
                 <div class="col-md-7">
-                    <a class="btn btn-primary" data-toggle="collapse" href="#creacionTour" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Añadir categoría</a>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#creacionTour" role="button" aria-expanded="false" aria-controls="creacionTour">Añadir categoría</a>
                     <div class="row">
                         <div class="col">
                             <div class="collapse multi-collapse" id="creacionTour">
