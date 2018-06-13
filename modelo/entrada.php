@@ -1,6 +1,6 @@
 <?php
 
-class Profesor {
+class Entradar {
 
     public $id;
     public $nombre;

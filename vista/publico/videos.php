@@ -6,18 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/styles.css">
-    <title>Gestor de contenido</title>
+    <title>Videos | Coldplay</title>
 </head>
 <body>
-    <?php include 'includes/header.php'; ?>
+    <?php include 'header.php'; ?>
 
-    <div id="page-wrapper">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Dashboard</h1>
-            </div>
-        </div>
-    </div>
-    <?php include 'includes/footer.php'; ?>
+    
+
+
+    <script src="../../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../../assets/vendor/js/popper.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="../../assets/js/scripts.js"></script>
 </body>
 </html>
