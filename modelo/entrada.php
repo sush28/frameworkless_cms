@@ -3,9 +3,8 @@
 class Entrada {
 
     include("conexion.php");
-
-
     private $db;
+    
 
     public $id;
     public $titulo;

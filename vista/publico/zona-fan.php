@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/css/styles.css">
-    <title>Coldplay | HOME</title>
+    <?php include 'includes/head.php'; ?>
+    <title>Zona fan</title>
 </head>
 <body>
+    <?php include 'includes/header.php'; ?>
 
-    <?php include 'header.php'; ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+            <div class="grid">
+                <div class="grid-sizer"></div>
+                <div class="grid-item"><img src="../../assets/images/zona-fan/fan1.jpg" alt=""></div>
+                <div class="grid-item grid-item--width2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-    <script src="../../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <script src="../../assets/vendor/js/popper.min.js"></script>
-    <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="../../assets/js/scripts.js"></script>
+    <?php include 'includes/footer.php'; ?>
 </body>
 </html>

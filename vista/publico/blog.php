@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <?php include 'includes/head.php'; ?>
     <title>Coldplay | HOME</title>
 </head>
 <body>
 
-    <?php include 'header.php'; ?>
+    <?php include 'includes/header.php'; ?>
 
-    <div class="container-fluid">
-        <h1>BLOG</h1>
+    <div class="container-fluid c-header">
+        <div class="row">
+            <div class="col-12">
+                <div class="c-cabecera">
+                    <h1 class="titulo">Blog</h1>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="container">
+    <div class="container c-blog">
         <div class="row">
             <!-- Bloque principal -->
             <div class="col-md-8">
                 <div class="c-blog-post">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-4 imagen">
-                            <p>IMAGEN</p>
-                        </div>
-                        <div class="col-sm-12 col-md-8">
-                            <div class="categoria">Tour</div>
-                            <div class="titulo-post">Nuevos conciertos anunciados</div>
-                            <div class="desc-post"><p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. o sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos.</p></div>
-                            <div class="datos-post">
-                                <div class="fecha">23 mayo 2012</div>
-                                <div class="autor">Artista</div>
-                                <div class="comentarios">23 comentarios</div>
+                    <div class="c-blog-wrapper">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4 c-blog-imagen">
+                                <p>IMAGEN</p>
+                            </div>
+                            <div class="col-sm-12 col-md-8 c-blog-contenido">
+                                <div class="c-blog-contenido-wrapper">
+                                    <div class="categoria">Tour</div>
+                                    <div class="titulo-post">Nuevos conciertos anunciados</div>
+                                    <div class="desc-post"><p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. o sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos.</p></div>
+                                    <div class="datos-post">
+                                        <div class="fecha">23 mayo 2012</div>
+                                        <div class="autor">Artista</div>
+                                        <div class="comentarios">23 comentarios</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="c-blog-post">
                     <div class="row">
-                        <div class="col-sm-12 col-md-4 imagen">
+                        <div class="col-sm-12 col-md-4 c-blog-imagen">
                             <p>IMAGEN</p>
                         </div>
-                        <div class="col-sm-12 col-md-8">
-                            <div class="categoria">Tour</div>
-                            <div class="titulo-post">Nuevos conciertos anunciados</div>
-                            <div class="desc-post"><p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. o sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos.</p></div>
-                            <div class="datos-post">
-                                <div class="fecha">23 mayo 2012</div>
-                                <div class="autor">Artista</div>
-                                <div class="comentarios">23 comentarios</div>
+                        <div class="col-sm-12 col-md-8 c-blog-contenido">
+                            <div class="c-blog-contenido-wrapper">
+                                <div class="categoria">Tour</div>
+                                <div class="titulo-post">Nuevos conciertos anunciados</div>
+                                <div class="desc-post"><p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. o sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos.</p></div>
+                                <div class="datos-post">
+                                    <div class="fecha">23 mayo 2012</div>
+                                    <div class="autor">Artista</div>
+                                    <div class="comentarios">23 comentarios</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <!-- Paginacion -->
                 <div class="paginacion">
                     <div class="row">
                         <div class="col-12">
-                            ul
+                            
                         </div>
                     </div>
                 </div>
@@ -85,13 +94,8 @@
                 </div>
             </div>
         </div>
-
     </div>
 
-    <script src="../../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <script src="../../assets/vendor/js/popper.min.js"></script>
-    <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="../../assets/js/scripts.js"></script>
-
+    <?php include 'includes/footer.php'; ?>
 </body>
 </html>

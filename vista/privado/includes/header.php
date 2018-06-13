@@ -1,7 +1,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="MenuCMS">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.html">Gestor de contenidos</a>
+        <a class="navbar-brand js-scroll-trigger" href="index.php">Gestor de contenidos</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#MenuCMSResp" aria-controls="MenuCMSResp" aria-expanded="false" aria-label="Menú Principal">
         <span class="navbar-toggler-icon"></span>
         </button>
