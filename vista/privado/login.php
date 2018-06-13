@@ -38,7 +38,7 @@
     <div class="container-fluid">
         <div class="row">
             <header class="col-12">
-                <h1 class="text-center p-4">Gestor de contenidos de Crystal Fighters</h1>
+                <h1 class="text-center p-4">Gestor de contenidos</h1>
             </header>
         </div>
         <div class="row">

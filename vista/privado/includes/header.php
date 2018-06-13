@@ -8,12 +8,14 @@
         <div class="collapse navbar-collapse" id="MenuCMSResp">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Entradas</a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="listado-entradas.php">Listado de entradas</a>
                     <a class="dropdown-item" href="crear-entrada.php">Crear entrada</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Moderar comentarios</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="listado-categorias.php">Listado de categorías</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -23,7 +25,7 @@
               <a class="nav-link" href="zona-fan.php">Zona fan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="videos.php">Vídeos</a>
+              <a class="nav-link" href="videos.php">Galería</a>
             </li>
           </ul>
         </div>

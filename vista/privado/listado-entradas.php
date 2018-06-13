@@ -7,25 +7,27 @@
 <body>
     <?php include 'includes/header.php'; ?>
 
-    <div class="container c-formulario c-formulario--crear">
+    <div class="container">
         <div class="btn-crear">
             <div class="row">
                 <div class="col-md-12">
-                    <a href="crear-post.php" class="btn btn-primary text-center my-3" role="button">CREAR NUEVO POST</a>
+                    <a href="crear-entrada.php" class="btn btn-primary btn-cms text-center" role="button">CREAR NUEVO POST</a>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container c-listado c-listado--blog">
         <div class="entrada">
             <div class="row">
-                <div class="col-md-10">
+                <div class="col-10">
                     <div class="titulo-post">Blablabla</div>
                     <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
                 </div>
-                <div class="col-md-2">
-                    <div class="modificar-post">
-                        <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
+                <div class="col-2">
+                    <div class="modificar modificar-post">
+                        <a href="modificar-entrada.php" data-toggle="modal" data-target="#modificarEntrada"><i class="far fa-edit"></i> Editar </a>
                     </div>
-                    <div class="eliminar-post">
+                    <div class="eliminar eliminar-post">
                         <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
                     </div>
                 </div>
@@ -33,15 +35,15 @@
         </div>
         <div class="entrada">
             <div class="row">
-                <div class="col-md-10">
+                <div class="col-10">
                     <div class="titulo-post">Blablabla</div>
                     <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
                 </div>
-                <div class="col-md-2">
-                    <div class="modificar-post">
+                <div class="col-2">
+                    <div class="modificar modificar-post">
                         <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
                     </div>
-                    <div class="eliminar-post">
+                    <div class="eliminar eliminar-post">
                         <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
                     </div>
                 </div>
@@ -49,15 +51,15 @@
         </div>
         <div class="entrada">
             <div class="row">
-                <div class="col-md-10">
+                <div class="col-10">
                     <div class="titulo-post">Blablabla</div>
                     <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
                 </div>
-                <div class="col-md-2">
-                    <div class="modificar-post">
+                <div class="col-2">
+                    <div class="modificar modificar-post">
                         <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
                     </div>
-                    <div class="eliminar-post">
+                    <div class="eliminar eliminar-post">
                         <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
                     </div>
                 </div>
@@ -65,18 +67,77 @@
         </div>
         <div class="entrada">
             <div class="row">
-                <div class="col-md-10">
+                <div class="col-10">
                     <div class="titulo-post">Blablabla</div>
                     <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
                 </div>
-                <div class="col-md-2">
-                    <div class="modificar-post">
+                <div class="col-2">
+                    <div class="modificar modificar-post">
                         <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
                     </div>
-                    <div class="eliminar-post">
+                    <div class="eliminar eliminar-post">
                         <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modificarEntrada" tabindex="-1" role="dialog" aria-labelledby="modificarEntradaLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modificarEntradaLabel">Modificar entrada</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="form-container" class="container">
+                    <form action="crear-post.php" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-xs-12 mx-auto">
+                                <div class="form-group">
+                                    <label for="categoria">Categoría</label>
+                                    <select class="form-control" id="categoria">
+                                        <option value="">Categoría 1</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="titulo">Título</label>
+                                    <input class="form-control" type="text" name="titulo" id="titulo" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="imagen">Imagen</label>
+                                    <input class="form-control" type="file" name="imagen" id="imagen" required/>
+                                    <small>El tamaño recomendado es de 900x300px.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="altimagen">Alt de la imagen</label>
+                                    <input class="form-control" type="text" name="altimagen" id="altimagen"/>
+                                    <small>Pequeña descripción que ayudará a las personas que no puedan ver la imagen o usen lector de pantalla.</small>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="entrada">Entrada</label>
+                                    <textarea class="form-control" name="entrada" id="entrada" required>                   
+                                    </textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="publico" value="público"> Público<br>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary" type="submit" name="submit">Crear</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
             </div>
         </div>
     </div>
