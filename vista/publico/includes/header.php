@@ -1,6 +1,6 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="MenuPrincipal">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.html">Coldplay</a>
+        <a class="navbar-brand js-scroll-trigger" href="index.html">Two Door Cinema Club</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#MenuPrincipalResp" aria-controls="MenuPrincipalResp" aria-expanded="false" aria-label="Menú Principal">
         <span class="navbar-toggler-icon"></span>
         </button>
