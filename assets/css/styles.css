@@ -10,9 +10,34 @@
 .grid-item--width2 {
   width: 40%;
 }
+/* GRID DE ZONA FAN */
 .grid .grid-item {
   width: 30%;
   overflow: hidden;
   margin-bottom: 15px;
 }
+/* GRID DE GALERIA */
+.grid-galeria .grid-item {
+  width: 30%;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
 /* COMPONENTS */
+.c-desplegable .btn-desplegable {
+  width: 100%;
+  background-color: #be75f9;
+}
+.c-desplegable .btn-desplegable .multi-collapse {
+  background-color: green;
+}
+.c-header {
+  background-color: lightblue;
+  margin-bottom: 40px;
+}
+.c-header .c-cabecera {
+  text-align: center;
+}
+.c-header .c-cabecera .titulo {
+  font-size: 30px;
+}
+/* RESPONSIVE */

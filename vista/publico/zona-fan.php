@@ -11,12 +11,12 @@
         <div class="c-desplegable">
             <div class="row">
                 <div class="col-md-12">
-                    <a class="btn btn-primary" data-toggle="collapse" href="#creacionEntrada" role="button" aria-expanded="false" aria-controls="creacionEntrada">Crear entrada</a>
+                    <a class="btn btn-desplegable" data-toggle="collapse" href="#creacionEntrada" role="button" aria-expanded="false" aria-controls="creacionEntrada">Sube tu contenido</a>
                     <div class="row">
                         <div class="col">
                             <div class="collapse multi-collapse" id="creacionEntrada">
                                 <form action="crear-post.php" method="post" enctype="multipart/form-data">
-                                    <h2 class="text-center">Crear post</h2>
+                                    <h2 class="text-center">Elige entre imagen o texto.</h2>
                                     <div class="row">
                                         <div class="col-xs-12 mx-auto">
                                             <div class="form-group">

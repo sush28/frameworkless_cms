@@ -1,0 +1,11 @@
+.c-header {
+  background-color: lightblue;
+  margin-bottom: 40px;
+}
+.c-header .c-cabecera {
+  text-align: center;
+}
+.c-header .c-cabecera .titulo {
+  font-size: 30px;
+}
+/* RESPONSIVE */

@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <?php include 'includes/head.php'; ?>
-    <title>Coldplay | HOME</title>
+    <title>Blog</title>
 </head>
 <body>
 
@@ -82,7 +82,7 @@
                         <div class="row">
                             <div class="col-md-12 cat-titulo"><p>Categorías</p></div>
                             <div class="col-md-12 cat-listado">
-                                <ul>
+                                <ul class="list-unstyled">
                                     <li class="cat">Conciertos</li>
                                     <li class="cat">Álbumes</li>
                                     <li class="cat">Personal</li>

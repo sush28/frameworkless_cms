@@ -7,7 +7,14 @@
 .grid-item--width2 {
   width: 40%;
 }
+/* GRID DE ZONA FAN */
 .grid .grid-item {
+  width: 30%;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+/* GRID DE GALERIA */
+.grid-galeria .grid-item {
   width: 30%;
   overflow: hidden;
   margin-bottom: 15px;

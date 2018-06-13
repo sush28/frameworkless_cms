@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <?php include 'head.php'; ?>
+    <?php include 'includes/head.php'; ?>
     <title>Videos | Coldplay</title>
 </head>
 <body>
-    <?php include 'header.php'; ?>
-
-
-    <script src="../../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <script src="../../assets/vendor/js/popper.min.js"></script>
-    <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="../../assets/js/scripts.js"></script>
+    <?php include 'includes/header.php'; ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <iframe src="https://open.spotify.com/embed/artist/536BYVgOnRky0xjsPT96zl" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+            </div>
+        </div>
+    </div>
+    <?php include 'includes/footer.php'; ?>
 </body>
 </html>
+

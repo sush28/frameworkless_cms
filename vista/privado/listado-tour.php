@@ -69,7 +69,7 @@
     <!-- Listado --> 
     <div class="container c-tabla-cms c-tabla-cms--tour">
         <div class="conciertos">
-            <table class="table">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th scope="col">Fecha</th>
