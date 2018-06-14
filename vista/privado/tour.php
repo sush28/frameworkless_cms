@@ -62,12 +62,12 @@
     <!-- Listado --> 
     <div class="container c-tabla-cms c-tabla-cms--tour">
         <div class="conciertos">
-            <table class="table table-bordered">
+            <table class="table table-bordered table-responsive">
                 <thead>
                     <tr>
                         <th scope="col">Fecha</th>
-                        <th scope="col">Ciudad</th>
-                        <th scope="col">País</th>
+                        <th scope="col">Localización</th>
+                        <th scope="col">Estadio</th>
                         <th scope="col">Disponibilidad</th>
                         <th scope="col">Punto de venta</th>
                         <th scope="col">Opciones</th>
@@ -77,7 +77,7 @@
                     <tr class="concierto">
                         <td>24/07/18</td>
                         <td>Madrid</td>
-                        <td>España</td>
+                        <td>Madrid Arena</td>
                         <td>A la venta</td>
                         <td>Enlace</td>
                         <td>
@@ -88,7 +88,7 @@
                     <tr class="concierto">
                         <td>24/07/18</td>
                         <td>Bcn</td>
-                        <td>España</td>
+                        <td>Millenium Stadium</td>
                         <td>Vendidas</td>
                         <td>Enlace</td>
                         <td>
@@ -99,7 +99,7 @@
                     <tr class="concierto">
                         <td>24/07/18</td>
                         <td>Kentucky</td>
-                        <td>España</td>
+                        <td>Palacio de vistalegre</td>
                         <td>A la venta</td>
                         <td>Enlace</td>
                         <td>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="html-home" lang="es">
 <head>
     <?php include 'includes/head.php'; ?>
     <title>HOME | Two Door Cinema Club</title>

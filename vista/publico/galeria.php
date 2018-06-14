@@ -8,11 +8,11 @@
 
     <?php include 'includes/header.php'; ?>
 
-    <div class="container-fluid c-header c-header--galeria d-flex align-items-center">
-        <div class="row">
-            <div class="col-12">
-                <div class="c-cabecera justify-content-center">
-                    <h1 class="titulo">Blog</h1>
+    <div class="container-fluid c-header c-header--galeria align-items-center">
+        <div class="row h-100">
+            <div class="col-12 h-100">
+                <div class="c-cabecera justify-content-center h-100">
+                    <h1 class="titulo text-center">Galería</h1>
                 </div>
             </div>
         </div>

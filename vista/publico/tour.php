@@ -7,11 +7,11 @@
 <body>
     <?php include 'includes/header.php'; ?>
 
-    <div class="container-fluid c-header">
-        <div class="row">
-            <div class="col-12">
-                <div class="c-cabecera">
-                    <h1 class="titulo my-5">Tour</h1>
+    <div class="container-fluid c-header c-header--tour align-items-center">
+        <div class="row h-100">
+            <div class="col-12 h-100">
+                <div class="c-cabecera justify-content-center h-100">
+                    <h1 class="titulo text-center">Tour</h1>
                 </div>
             </div>
         </div>

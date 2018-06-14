@@ -7,11 +7,11 @@
 <body>
     <?php include 'includes/header.php'; ?>
 
-    <div class="container-fluid c-header d-flex align-items-center">
-        <div class="row">
-            <div class="col-12">
-                <div class="c-cabecera justify-content-center">
-                    <h1 class="titulo">Zona fan</h1>
+    <div class="container-fluid c-header c-header--zona-fan align-items-center">
+        <div class="row h-100">
+            <div class="col-12 h-100">
+                <div class="c-cabecera justify-content-center h-100">
+                    <h1 class="titulo text-center">Zona fan</h1>
                 </div>
             </div>
         </div>

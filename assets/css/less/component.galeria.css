@@ -2,9 +2,27 @@
   height: fit-content;
 }
 .c-galeria .row .c-galeria-item a .mask {
-  width: inherit;
-  height: inherit;
-  z-index: 2;
-  background-color: rgba(86, 39, 9, 0.5);
+  position: relative;
+  width: 100%;
+  height: 100%;
   transition: all 0.3s ease-in-out;
+}
+.c-galeria .row .c-galeria-item a .mask img {
+  width: 100%;
+  vertical-align: top;
+}
+.c-galeria .row .c-galeria-item a .mask:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(86, 39, 9, 0.5);
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.c-galeria .row .c-galeria-item a .mask:hover:after {
+  opacity: 1;
 }

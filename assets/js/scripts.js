@@ -1,32 +1,31 @@
-
-/* ISOTOPE - ZONA FAN */
-
-$('.grid').isotope({
-    // set itemSelector so .grid-sizer is not used in layout
-    itemSelector: '.grid-item',
-    horizontalOrder: true,
-    percentPosition: true,
-    masonry: {
-        //columnWidth: '.grid-sizer',
-        gutter: 15
-    }
-})
-
-/* ISOTOPE - GALERIA */
-
-$('.grid-galeria').isotope({
-    // set itemSelector so .grid-sizer is not used in layout
-    itemSelector: '.grid-item',
-    horizontalOrder: true,
-    percentPosition: true,
-    masonry: {
-        //columnWidth: '.grid-sizer',
-        gutter: 15
-    }
-})
-
 $(document).ready(function(){
+    /* ISOTOPE - ZONA FAN */
 
+    $('.grid').isotope({
+        // set itemSelector so .grid-sizer is not used in layout
+        itemSelector: '.grid-item',
+        horizontalOrder: true,
+        percentPosition: true,
+        masonry: {
+            //columnWidth: '.grid-sizer',
+            gutter: 15
+        }
+    })
+
+    /* ISOTOPE - GALERIA */
+
+    $('.grid-galeria').isotope({
+        // set itemSelector so .grid-sizer is not used in layout
+        itemSelector: '.grid-item',
+        horizontalOrder: true,
+        percentPosition: true,
+        masonry: {
+            //columnWidth: '.grid-sizer',
+            gutter: 15
+        }
+    })
+
+    /* MENU POSICION SEGUN STICKY */
     var altomenu = $('#MenuPrincipal').outerHeight() + 25;
 
     $(window).scroll(function(){

@@ -1,0 +1,15 @@
+.c-blog .c-blog-post {
+  margin-bottom: 30px;
+}
+.c-blog .c-blog-post .c-blog-contenido {
+  padding: 10px 15px;
+}
+.c-blog .c-blog-post .c-blog-contenido .categoria {
+  font-family: 'Gotham Medium', Helvetica, sans-serif;
+  font-size: 14px;
+}
+.c-blog .c-blog-post .c-blog-contenido .titulo {
+  font-family: 'Gotham Medium', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
