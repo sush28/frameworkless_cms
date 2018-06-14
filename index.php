@@ -3,7 +3,6 @@
 if (isset($_GET['apartado'])) {
     $apartado = $_GET['apartado'];
 } else {
-    // DEfault
     $apartado = 'publico';
 }
 /*

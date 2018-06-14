@@ -2,10 +2,6 @@
 
 class Entrada {
 
-    include("conexion.php");
-    private $db;
-    
-
     public $id;
     public $titulo;
     public $contenido;
@@ -30,7 +26,7 @@ class Entrada {
         $this->publico = $publico;
         $this->slug = $slug;
         $this->id_cat = $id_cat;
-        
+
     }
 
 }

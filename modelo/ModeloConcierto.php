@@ -23,6 +23,26 @@ class ModeloConcierto{
         return $conciertos;
     }
 
+    function insertarConcierto($fecha, $arena, $ciudad, $disponible, $puntoventa) {
+        $conciertos = array();
+        $sql = sprintf(
+            "INSERT INTO `concierto` (`id`, `fecha`, `arena`, `ciudad`, `disponible`, `puntoventa`) VALUES (%s, %s, '%s', '%s', '%s', '%s')",
+            "NULL",
+            mysqli::real_escape_string ($fecha),
+            mysqli::real_escape_string ($arena),
+            mysqli::real_escape_string ($ciudad),
+            mysqli::real_escape_string ($disponible),
+            mysqli::real_escape_string ($puntoventa),
+        );
+
+        $resul = mysqli_query($con, $sql) or die("No se han podido obtener los conciertos.");
+
+        while ($row = mysqli_fetch_array($resul, MYSQLI_ASSOC)) {
+            array_push($conciertos, $row['id_escu']);
+        }
+        return $conciertos;
+    }
+
     function getEscuelas() {
         $escuelas = array();
         $textoIns = "select id_escu from escuelas;";
