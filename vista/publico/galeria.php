@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <?php include 'includes/head.php'; ?>
-    <title>Galería | Coldplay</title>
+    <title>Galería | Two Door Cinema Club</title>
 </head>
 <body>
 

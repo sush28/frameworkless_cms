@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <?php include 'includes/head.php'; ?>
-    <title>Blog</title>
+    <title>Blog | Two Door Cinema Club</title>
 </head>
 <body>
 
@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="c-cabecera">
-                    <h1 class="titulo">Blog</h1>
+                    <h1 class="titulo my-5">Blog</h1>
                 </div>
             </div>
         </div>

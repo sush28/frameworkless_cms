@@ -15,11 +15,11 @@ class Entrada {
     public $fecha;
     public $publico;
     public $slug;
+    public $id_cat;
 
 
-    public function __construct($id, $titulo, $contenido, $autor, $imagen, $altimagen, $fecha, $publico, $slug) {
+    public function __construct($id, $titulo, $contenido, $autor, $imagen, $altimagen, $fecha, $publico, $slug, $id_cat) {
 
-        
         $this->id = $id;
         $this->titulo = $titulo;
         $this->contenido = $contenido;
@@ -29,22 +29,9 @@ class Entrada {
         $this->fecha = $fecha;
         $this->publico = $publico;
         $this->slug = $slug;
+        $this->id_cat = $id_cat;
+        
     }
-
-
-    public function getEntradas() {
-        $entradas = array();
-        $consulta = "select * from entrada;";
-
-        $resul = mysqli_query($this->$db, $consulta) or die("No se han podido consultar las empresa.");
-
-        while ($row = mysqli_fetch_array($resul, MYSQLI_ASSOC)) {
-            array_push($entradas, $row['id_empr']);
-        }
-        return $entradas;
-    }
-
-
 
 }
 

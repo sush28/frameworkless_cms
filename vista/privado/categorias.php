@@ -16,9 +16,9 @@
             </div>
         </div>
         <div class="c-desplegable">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-7">
-                    <a class="btn btn-primary" data-toggle="collapse" href="#creacionTour" role="button" aria-expanded="false" aria-controls="creacionTour">Añadir categoría</a>
+                    <a class="btn btn-desplegable" data-toggle="collapse" href="#creacionTour" role="button" aria-expanded="false" aria-controls="creacionTour">Añadir categoría</a>
                     <div class="row">
                         <div class="col">
                             <div class="collapse multi-collapse" id="creacionTour">
@@ -28,7 +28,7 @@
                                         <input class="form-control" type="text" name="nombre" id="nombre" required>
                                     </div>
                                     <div class="form-group">
-                                        <button class="btn btn-primary" type="submit" name="submit">Crear categoría</button>
+                                        <button class="btn btn-cms" type="submit" name="submit">Crear categoría</button>
                                     </div>
                                 </form>
                             </div>
@@ -39,17 +39,21 @@
         </div>
     </div>
     <div class="container c-listado c-listado--categorias">
-        <div class="categoria">
-            <div class="row">
-                <div class="col-10">
-                    <div class="titulo-cat">Categoría 1</div>
-                </div>
-                <div class="col-2">
-                    <div class="modificar modificar-post">
-                        <a href="#" data-toggle="modal" data-target="#modificarCategoria"><i class="far fa-edit"></i> Editar </a>
-                    </div>
-                    <div class="eliminar eliminar-post">
-                        <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+                <div class="c-listado-elemento categoria">   
+                    <div class="row">
+                        <div class="col-10 d-flex align-items-center">
+                            <div class="titulo-cat">Categoría 1</div>
+                        </div>
+                        <div class="col-2">
+                            <div class="modificar modificar-post">
+                                <a href="#" data-toggle="modal" data-target="#modificarCategoria"><i class="far fa-edit"></i> Editar </a>
+                            </div>
+                            <div class="eliminar eliminar-post">
+                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

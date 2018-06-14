@@ -19,43 +19,36 @@
         <div class="c-desplegable">
             <div class="row">
                 <div class="col-md-12">
-                    <a class="btn btn-primary" data-toggle="collapse" href="#creacionTour" role="button" aria-expanded="false" aria-controls="creacionTour">Añadir tour</a>
+                    <a class="btn btn-desplegable" data-toggle="collapse" href="#creacionTour" role="button" aria-expanded="false" aria-controls="creacionTour">Añadir tour</a>
                     <div class="row">
                         <div class="col">
                             <div class="collapse multi-collapse" id="creacionTour">
                                 <form action="crear-post.php" method="post" enctype="multipart/form-data">
-                                    <div class="form-group">
-                                        <label for="categoria">País</label>
-                                        <select class="form-control" name="categoria">
-                                            <?php
-                                            $resultado = mysqli_query($con, "SELECT * FROM categoria");
-                                            while ($categoria = mysqli_fetch_array(
-                                                $resultado,
-                                                MYSQLI_ASSOC
-                                            )) {
-                                                ?><option value="<?= $categoria["idcategoria"] ?>"><?= $categoria["nombre"] ?></option><?php
-                                            }
-                                            ?>
-                                        </select>
+                                    <div class="form-row">
+                                        <div class="form-group  col-md-4">
+                                            <label for="localizacion">Lugar</label>
+                                            <input class="form-control" type="text" name="localizacion" id="localizacion" required>
+                                            <small class="text-muted">Inserta tanto la ciudad como el país (Ejemplo: Madrid, España).</small>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="fecha">Fecha</label>
+                                            <input class="form-control" type="date" name="fecha" id="fecha" required>
+                                        </div>  
+                                        <div class="form-group col-md-4">
+                                            <label for="disponibilidad">Disponibilidad</label>
+                                            <select class="form-control" name="disponibilidad">
+                                                <option value="disponibles">A la venta</option>
+                                                <option value="vendidas">Vendidas</option>
+                                                <option value="disponible">Próximamente</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="ciudad">Ciudad</label>
-                                        <input class="form-control" type="text" name="ciudad" id="ciudad" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="disponibilidad">Disponibilidad</label>
-                                        <select class="form-control" name="disponibilidad">
-                                            <option value="disponibles">A la venta</option>
-                                            <option value="vendidas">Vendidas</option>
-                                            <option value="disponible">Próximamente</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="altimagen">Enlace con el punto de venta</label>
+                                        <label for="altimagen">Enlace del punto de venta</label>
                                         <input class="form-control" type="text" name="altimagen" id="altimagen"/>
                                     </div>
                                     <div class="form-group">
-                                        <button class="btn btn-primary" type="submit" name="submit">Añadir fecha</button>
+                                        <button class="btn btn-cms" type="submit" name="submit">Añadir fecha</button>
                                     </div>
                                 </form>
                             </div>

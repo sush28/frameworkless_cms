@@ -1,7 +1,71 @@
 /* SETTINGS */
+body {
+  background-color: #f9f9f9;
+}
+a {
+  color: #286fb8;
+}
 /* TOOLS */
 /* ELEMENTS */
+.btn-cms {
+  background-color: #e6e9ef;
+  border: 1px solid #dee2e6;
+}
 /* COMPONENTS */
+.c-desplegable {
+  margin-bottom: 30px;
+}
+.c-desplegable .btn-desplegable {
+  width: 100%;
+  padding: 10px;
+  background-color: #286fb8;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: 1px solid #286fb8;
+}
+.c-desplegable .btn-desplegable:focus {
+  box-shadow: none;
+}
+.c-desplegable .multi-collapse {
+  border: 1px solid #dee2e6;
+  border-top: 0;
+  padding: 20px;
+  background-color: #ffffff;
+}
+form input:focus,
+form select:focus,
+form textarea:focus {
+  box-shadow: none;
+}
+form .form-control:focus {
+  box-shadow: none;
+}
+.header-cms {
+  margin: 20px;
+  text-align: center;
+}
+.c-listado .c-listado-elemento {
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+.c-listado .entrada .titulo-post {
+  font-weight: bold;
+}
+.modal .modal-dialog {
+  max-width: 700px;
+}
 #MenuCMS {
-  background-color: #eaeaea;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f1f1f1+50,e1e1e1+51,f6f6f6+100;White+Gloss+%231 */
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0);
+  /* IE6-9 */
+  border-bottom: 1px #e2e2e2 solid;
 }

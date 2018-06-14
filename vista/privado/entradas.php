@@ -7,7 +7,7 @@
 <body>
     <?php include 'includes/header.php'; ?>
 
-    <div class="container">
+    <div class="container c-formulario c-formulario--entradas">
         <div class="header-cms">
             <div class="row">
                 <div class="col-12">
@@ -18,9 +18,9 @@
         <div class="c-desplegable">
             <div class="row">
                 <div class="col-md-12">
-                    <a class="btn btn-primary" data-toggle="collapse" href="#creacionEntrada" role="button" aria-expanded="false" aria-controls="creacionEntrada">Crear entrada</a>
+                    <a class="btn btn-desplegable" data-toggle="collapse" href="#creacionEntrada" role="button" aria-expanded="false" aria-controls="creacionEntrada">Crear entrada</a>
                     <div class="row">
-                        <div class="col">
+                        <div class="col-12">
                             <div class="collapse multi-collapse" id="creacionEntrada">
                                 <form action="crear-post.php" method="post" enctype="multipart/form-data">
                                     <h2 class="text-center">Crear post</h2>
@@ -56,7 +56,7 @@
                                                 <input type="checkbox" name="publico" value="público"> Público<br>
                                             </div>
                                             <div class="form-group">
-                                                <button class="btn btn-primary" type="submit" name="submit">Crear</button>
+                                                <button class="btn btn-cms" type="submit" name="submit">Crear</button>
                                             </div>
                                         </div>
                                     </div>
@@ -69,66 +69,82 @@
         </div>
     </div>
     <div class="container c-listado c-listado--blog">
-        <div class="entrada">
-            <div class="row">
-                <div class="col-10">
-                    <div class="titulo-post">Blablabla</div>
-                    <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
-                </div>
-                <div class="col-2">
-                    <div class="modificar modificar-post">
-                        <a href="modificar-entrada.php" data-toggle="modal" data-target="#modificarEntrada"><i class="far fa-edit"></i> Editar </a>
-                    </div>
-                    <div class="eliminar eliminar-post">
-                        <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="entrada">
-            <div class="row">
-                <div class="col-10">
-                    <div class="titulo-post">Blablabla</div>
-                    <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
-                </div>
-                <div class="col-2">
-                    <div class="modificar modificar-post">
-                        <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
-                    </div>
-                    <div class="eliminar eliminar-post">
-                        <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="c-listado-elemento entrada">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="titulo-post">Blablabla</div>
+                            <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="modificar modificar-post">
+                                <a href="modificar-entrada.php" data-toggle="modal" data-target="#modificarEntrada"><i class="far fa-edit"></i> Editar </a>
+                            </div>
+                            <div class="eliminar eliminar-post">
+                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="entrada">
-            <div class="row">
-                <div class="col-10">
-                    <div class="titulo-post">Blablabla</div>
-                    <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
-                </div>
-                <div class="col-2">
-                    <div class="modificar modificar-post">
-                        <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
-                    </div>
-                    <div class="eliminar eliminar-post">
-                        <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="c-listado-elemento entrada">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="titulo-post">Blablabla</div>
+                            <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="modificar modificar-post">
+                                <a href="modificar-entrada.php" data-toggle="modal" data-target="#modificarEntrada"><i class="far fa-edit"></i> Editar </a>
+                            </div>
+                            <div class="eliminar eliminar-post">
+                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="entrada">
-            <div class="row">
-                <div class="col-10">
-                    <div class="titulo-post">Blablabla</div>
-                    <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
-                </div>
-                <div class="col-2">
-                    <div class="modificar modificar-post">
-                        <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="c-listado-elemento entrada">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="titulo-post">Blablabla</div>
+                            <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="modificar modificar-post">
+                                <a href="modificar-entrada.php" data-toggle="modal" data-target="#modificarEntrada"><i class="far fa-edit"></i> Editar </a>
+                            </div>
+                            <div class="eliminar eliminar-post">
+                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="eliminar eliminar-post">
-                        <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="c-listado-elemento entrada">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="titulo-post">Blablabla</div>
+                            <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="modificar modificar-post">
+                                <a href="modificar-entrada.php" data-toggle="modal" data-target="#modificarEntrada"><i class="far fa-edit"></i> Editar </a>
+                            </div>
+                            <div class="eliminar eliminar-post">
+                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
