@@ -7,6 +7,16 @@
 <body>
     <?php include 'includes/header.php'; ?>
 
+    <div class="container-fluid c-header d-flex align-items-center">
+        <div class="row">
+            <div class="col-12">
+                <div class="c-cabecera justify-content-center">
+                    <h1 class="titulo">Zona fan</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="c-desplegable">
             <div class="row">

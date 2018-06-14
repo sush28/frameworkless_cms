@@ -1,0 +1,7 @@
+#MenuPrincipal .nav-item {
+  font-family: 'Bison', Helvetica, sans-serif;
+  font-size: 18px;
+}
+#MenuPrincipal .social ul li a i {
+  color: black;
+}

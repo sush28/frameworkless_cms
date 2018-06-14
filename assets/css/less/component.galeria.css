@@ -1,0 +1,10 @@
+.c-galeria .row .c-galeria-item a {
+  height: fit-content;
+}
+.c-galeria .row .c-galeria-item a .mask {
+  width: inherit;
+  height: inherit;
+  z-index: 2;
+  background-color: rgba(86, 39, 9, 0.5);
+  transition: all 0.3s ease-in-out;
+}

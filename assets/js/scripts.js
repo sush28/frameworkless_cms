@@ -24,3 +24,23 @@ $('.grid-galeria').isotope({
         gutter: 15
     }
 })
+
+$(document).ready(function(){
+
+    var altomenu = $('#MenuPrincipal').outerHeight() + 25;
+
+    $(window).scroll(function(){
+        console.log($(window).scrollTop());
+        console.log('alto menu: ' + altomenu);
+        if($(window).scrollTop() > altomenu){
+            console.log("es mas alto");
+            $('#MenuPrincipal').addClass('is-fixed');
+
+        }else{
+            console.log("es menos alto");
+            $('#MenuPrincipal').removeClass('is-fixed');
+        }
+    });
+
+
+});

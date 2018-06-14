@@ -1,4 +1,27 @@
 /* SETTINGS */
+body {
+  font-family: 'Gotham Book', Helvetica, sans-serif;
+}
+p {
+  font-family: 'Gotham Book', Helvetica, sans-serif;
+}
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('../fonts/GothamBook.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url('../fonts/Gotham-Bold.otf');
+  src: url('../fonts/GothamBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url('../fonts/GothamMedium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bison';
+  src: url('../fonts/Bison-Bold(PersonalUse).ttf') format('truetype');
+}
 /* TOOLS */
 /* ELEMENTS */
 /* fluid 5 columns */
@@ -30,6 +53,16 @@
 .c-desplegable .btn-desplegable .multi-collapse {
   background-color: green;
 }
+.c-galeria .row .c-galeria-item a {
+  height: fit-content;
+}
+.c-galeria .row .c-galeria-item a .mask {
+  width: inherit;
+  height: inherit;
+  z-index: 2;
+  background-color: rgba(86, 39, 9, 0.5);
+  transition: all 0.3s ease-in-out;
+}
 .c-header {
   background-color: lightblue;
   margin-bottom: 40px;
@@ -38,6 +71,18 @@
   text-align: center;
 }
 .c-header .c-cabecera .titulo {
-  font-size: 30px;
+  font-family: 'Bison', Helvetica, sans-serif;
+  font-size: 72px;
+  color: #ffffff;
+}
+.c-header--galeria {
+  background-image: url(../images);
 }
 /* RESPONSIVE */
+#MenuPrincipal .nav-item {
+  font-family: 'Bison', Helvetica, sans-serif;
+  font-size: 18px;
+}
+#MenuPrincipal .social ul li a i {
+  color: black;
+}
