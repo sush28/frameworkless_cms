@@ -3,17 +3,43 @@
     position: fixed;
     bottom: 30px;
     right: 20px;
+
     i{
-        font-size: 20px;
-        color: @color_marron_claro;
-    }
+        font-size: 50px;
+        color: rgba(170, 90, 41, 0.5);
+        transition: all 0.3s ease-in-out;
+    }  
 }
 
 .to-top--visible{
-    visibility: visible;
-    opacity: 1;
+    i{
+        color: rgba(170, 90, 41, 1);
+        transition: all 0.3s ease-in-out;
+    }     
 }
 
 .to-top-semivisible{
-    opacity: .5;
+    i{
+        color: rgba(170, 90, 41, 0.5);
+    }   
 }
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {}
+@media (max-width: 992px) {
+    .to-top{   
+        i{
+            font-size: 40px;
+        }
+    }
+
+}
+@media (max-width: 768px) {}
+@media (max-width: 576px) {
+    .to-top{   
+        i{
+            font-size: 30px;
+        }
+    }
+}
+

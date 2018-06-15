@@ -1,0 +1,22 @@
+.c-tour .titulo {
+  font-family: 'Gotham Bold', Helvetica, sans-serif;
+  margin-bottom: 30px;
+}
+.c-tour .conciertos .concierto {
+  padding-top: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(191, 191, 191, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+.c-tour .conciertos .concierto .col-sm-6 .fecha,
+.c-tour .conciertos .concierto .col-sm-6 .arena,
+.c-tour .conciertos .concierto .col-sm-6 .ciudad,
+.c-tour .conciertos .concierto .col-sm-6 .disponibilidad {
+  margin-bottom: 0;
+}
+.c-tour .conciertos .concierto:hover {
+  background-color: rgba(170, 90, 41, 0.1);
+}
+.c-tour .conciertos .concierto:last-child {
+  border-bottom: none;
+}

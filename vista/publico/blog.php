@@ -51,7 +51,7 @@
                                 <img src="http://via.placeholder.com/360x200" alt="" class="img-fluid">
                             </div>
                             <div class="col-sm-12 col-md-8 col-lg-12 c-blog-contenido">
-                                <div class="categoria">Tour</div>
+                                <div class="categoria"><i class="fas fa-bullseye"></i>Tour</div>
                                 <div class="titulo"><p>Titular de la noticia muy importante todo</p></div>
                                 <div class="contenido">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. o sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos.</div>
                             </div>
@@ -63,7 +63,7 @@
                                 <img src="http://via.placeholder.com/360x200" alt="" class="img-fluid">
                             </div>
                             <div class="col-sm-12 col-md-8 col-lg-12 c-blog-contenido">
-                                <div class="categoria">Tour</div>
+                                <div class="categoria"><i class="fas fa-bullseye"></i>Tour</div>
                                 <div class="titulo"><p>Titular de la noticia muy importante todo</p></div>
                                 <div class="contenido">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. o sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos.</div>
                             </div>
@@ -75,8 +75,8 @@
                                 <img src="http://via.placeholder.com/360x200" alt="" class="img-fluid">
                             </div>
                             <div class="col-sm-12 col-md-8 col-lg-12 c-blog-contenido">
-                                <div class="categoria">Tour</div>
-                                <div class="titulo">Titular de la noticia muy importante todo</div>
+                                <div class="categoria"><i class="fas fa-bullseye"></i>Tour</div>
+                                <div class="titulo"><p>Titular de la noticia muy importante todo</p></div>
                                 <div class="contenido">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. o sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos.</div>
                             </div>
                         </div> 
@@ -87,8 +87,8 @@
                                 <img src="http://via.placeholder.com/360x200" alt="" class="img-fluid">
                             </div>
                             <div class="col-sm-12 col-md-8 col-lg-12 c-blog-contenido">
-                                <div class="categoria">Tour</div>
-                                <div class="titulo">Titular de la noticia muy importante todo</div>
+                                <div class="categoria"><i class="fas fa-bullseye"></i>Tour</div>
+                                <div class="titulo"><p>Titular de la noticia muy importante todo</p></div>
                                 <div class="contenido">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. o sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos.</div>
                             </div>
                         </div> 
@@ -99,8 +99,8 @@
                                 <img src="http://via.placeholder.com/360x200" alt="" class="img-fluid">
                             </div>
                             <div class="col-sm-12 col-md-8 col-lg-12 c-blog-contenido">
-                                <div class="categoria">Tour</div>
-                                <div class="titulo">Titular de la noticia muy importante todo</div>
+                                <div class="categoria"><i class="fas fa-bullseye"></i>Tour</div>
+                                <div class="titulo"><p>Titular de la noticia muy importante todo</p></div>
                                 <div class="contenido">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. o sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos.</div>
                             </div>
                         </div> 

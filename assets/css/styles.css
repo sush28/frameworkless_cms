@@ -31,15 +31,27 @@ p {
   right: 20px;
 }
 .to-top i {
-  font-size: 20px;
+  font-size: 50px;
+  color: rgba(170, 90, 41, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+.to-top--visible i {
   color: #aa5a29;
+  transition: all 0.3s ease-in-out;
 }
-.to-top--visible {
-  visibility: visible;
-  opacity: 1;
+.to-top-semivisible i {
+  color: rgba(170, 90, 41, 0.5);
 }
-.to-top-semivisible {
-  opacity: .5;
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .to-top i {
+    font-size: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .to-top i {
+    font-size: 30px;
+  }
 }
 #Footer {
   margin-top: 40px;
@@ -98,20 +110,98 @@ p {
   margin-bottom: 15px;
 }
 /* COMPONENTS */
+.c-biografia .c-grupo {
+  text-align: center;
+}
+.c-biografia .c-grupo .titulo {
+  font-family: 'Gotham Medium', Helvetica, sans-serif;
+  margin: 10px auto;
+}
+.c-biografia .c-grupo p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.c-biografia .c-miembro {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.c-biografia .c-miembro .texto .nombre {
+  font-family: 'Gotham Medium', Helvetica, sans-serif;
+}
+.c-biografia .c-miembro .texto .rol {
+  color: #aa5a29;
+  margin-bottom: 3px;
+}
+.c-biografia .c-miembro .imagen {
+  padding: 20px;
+}
+.c-biografia .c-miembro .imagen img {
+  width: 100%;
+  max-width: 400px;
+}
+.c-biografia .c-miembro--alex {
+  border-bottom: 1px solid #666666;
+}
+.c-biografia .c-miembro--alex .texto {
+  text-align: left;
+}
+.c-biografia .c-miembro--sam {
+  border-bottom: 1px solid #666666;
+}
+.c-biografia .c-miembro--sam .texto {
+  text-align: right;
+}
+.c-biografia .c-miembro--kevin .texto {
+  text-align: left;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .c-biografia .c-miembro {
+    text-align: center;
+  }
+  .c-biografia .c-miembro--sam .texto {
+    text-align: center;
+  }
+}
 .c-blog .c-blog-post {
   margin-bottom: 30px;
 }
 .c-blog .c-blog-post .c-blog-contenido {
-  padding: 10px 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .c-blog .c-blog-post .c-blog-contenido .categoria {
   font-family: 'Gotham Medium', Helvetica, sans-serif;
   font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-.c-blog .c-blog-post .c-blog-contenido .titulo {
+.c-blog .c-blog-post .c-blog-contenido .categoria i {
+  color: #07b9e0;
+  margin-right: 5px;
+}
+.c-blog .c-blog-post .c-blog-contenido .titulo p {
   font-family: 'Gotham Medium', Helvetica, sans-serif;
   font-weight: bold;
   font-size: 16px;
+}
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .c-blog .c-blog-post .c-blog-contenido {
+    padding-top: 0;
+  }
+  .c-blog .c-blog-post .c-blog-contenido .categoria {
+    padding-top: 0;
+  }
+  .c-blog .c-blog-post .c-blog-contenido .categoria i {
+    color: #07b9e0;
+    margin-right: 5px;
+  }
+  .c-blog .c-blog-post .c-blog-contenido .titulo p {
+    margin-bottom: 5px;
+  }
 }
 .c-desplegable .btn-desplegable {
   width: 100%;
@@ -120,8 +210,12 @@ p {
 .c-desplegable .btn-desplegable .multi-collapse {
   background-color: green;
 }
+.c-galeria .row .c-galeria-item {
+  transition: all 0.3s ease-in-out;
+}
 .c-galeria .row .c-galeria-item a {
   height: fit-content;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 .c-galeria .row .c-galeria-item a .mask {
   position: relative;
@@ -132,6 +226,10 @@ p {
 .c-galeria .row .c-galeria-item a .mask img {
   width: 100%;
   vertical-align: top;
+  transition: all 0.3s ease-in-out;
+}
+.c-galeria .row .c-galeria-item a .mask img:hover {
+  transform: rotate(20deg);
 }
 .c-galeria .row .c-galeria-item a .mask:after {
   content: "";
@@ -140,7 +238,7 @@ p {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(86, 39, 9, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
   opacity: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -148,11 +246,12 @@ p {
 .c-galeria .row .c-galeria-item a .mask:hover:after {
   opacity: 1;
 }
-.html-home {
+.html-home body {
   background-size: cover;
-  background: url("../images/inicio.jpg") no-repeat;
+  background: url("../images/inicio.jpg") no-repeat #000000;
   background-position: center top !important;
 }
+/* RESPONSIVE */
 .c-header {
   margin-bottom: 40px;
   height: 400px;
@@ -258,12 +357,19 @@ p {
   margin-bottom: 30px;
 }
 .c-tour .conciertos .concierto {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #bfbfbf;
+  padding-top: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(191, 191, 191, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+.c-tour .conciertos .concierto .col-sm-6 .fecha,
+.c-tour .conciertos .concierto .col-sm-6 .arena,
+.c-tour .conciertos .concierto .col-sm-6 .ciudad,
+.c-tour .conciertos .concierto .col-sm-6 .disponibilidad {
+  margin-bottom: 0;
 }
 .c-tour .conciertos .concierto:hover {
-  background-color: #07b9e0;
+  background-color: rgba(170, 90, 41, 0.1);
 }
 .c-tour .conciertos .concierto:last-child {
   border-bottom: none;

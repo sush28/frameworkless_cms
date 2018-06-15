@@ -1,6 +1,4 @@
-<a href="#0" class="to-top to-top-js"></a>
-    <i class="fas fa-chevron-circle-up" aria-label="Ir hacia arriba"></i>
-</button>
+<a href="#0" class="to-top to-top-js"><i class="fas fa-chevron-circle-up class" aria-label="Ir hacia arriba"></i></a>
 
 <footer id="Footer">
     <div class="container">
@@ -32,7 +30,7 @@
             </div>
             <ul class="list-inline legales">
                 <li class="list-inline-item"><a href="aviso-legal.php">Aviso legal</a></li>
-                <li class="list-inline-item"><a href="aviso-legal.php">Política de privacidad</a></li>
+                <li class="list-inline-item"><a href="politica-privacidad.php">Política de privacidad</a></li>
             </ul>
         </div>
     </div>

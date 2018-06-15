@@ -1,11 +1,29 @@
 .to-top {
   display: inline-block;
   position: fixed;
+  bottom: 30px;
+  right: 20px;
 }
-.to-top--visible {
-  visibility: visible;
-  opacity: 1;
+.to-top i {
+  font-size: 50px;
+  color: rgba(170, 90, 41, 0.5);
+  transition: all 0.3s ease-in-out;
 }
-.to-top-semivisible {
-  opacity: .5;
+.to-top--visible i {
+  color: #aa5a29;
+  transition: all 0.3s ease-in-out;
+}
+.to-top-semivisible i {
+  color: rgba(170, 90, 41, 0.5);
+}
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .to-top i {
+    font-size: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .to-top i {
+    font-size: 30px;
+  }
 }

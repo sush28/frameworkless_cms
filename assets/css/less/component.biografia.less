@@ -1,0 +1,73 @@
+.c-biografia{
+    .c-grupo{
+        text-align: center;
+        .titulo{
+            font-family: 'Gotham Medium', Helvetica, sans-serif;
+            margin: 10px auto;
+        }
+        p{
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+    }
+    .c-miembro{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .texto{
+            .nombre{
+                font-family: 'Gotham Medium', Helvetica, sans-serif;
+            }
+            .rol{
+                color: @color_marron_claro;
+                margin-bottom: 3px;
+            }
+            .descripcion{}
+        }
+        .imagen{
+            padding: 20px;
+            img{
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    }
+
+    .c-miembro--alex{
+        border-bottom: 1px solid @color_dark_grey;
+        .texto{
+            text-align: left;
+        }
+    }
+    .c-miembro--sam{
+        border-bottom: 1px solid @color_dark_grey;       
+        .texto{
+            text-align: right;
+        }
+    }
+    .c-miembro--kevin{
+        .texto{
+            text-align: left;
+        }
+    }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {}
+@media (max-width: 992px) {}
+@media (max-width: 768px) {
+    .c-biografia{
+        .c-miembro{
+            text-align: center;
+        }
+        .c-miembro--sam{
+            .texto{
+                text-align: center;
+            }
+        }
+    } 
+
+}
+@media (max-width: 576px) {}
