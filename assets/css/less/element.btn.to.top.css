@@ -1,0 +1,11 @@
+.to-top {
+  display: inline-block;
+  position: fixed;
+}
+.to-top--visible {
+  visibility: visible;
+  opacity: 1;
+}
+.to-top-semivisible {
+  opacity: .5;
+}

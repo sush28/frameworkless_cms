@@ -1,21 +1,30 @@
 #MenuPrincipal{
     background-color: @color_black;
+    .navbar-toggler{
+        border-color: @color_white;
+    }
     .nav-item{
         font-family: 'Bison', Helvetica, sans-serif;
         font-size: 18px;
         .nav-link{
             color: @color_white;
+            &:hover{
+                color: @color_secundario;
+            }
         }
-        
     }
     .social{
         ul{
             li{
                 a{
-                    i{color: @color_white;}
+                    i{
+                        color: @color_white;
+                        &:hover{
+                            color: @color_secundario;
+                        }
+                    }
                 }
             }
-        }
-        
+        }   
     }
 }

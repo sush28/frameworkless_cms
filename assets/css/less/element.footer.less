@@ -1,0 +1,45 @@
+#Footer{
+    margin-top: 40px;
+    padding-top: 20px;
+    .container{
+        border-top: 1px solid @color_dark_grey;
+        .social{
+            padding-top: 20px;
+            ul{
+                li{
+                    a{
+                        i{
+                            font-size: 20px;
+                            color: @color_dark_grey;
+    
+                            &:hover{
+                                color: @color_secundario;
+                            }
+                        }
+                    }
+                }
+            }   
+        }
+
+        .legales{
+            li{
+                font-family: 'Bison', Helvetica, sans-serif;
+                a{
+                    color: @color_dark_grey;
+                    &:hover{
+                        color: @color_secundario;
+                        text-decoration: none;
+                    }
+                }
+                &:first-child{
+                    margin-right: 0;
+                }
+                &:first-child:after{
+                    content: "|";
+                    display: inline;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }   
+}

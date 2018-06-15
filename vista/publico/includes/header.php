@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light sticky-top" id="MenuPrincipal">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="MenuPrincipal">
   <div class="container">
     <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="../../assets/images/logo-nav.png" alt="Two Door Cinema Club" class="img-fluid"></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#MenuPrincipalResp" aria-controls="MenuPrincipalResp" aria-expanded="false" aria-label="Menú Principal">
@@ -28,8 +28,7 @@
           <a class="nav-link" href="blog.php">Blog</a>
         </li>
       </ul>
-    </div>
-    <div class="social">
+      <div class="social">
       <ul class="list-inline list-unstyled">
         <li class="list-inline-item social--spotify">
           <a href="https://open.spotify.com/artist/536BYVgOnRky0xjsPT96zl" target="_blank" aria-label="spotify">
@@ -52,6 +51,7 @@
           </a>
         </li>
       </ul>
+    </div>
     </div>
   </div>
 </nav>

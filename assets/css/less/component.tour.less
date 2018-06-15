@@ -1,8 +1,25 @@
 .c-tour{
-    .concierto{
-        .col-md-12{
-            .fecha, .arena, .ciudad, .disponibilidad{
+    .titulo{
+        font-family: 'Gotham Bold', Helvetica, sans-serif;
+        margin-bottom: 30px;
+    }
+    .conciertos{
+        .concierto{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid @color_grey;
+            .col-sm-6{
+                .fecha, .arena, .ciudad, .disponibilidad{
+                }
             }
-        }   
+    
+            &:hover{
+                background-color: @color_secundario;
+            }
+            &:last-child{
+                border-bottom: none; 
+            }
+            
+        }
     }
 }

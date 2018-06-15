@@ -24,6 +24,58 @@ p {
 }
 /* TOOLS */
 /* ELEMENTS */
+.to-top {
+  display: inline-block;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
+.to-top i {
+  font-size: 20px;
+  color: #aa5a29;
+}
+.to-top--visible {
+  visibility: visible;
+  opacity: 1;
+}
+.to-top-semivisible {
+  opacity: .5;
+}
+#Footer {
+  margin-top: 40px;
+  padding-top: 20px;
+}
+#Footer .container {
+  border-top: 1px solid #666666;
+}
+#Footer .container .social {
+  padding-top: 20px;
+}
+#Footer .container .social ul li a i {
+  font-size: 20px;
+  color: #666666;
+}
+#Footer .container .social ul li a i:hover {
+  color: #07b9e0;
+}
+#Footer .container .legales li {
+  font-family: 'Bison', Helvetica, sans-serif;
+}
+#Footer .container .legales li a {
+  color: #666666;
+}
+#Footer .container .legales li a:hover {
+  color: #07b9e0;
+  text-decoration: none;
+}
+#Footer .container .legales li:first-child {
+  margin-right: 0;
+}
+#Footer .container .legales li:first-child:after {
+  content: "|";
+  display: inline;
+  padding: 0 10px;
+}
 /* fluid 5 columns */
 .grid-sizer,
 .grid-item {
@@ -103,7 +155,7 @@ p {
 }
 .c-header {
   margin-bottom: 40px;
-  height: 300px;
+  height: 400px;
   background-position: center top !important;
   background-size: cover;
 }
@@ -112,6 +164,10 @@ p {
 }
 .c-header .row .col-12 .c-cabecera {
   text-align: center;
+  height: 90% !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 .c-header .row .col-12 .c-cabecera .titulo,
 .c-header .row .col-12 .c-cabecera .titulo-post {
@@ -134,7 +190,7 @@ p {
   height: 100%;
   top: -100%;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 1;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -165,6 +221,9 @@ p {
 #MenuPrincipal {
   background-color: #000000;
 }
+#MenuPrincipal .navbar-toggler {
+  border-color: #ffffff;
+}
 #MenuPrincipal .nav-item {
   font-family: 'Bison', Helvetica, sans-serif;
   font-size: 18px;
@@ -172,8 +231,14 @@ p {
 #MenuPrincipal .nav-item .nav-link {
   color: #ffffff;
 }
+#MenuPrincipal .nav-item .nav-link:hover {
+  color: #07b9e0;
+}
 #MenuPrincipal .social ul li a i {
   color: #ffffff;
+}
+#MenuPrincipal .social ul li a i:hover {
+  color: #07b9e0;
 }
 #MenuCategorias {
   background-color: #07b9e0;
@@ -182,4 +247,24 @@ p {
 }
 #MenuCategorias .navbar-nav .nav-item .nav-link {
   color: #ffffff;
+}
+.c-pidetour {
+  background-color: rgba(197, 103, 40, 0.8);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.c-tour .titulo {
+  font-family: 'Gotham Bold', Helvetica, sans-serif;
+  margin-bottom: 30px;
+}
+.c-tour .conciertos .concierto {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #bfbfbf;
+}
+.c-tour .conciertos .concierto:hover {
+  background-color: #07b9e0;
+}
+.c-tour .conciertos .concierto:last-child {
+  border-bottom: none;
 }
