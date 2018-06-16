@@ -49,6 +49,73 @@
         </div>
     </div>
 
+    <section class="container c-galeria">
+        <div class="row text-center text-lg-left">
+            <div class="col-lg-3 col-md-4 col-xs-6 c-galeria-item">
+                <div class="col-12 imagen">
+                    <img class="img-fluid" src="../../assets/images/zona-fan/fan4.jpg" alt="">
+                </div>
+                <div class="col-12">
+                    <div class="borrar">
+                        <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>     
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 c-galeria-item">
+                <div class="col-12 imagen">
+                    <img class="img-fluid" src="../../assets/images/zona-fan/fan2.jpg" alt="">
+                </div>
+                <div class="col-12">
+                    <div class="borrar">
+                        <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>     
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 c-galeria-item">
+                <div class="col-12 imagen">
+                    <img class="img-fluid" src="../../assets/images/zona-fan/fan3.jpg" alt="">
+                </div>
+                <div class="col-12">
+                    <div class="borrar">
+                        <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>     
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 c-galeria-item">
+                <div class="col-12 imagen">
+                    <img class="img-fluid" src="../../assets/images/zona-fan/fan1.jpg" alt="">
+                </div>
+                <div class="col-12">
+                    <div class="borrar">
+                        <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>     
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 c-galeria-item">
+                <div class="col-12 imagen">
+                    <img class="img-fluid" src="../../assets/images/zona-fan/fan4.jpg" alt="">
+                </div>
+                <div class="col-12">
+                    <div class="borrar">
+                        <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>     
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 c-galeria-item">
+                <div class="col-12 imagen">
+                    <img class="img-fluid" src="../../assets/images/zona-fan/fan4.jpg" alt="">
+                </div>
+                <div class="col-12">
+                    <div class="borrar">
+                        <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>     
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </section>
+
+
+
     <?php include 'includes/footer.php'; ?>
 </body>
 </html>

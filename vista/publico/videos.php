@@ -9,7 +9,7 @@
 
     <div class="container-fluid c-header c-header--videos align-items-center">
         <div class="row h-100">
-            <div class="col-12 h-100">
+            <div class="col-md-12 h-100 c-cabecera-wrapper">
                 <div class="c-cabecera justify-content-center h-100">
                     <h1 class="titulo text-center">Vídeos</h1>
                 </div>

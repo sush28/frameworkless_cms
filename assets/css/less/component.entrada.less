@@ -1,0 +1,58 @@
+.c-entrada{
+    padding-bottom: 30px;
+    .c-blog-contenido{
+        .datos-post{
+            padding-bottom: 30px;
+            .fecha, .autor {
+                display: inline;
+                font-size: 12px;
+                color: @color_dark_grey;
+            }
+            .autor {
+                a{
+                    color: @color_dark_grey;
+                    &:hover{
+                        color: @color_secundario;
+                    }
+                }
+            }
+        }
+        .contenido-post{  
+
+        }
+    }
+} 
+
+.c-entrada-comentarios{
+    .c-comentarios-wrapper{
+        border-top: 1px solid @color_grey;
+        .c-comentarios{
+            padding-top: 20px;
+            .titulo{
+                font-family: 'Bison', Helvetica, sans-serif;
+                margin-bottom: 20px;
+            }
+            .c-comentario{
+                .comentario{
+                    margin-bottom: 10px;
+                    .comentador{
+                        font-family: 'Gotham Medium', Helvetica, sans-serif;
+                        display: inline;
+                    }
+                    .fecha-hora{
+                        display: inline;
+                        font-size: 12px;
+                        color: @color_dark_grey;
+                    }
+                    .contenido-comentario{
+                        margin-bottom: 0;
+                    }
+                }     
+                .comentario-hijo{
+                    margin-left: 30px;
+                    border-left: 3px solid @color_marron_claro;
+                }
+            }
+        }     
+    } 
+}

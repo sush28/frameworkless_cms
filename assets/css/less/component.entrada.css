@@ -1,0 +1,7 @@
+.c-entrada .c-blog--contenido .datos-post {
+  display: inline;
+}
+.c-entrada .c-blog--contenido .datos-post .fecha,
+.c-entrada .c-blog--contenido .datos-post .autor {
+  font-size: 12px;
+}

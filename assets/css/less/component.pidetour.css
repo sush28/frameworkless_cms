@@ -1,5 +1,12 @@
 .c-pidetour {
-  background-color: rgba(197, 103, 40, 0.8);
   margin-top: 40px;
   margin-bottom: 40px;
+}
+.c-pidetour .c-pidetour-container {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+.c-pidetour .c-pidetour-container .lead {
+  font-family: 'Gotham Medium', Helvetica, sans-serif;
 }

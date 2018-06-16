@@ -41,6 +41,14 @@ form textarea:focus {
 form .form-control:focus {
   box-shadow: none;
 }
+.c-galeria .c-galeria-item {
+  border: 1px solid grey;
+  padding: 10px;
+}
+.c-galeria .c-galeria-item .borrar {
+  text-align: center;
+  background-color: #eaeaea;
+}
 .header-cms {
   margin: 20px;
   text-align: center;

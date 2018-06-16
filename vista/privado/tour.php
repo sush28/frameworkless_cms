@@ -61,54 +61,56 @@
 
     <!-- Listado --> 
     <div class="container c-tabla-cms c-tabla-cms--tour">
-        <div class="conciertos">
-            <table class="table table-bordered table-responsive">
-                <thead>
-                    <tr>
-                        <th scope="col">Fecha</th>
-                        <th scope="col">Localización</th>
-                        <th scope="col">Estadio</th>
-                        <th scope="col">Disponibilidad</th>
-                        <th scope="col">Punto de venta</th>
-                        <th scope="col">Opciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="concierto">
-                        <td>24/07/18</td>
-                        <td>Madrid</td>
-                        <td>Madrid Arena</td>
-                        <td>A la venta</td>
-                        <td>Enlace</td>
-                        <td>
-                            <a href="#" data-toggle="modal" data-target="#modificarConcierto"><i class="far fa-edit"></i> Editar </a>
-                            <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
-                        </td>
-                    </tr>
-                    <tr class="concierto">
-                        <td>24/07/18</td>
-                        <td>Bcn</td>
-                        <td>Millenium Stadium</td>
-                        <td>Vendidas</td>
-                        <td>Enlace</td>
-                        <td>
-                            <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
-                            <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
-                        </td>
-                    </tr>
-                    <tr class="concierto">
-                        <td>24/07/18</td>
-                        <td>Kentucky</td>
-                        <td>Palacio de vistalegre</td>
-                        <td>A la venta</td>
-                        <td>Enlace</td>
-                        <td>
-                            <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
-                            <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Localización</th>
+                            <th scope="col">Estadio</th>
+                            <th scope="col">Disponibilidad</th>
+                            <th scope="col">Punto de venta</th>
+                            <th scope="col">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="concierto">
+                            <td>24/07/18</td>
+                            <td>Madrid</td>
+                            <td>Madrid Arena</td>
+                            <td>A la venta</td>
+                            <td>Enlace</td>
+                            <td>
+                                <a href="#" data-toggle="modal" data-target="#modificarConcierto"><i class="far fa-edit"></i> Editar </a>
+                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                            </td>
+                        </tr>
+                        <tr class="concierto">
+                            <td>24/07/18</td>
+                            <td>Bcn</td>
+                            <td>Millenium Stadium</td>
+                            <td>Vendidas</td>
+                            <td>Enlace</td>
+                            <td>
+                                <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
+                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                            </td>
+                        </tr>
+                        <tr class="concierto">
+                            <td>24/07/18</td>
+                            <td>Kentucky</td>
+                            <td>Palacio de vistalegre</td>
+                            <td>A la venta</td>
+                            <td>Enlace</td>
+                            <td>
+                                <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
+                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 

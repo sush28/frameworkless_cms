@@ -4,8 +4,7 @@
 }
 @font-face {
   font-family: 'Gotham Bold';
-  src: url('../fonts/Gotham-Bold.otf');
-  src: url('../fonts/GothamBold.ttf') format('truetype');
+  src: url('../fonts/Gotham-Bold.otf'), url('../fonts/GothamBold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Gotham Medium';
