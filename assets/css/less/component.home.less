@@ -2,22 +2,103 @@
     body{
         background-size: cover;
         background: url("../images/inicio.jpg") no-repeat @color_black;
-        background-position: center top !important;
+        background-position: 50% -42px !important;
+        overflow: hidden;
     }
 }
 
 .c-inicio{
-    .c-inicio-texto{
-
-    }
-    .c-inicio-disco{      
-
+    position: relative;
+    height: 635px; 
+    margin-top: 0;
+    color: @color_white;
+    .c-inicio-row{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        .c-inicio-texto{
+            .decoracion{
+                .linea{
+                    .linea2{
+                        position: absolute;
+                        top: 70px;
+                        background-color: @color_white;
+                        width: 5px;
+                        height: 450px;
+                    }       
+                }
+            }
+            .contenido{
+                padding-top: 190px;
+                .venta{
+                    font-family: 'Gotham Black', Helvetica, sans-serif;
+                    font-size: 60px;
+                    line-height: 65px;
+                    text-transform: uppercase;
+                    margin-bottom: 45px;
+                }
+                .btn_compra{
+                    max-width: 200px;
+                    a{
+                        display: block;
+                        font-size: 11px;
+                        color: @color_white;
+                        border: 3px solid @color_white;
+                        padding: 9px 0 3px 0;
+                        width: auto;
+                        height: 100%;
+                        text-transform: uppercase;
+                        text-align: center;
+                        transition: all 0.5s;
+                        -webkit-transition: all 0.5s;
+                    }
+                    &:hover{
+                        a{
+                            text-decoration: none;
+                            letter-spacing: 1px;
+                        }
+                    }     
+                }
+            }
+        }
+        .c-inicio-disco{ 
+            .disco{
+                margin-bottom: 40px;
+                .imagen{
+                    margin-bottom: 15px;
+                    .portada{
+                        max-width: 455px;
+                        width: 90%;
+                        margin: auto;
+                        img{
+                            display: block;
+                            margin: auto;
+                            -webkit-box-shadow: 9px 9px 6px 2px rgba(0,0,0,0.3);
+                            -moz-box-shadow: 9px 9px 6px 2px rgba(0,0,0,0.3);
+                            box-shadow: 9px 9px 6px 2px rgba(0,0,0,0.3);
+                        }
+    
+                    }
+                }
+                .texto{
+                    font-family: 'Gotham Medium', Helvetica, sans-serif;
+                    font-size: 11px;
+                    text-align: center;
+                    p{
+                        margin-bottom: 4px;
+                    }
+    
+                }  
+            }    
+        }
     }
 }
 
 
 /* RESPONSIVE */
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+
+}
 @media (max-width: 992px) {}
 @media (max-width: 768px) {}
 @media (max-width: 576px) {}

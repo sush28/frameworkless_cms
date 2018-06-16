@@ -1,13 +1,58 @@
 .c-listado{
     .c-listado-elemento{
         padding: 10px;
-        border-bottom: 1px solid @color_border;
+        border-bottom: 1px solid @color_border; 
+        .modificar, .eliminar{
+            background-color: @color_gris;
+            border-radius: 4px;
+            padding: 3px;
+            a{
+                display: block;
+                text-align: center;
+                color: @color_texto;
 
-        
+            }
+            &:hover{
+                a{
+                    color: @color_white;
+                    text-decoration: none;
+                }
+            }
+        }
+        .modificar{         
+            margin-bottom: 4px;
+            a{
+                i{
+                    color: @color_modificar;
+                }
+            }
+            &:hover{
+                background-color: @color_modificar;
+            }
+        }
+        .eliminar{
+            a{
+                i{
+                    color: @color_borrar;
+                }
+            }
+            &:hover{
+                background-color: @color_borrar;
+            }
+        }      
     }
 
     .entrada{
         .titulo-post{
+            font-weight: bold;
+        }
+        .fecha-post{
+            color: @color_texto_gris;
+            font-size: 14px;
+        }
+    }
+    .usuario{
+        .nombre-user{
             font-weight: bold;
         }
     }

@@ -8,6 +8,10 @@
   src: url('../fonts/Gotham-Bold.otf'), url('../fonts/GothamBold.ttf') format('truetype');
 }
 @font-face {
+  font-family: 'Gotham Black';
+  src: url('../fonts/Gotham-Black.otf') format('opentype');
+}
+@font-face {
   font-family: 'Gotham Medium';
   src: url('../fonts/GothamMedium.ttf') format('truetype');
 }
@@ -309,7 +313,82 @@ p {
 .html-home body {
   background-size: cover;
   background: url("../images/inicio.jpg") no-repeat #000000;
-  background-position: center top !important;
+  background-position: 50% -42px !important;
+  overflow: hidden;
+}
+.c-inicio {
+  position: relative;
+  height: 635px;
+  margin-top: 0;
+  color: #ffffff;
+}
+.c-inicio .c-inicio-row {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.c-inicio .c-inicio-row .c-inicio-texto .decoracion .linea .linea2 {
+  position: absolute;
+  top: 70px;
+  background-color: #ffffff;
+  width: 5px;
+  height: 450px;
+}
+.c-inicio .c-inicio-row .c-inicio-texto .contenido {
+  padding-top: 190px;
+}
+.c-inicio .c-inicio-row .c-inicio-texto .contenido .venta {
+  font-family: 'Gotham Black', Helvetica, sans-serif;
+  font-size: 60px;
+  line-height: 65px;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+}
+.c-inicio .c-inicio-row .c-inicio-texto .contenido .btn_compra {
+  max-width: 200px;
+}
+.c-inicio .c-inicio-row .c-inicio-texto .contenido .btn_compra a {
+  display: block;
+  font-size: 11px;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  padding: 9px 0 3px 0;
+  width: auto;
+  height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.c-inicio .c-inicio-row .c-inicio-texto .contenido .btn_compra:hover a {
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.c-inicio .c-inicio-row .c-inicio-disco .disco {
+  margin-bottom: 40px;
+}
+.c-inicio .c-inicio-row .c-inicio-disco .disco .imagen {
+  margin-bottom: 15px;
+}
+.c-inicio .c-inicio-row .c-inicio-disco .disco .imagen .portada {
+  max-width: 455px;
+  width: 90%;
+  margin: auto;
+}
+.c-inicio .c-inicio-row .c-inicio-disco .disco .imagen .portada img {
+  display: block;
+  margin: auto;
+  -webkit-box-shadow: 9px 9px 6px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 9px 9px 6px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 9px 9px 6px 2px rgba(0, 0, 0, 0.3);
+}
+.c-inicio .c-inicio-row .c-inicio-disco .disco .texto {
+  font-family: 'Gotham Medium', Helvetica, sans-serif;
+  font-size: 11px;
+  text-align: center;
+}
+.c-inicio .c-inicio-row .c-inicio-disco .disco .texto p {
+  margin-bottom: 4px;
 }
 /* RESPONSIVE */
 .c-header {

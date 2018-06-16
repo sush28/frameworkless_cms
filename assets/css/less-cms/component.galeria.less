@@ -1,11 +1,25 @@
 .c-galeria{
     .c-galeria-item{
-        border: 1px solid grey;
+        border: 1px solid @color_border;
         padding: 10px;
         .imagen{}
         .borrar{
             text-align: center;
             background-color: @color_primario;
+            a{
+                display: block;
+                color: @color_texto; 
+            }
+            &:hover{
+                background-color: @color_borrar;
+                a{
+                    color: @color_white;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+                
+            }
         }
     }
 }

@@ -8,8 +8,8 @@
         <div class="collapse navbar-collapse" id="MenuCMSResp">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="DropdownBlog" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+                <div class="dropdown-menu" aria-labelledby="DropdownBlog">
                     <a class="dropdown-item" href="entradas.php">Entradas</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="comentarios.php">Comentarios</a>
@@ -26,10 +26,15 @@
             <li class="nav-item">
               <a class="nav-link" href="galeria.php">Galería</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="galeria.php">Galería</a>
-            </li>
           </ul>
+        </div>
+        <div class="dropdown">
+          <button type="button" class="dropdown-toggle" id="DropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="usuario"><i class="fas fa-user"></i></button>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownUser">
+              <p class="dropdown-header">Nombre de usuario</p>
+              <a class="dropdown-item" href="usuarios.php">Gestión de usuarios</a>
+              <a class="dropdown-item" href="logout.php"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Salir</a>
+          </div>
         </div>
       </div>
     </nav>

@@ -36,7 +36,7 @@
                                         </div>  
                                         <div class="form-group col-md-4">
                                             <label for="disponibilidad">Disponibilidad</label>
-                                            <select class="form-control" name="disponibilidad">
+                                            <select class="form-control" name="disponibilidad" id="disponibilidad">
                                                 <option value="disponibles">A la venta</option>
                                                 <option value="vendidas">Vendidas</option>
                                                 <option value="disponible">Próximamente</option>
@@ -47,7 +47,7 @@
                                         <label for="altimagen">Enlace del punto de venta</label>
                                         <input class="form-control" type="text" name="altimagen" id="altimagen"/>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group text-right">
                                         <button class="btn btn-cms" type="submit" name="submit">Añadir fecha</button>
                                     </div>
                                 </form>
@@ -63,53 +63,55 @@
     <div class="container c-tabla-cms c-tabla-cms--tour">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <table class="table table-responsive">
-                    <thead>
-                        <tr>
-                            <th scope="col">Fecha</th>
-                            <th scope="col">Localización</th>
-                            <th scope="col">Estadio</th>
-                            <th scope="col">Disponibilidad</th>
-                            <th scope="col">Punto de venta</th>
-                            <th scope="col">Opciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="concierto">
-                            <td>24/07/18</td>
-                            <td>Madrid</td>
-                            <td>Madrid Arena</td>
-                            <td>A la venta</td>
-                            <td>Enlace</td>
-                            <td>
-                                <a href="#" data-toggle="modal" data-target="#modificarConcierto"><i class="far fa-edit"></i> Editar </a>
-                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
-                            </td>
-                        </tr>
-                        <tr class="concierto">
-                            <td>24/07/18</td>
-                            <td>Bcn</td>
-                            <td>Millenium Stadium</td>
-                            <td>Vendidas</td>
-                            <td>Enlace</td>
-                            <td>
-                                <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
-                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
-                            </td>
-                        </tr>
-                        <tr class="concierto">
-                            <td>24/07/18</td>
-                            <td>Kentucky</td>
-                            <td>Palacio de vistalegre</td>
-                            <td>A la venta</td>
-                            <td>Enlace</td>
-                            <td>
-                                <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
-                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Localización</th>
+                                <th scope="col">Estadio</th>
+                                <th scope="col">Disponibilidad</th>
+                                <th scope="col">Punto de venta</th>
+                                <th scope="col">Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="concierto">
+                                <td>24/07/18</td>
+                                <td>Madrid</td>
+                                <td>Madrid Arena</td>
+                                <td>A la venta</td>
+                                <td>Enlace</td>
+                                <td>
+                                    <a href="#" data-toggle="modal" data-target="#modificarConcierto"><i class="far fa-edit"></i> Editar </a>
+                                    <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                                </td>
+                            </tr>
+                            <tr class="concierto">
+                                <td>24/07/18</td>
+                                <td>Bcn</td>
+                                <td>Millenium Stadium</td>
+                                <td>Vendidas</td>
+                                <td>Enlace</td>
+                                <td>
+                                    <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
+                                    <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                                </td>
+                            </tr>
+                            <tr class="concierto">
+                                <td>24/07/18</td>
+                                <td>Kentucky</td>
+                                <td>Palacio de vistalegre</td>
+                                <td>A la venta</td>
+                                <td>Enlace</td>
+                                <td>
+                                    <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
+                                    <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -120,7 +122,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modificarConciertoLabel">Modificar concierto</h5>
+                <h2 class="modal-title" id="modificarConciertoLabel">Modificar concierto</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -129,26 +131,25 @@
                 <div id="form-container" class="container">
                     <form action="crear-post.php" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="categoria">País</label>
-                            <select class="form-control" name="categoria">
-                                <option value=""></option>
-                            </select>
+                            <label for="modificar-localizacion">Lugar</label>
+                            <input class="form-control" type="text" name="localizacion" id="modificar-localizacion" required>
+                            <small class="text-muted">Inserta tanto la ciudad como el país (Ejemplo: Madrid, España).</small>
                         </div>
                         <div class="form-group">
-                            <label for="ciudad">Ciudad</label>
-                            <input class="form-control" type="text" name="ciudad" id="ciudad" required>
-                        </div>
+                            <label for="modificar-fecha">Fecha</label>
+                            <input class="form-control" type="date" name="fecha" id="modificar-fecha" required>
+                        </div>  
                         <div class="form-group">
-                            <label for="disponibilidad">Disponibilidad</label>
-                            <select class="form-control" name="disponibilidad">
+                            <label for="modificar-disponibilidad">Disponibilidad</label>
+                            <select class="form-control" name="disponibilidad" id="modificar-disponibilidad">
                                 <option value="disponibles">A la venta</option>
                                 <option value="vendidas">Vendidas</option>
                                 <option value="disponible">Próximamente</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="altimagen">Enlace con el punto de venta</label>
-                            <input class="form-control" type="text" name="altimagen" id="altimagen"/>
+                            <label for="modificar-altimagen">Enlace con el punto de venta</label>
+                            <input class="form-control" type="text" name="altimagen" id="modificar-altimagen"/>
                         </div>
                         <div class="form-group">
                             <button class="btn btn-primary btn-enviar" type="submit" name="submit">Añadir fecha</button>

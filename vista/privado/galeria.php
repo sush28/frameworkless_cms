@@ -35,8 +35,8 @@
                                                 <input class="form-control" type="text" name="altimagen" id="altimagen"/>
                                                 <small>Pequeña descripción que ayudará a las personas que no puedan ver la imagen o usen lector de pantalla.</small>
                                             </div>
-                                            <div class="form-group">
-                                                <button class="btn btn-cms" type="submit" name="submit">Crear</button>
+                                            <div class="form-group text-right">
+                                                <button class="btn btn-cms" type="submit" name="submit">Añadir imagen</button>
                                             </div>
                                         </div>
                                     </div>
