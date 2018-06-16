@@ -37,12 +37,12 @@
   .c-tour .conciertos .concierto .concierto-fila {
     display: table;
   }
-  .c-tour .conciertos .concierto .concierto-fila .fecha,
-  .c-tour .conciertos .concierto .concierto-fila .arena {
-    display: inline-block;
+  .c-tour .conciertos .concierto .concierto-fila .fecha {
+    display: table-cell;
   }
+  .c-tour .conciertos .concierto .concierto-fila .arena,
   .c-tour .conciertos .concierto .concierto-fila .ciudad,
   .c-tour .conciertos .concierto .concierto-fila .disponibilidad {
-    margin-bottom: 0;
+    display: block;
   }
 }

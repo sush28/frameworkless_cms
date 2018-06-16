@@ -9,6 +9,35 @@
     }
 }
 
+.c-spotify{
+    iframe{
+        display: block;
+        margin: 20px auto;
+    }
+    .titular{
+        font-family: 'Gotham Black', Helvetica, sans-serif;
+        font-size: 79px;
+        text-align: left;
+        padding-left: 20px;
+        border-left: 9px solid @color_marron_claro;
+        span{
+            display: block;
+        }
+        .a{
+            color: rgba(0, 0, 0, 1);
+        }
+        .b{
+            color: rgba(0, 0, 0, 0.8);
+        }
+        .c{
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .d{
+            color: rgba(0, 0, 0, 0.35);
+        }
+    }
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 1200px) {}
@@ -29,6 +58,18 @@
             height: 287px;
         }
     }
+
+    .c-spotify{
+        iframe{
+            display: block;
+            margin: 20px auto;
+        }
+        .titular{
+            text-align: center;
+            border-top: 9px solid @color_marron_claro;
+            border-left: 0;
+        }
+    }
 }
 @media (max-width: 576px) {
     .c-video{
@@ -36,6 +77,12 @@
             max-width: 560px;
             height: 315px;
             min-height: 0;
+        }
+    }
+
+    .c-spotify{
+        .titular{
+            font-size: 72px;
         }
     }
 }

@@ -8,10 +8,9 @@
     <?php include 'includes/header.php'; ?>
 
     <header class="container-fluid c-header c-header--entrada align-items-center">
-        <div class="row h-100">
-            <div class="col-md-12 h-100 c-cabecera-wrapper">
-                <div class="c-cabecera justify-content-center h-100">
-                    <p class="categoria">Categoria</p>
+        <div class="row h-100 justify-content-center">
+            <div class="col-md-6 h-100 c-cabecera-wrapper">
+                <div class="c-cabecera">
                     <h1 class="titulo">Título entrada</h1>
                 </div>
             </div>
@@ -48,6 +47,7 @@
                         <div class="datos-post">
                             <div class="fecha"><span>23 mayo 2012</span></div>
                             <div class="autor"><span>· Por</span> <a href="">Laura Vicente</a></div>
+                            <div class="categoria"><span>Categoria</span></div>
                         </div>
                         <div class="contenido-post">
                             <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. o sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos.</p>

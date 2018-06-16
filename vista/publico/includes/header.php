@@ -13,16 +13,16 @@
           <a class="nav-link" href="biografia.php">Biografía</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="galeria.php">Galería</a>
+          <a class="nav-link" href="musica.php">Música</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="zona-fan.php">Zona fan</a>
+          <a class="nav-link" href="galeria.php">Galería</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="tour.php">Tour</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="videos.php">Vídeos</a>
+          <a class="nav-link" href="zona-fan.php">Zona fan</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="blog.php">Blog</a>

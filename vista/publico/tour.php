@@ -30,7 +30,7 @@
                         <p class="fecha">20/05/18</p>
                         <p class="arena">Wizink Center</p>
                         <p class="ciudad">Madrid, España</p>
-                        <p class="disponibilidad text-right">Vendido</p>
+                        <p class="disponibilidad">Vendido</p>
                     </div>
                 </div>
                 <div class="row concierto">
@@ -38,7 +38,7 @@
                         <p class="fecha">20/05/18</p>
                         <p class="arena">Wizink Center</p>
                         <p class="ciudad">Madrid, España</p>
-                        <p class="disponibilidad text-right">Vendido</p>
+                        <p class="disponibilidad">Vendido</p>
                     </div>
                 </div>
                 <div class="row concierto">
@@ -46,7 +46,7 @@
                         <p class="fecha">20/05/18</p>
                         <p class="arena">Wizink Center</p>
                         <p class="ciudad">Madrid, España</p>
-                        <p class="disponibilidad text-right">Vendido</p>
+                        <p class="disponibilidad">Vendido</p>
                     </div>
                 </div>
                 <div class="row concierto">
@@ -54,7 +54,7 @@
                         <p class="fecha">20/05/18</p>
                         <p class="arena">Wizink Center</p>
                         <p class="ciudad">Madrid, España</p>
-                        <p class="disponibilidad text-right">Vendido</p>
+                        <p class="disponibilidad">Vendido</p>
                     </div>
                 </div>
                 <div class="row concierto">
@@ -62,7 +62,7 @@
                         <p class="fecha">20/05/18</p>
                         <p class="arena">Wizink Center</p>
                         <p class="ciudad">Madrid, España</p>
-                        <p class="disponibilidad text-right">Vendido</p>
+                        <p class="disponibilidad">Vendido</p>
                     </div>
                 </div>
             </div>            
