@@ -14,9 +14,35 @@
 .c-tour .conciertos .concierto .col-sm-6 .disponibilidad {
   margin-bottom: 0;
 }
+.c-tour .conciertos .concierto .concierto-fila {
+  display: table;
+}
+.c-tour .conciertos .concierto .concierto-fila p {
+  display: table-cell;
+}
 .c-tour .conciertos .concierto:hover {
   background-color: rgba(170, 90, 41, 0.1);
 }
+.c-tour .conciertos .concierto:hover .fecha,
+.c-tour .conciertos .concierto:hover .arena,
+.c-tour .conciertos .concierto:hover .ciudad,
+.c-tour .conciertos .concierto:hover .disponibilidad {
+  font-family: 'Gotham Medium', Helvetica, sans-serif;
+}
 .c-tour .conciertos .concierto:last-child {
   border-bottom: none;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .c-tour .conciertos .concierto .concierto-fila {
+    display: table;
+  }
+  .c-tour .conciertos .concierto .concierto-fila .fecha,
+  .c-tour .conciertos .concierto .concierto-fila .arena {
+    display: inline-block;
+  }
+  .c-tour .conciertos .concierto .concierto-fila .ciudad,
+  .c-tour .conciertos .concierto .concierto-fila .disponibilidad {
+    margin-bottom: 0;
+  }
 }

@@ -25,6 +25,18 @@ body {
 p {
   font-family: 'Gotham Book', Helvetica, sans-serif;
 }
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #333333;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #333333;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #333333;
+}
 /* TOOLS */
 /* ELEMENTS */
 .btn-basico {
@@ -218,6 +230,11 @@ p {
   }
   .c-blog .c-blog-post .c-blog-contenido .titulo p {
     margin-bottom: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .c-blog .c-blog-post .c-blog-contenido {
+    padding-top: 10px;
   }
 }
 .c-desplegable .btn-desplegable {
@@ -518,8 +535,8 @@ p {
   margin-bottom: 40px;
 }
 .c-pidetour .c-pidetour-container {
-  border-top: 3px solid #aa5a29;
-  border-bottom: 3px solid #aa5a29;
+  border-top: 3px solid rgba(170, 90, 41, 0.3);
+  border-bottom: 3px solid rgba(170, 90, 41, 0.3);
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -543,9 +560,65 @@ p {
 .c-tour .conciertos .concierto .col-sm-6 .disponibilidad {
   margin-bottom: 0;
 }
+.c-tour .conciertos .concierto .concierto-fila {
+  display: table;
+}
+.c-tour .conciertos .concierto .concierto-fila p {
+  display: table-cell;
+}
 .c-tour .conciertos .concierto:hover {
   background-color: rgba(170, 90, 41, 0.1);
 }
+.c-tour .conciertos .concierto:hover .fecha,
+.c-tour .conciertos .concierto:hover .arena,
+.c-tour .conciertos .concierto:hover .ciudad,
+.c-tour .conciertos .concierto:hover .disponibilidad {
+  font-family: 'Gotham Medium', Helvetica, sans-serif;
+}
 .c-tour .conciertos .concierto:last-child {
   border-bottom: none;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .c-tour .conciertos .concierto .concierto-fila {
+    display: table;
+  }
+  .c-tour .conciertos .concierto .concierto-fila .fecha,
+  .c-tour .conciertos .concierto .concierto-fila .arena {
+    display: inline-block;
+  }
+  .c-tour .conciertos .concierto .concierto-fila .ciudad,
+  .c-tour .conciertos .concierto .concierto-fila .disponibilidad {
+    margin-bottom: 0;
+  }
+}
+.c-video {
+  margin-bottom: 60px;
+}
+.c-video .video-1 {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+  min-height: 450px;
+}
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .c-video .video-1 {
+    max-width: 560px;
+    height: 315px;
+    min-height: 0;
+  }
+}
+@media (max-width: 768px) {
+  .c-video .video-1 {
+    height: 287px;
+  }
+}
+@media (max-width: 576px) {
+  .c-video .video-1 {
+    max-width: 560px;
+    height: 315px;
+    min-height: 0;
+  }
 }

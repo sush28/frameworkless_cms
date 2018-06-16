@@ -25,59 +25,43 @@
         </div>
         <div class="row conciertos justify-content-center">
             <div class="col-md-12">
-                <div class="row concierto align-items-center">
-                    <div class="col-sm-6 col-md-3 align-items-center">
+                <div class="row concierto">
+                    <div class="col-sm-12 align-items-center concierto-fila">
                         <p class="fecha">20/05/18</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
                         <p class="arena">Wizink Center</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
                         <p class="ciudad">Madrid, España</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
                         <p class="disponibilidad text-right">Vendido</p>
                     </div>
                 </div>
-                <div class="row concierto align-items-center">
-                    <div class="col-sm-6 col-md-3 align-items-center">
+                <div class="row concierto">
+                    <div class="col-sm-12 align-items-center concierto-fila">
                         <p class="fecha">20/05/18</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
                         <p class="arena">Wizink Center</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
                         <p class="ciudad">Madrid, España</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
                         <p class="disponibilidad text-right">Vendido</p>
                     </div>
                 </div>
-                <div class="row concierto align-items-center">
-                    <div class="col-sm-6 col-md-3 align-items-center">
+                <div class="row concierto">
+                    <div class="col-sm-12 align-items-center concierto-fila">
                         <p class="fecha">20/05/18</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
                         <p class="arena">Wizink Center</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
                         <p class="ciudad">Madrid, España</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
                         <p class="disponibilidad text-right">Vendido</p>
                     </div>
                 </div>
-                <div class="row concierto align-items-center">
-                    <div class="col-sm-6 col-md-3 align-items-center">
+                <div class="row concierto">
+                    <div class="col-sm-12 align-items-center concierto-fila">
                         <p class="fecha">20/05/18</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
                         <p class="arena">Wizink Center</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
                         <p class="ciudad">Madrid, España</p>
+                        <p class="disponibilidad text-right">Vendido</p>
                     </div>
-                    <div class="col-sm-6 col-md-3">
+                </div>
+                <div class="row concierto">
+                    <div class="col-sm-12 align-items-center concierto-fila">
+                        <p class="fecha">20/05/18</p>
+                        <p class="arena">Wizink Center</p>
+                        <p class="ciudad">Madrid, España</p>
                         <p class="disponibilidad text-right">Vendido</p>
                     </div>
                 </div>

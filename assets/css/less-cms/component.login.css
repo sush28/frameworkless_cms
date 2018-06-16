@@ -1,0 +1,21 @@
+.c-login header {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#efefef+0,dcdede+22,d3d5d5+33,cfd1d1+50,cacccc+84,adb1b0+95,8e8e8e+100 */
+  background: #efefef;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #efefef 0%, #dcdede 22%, #d3d5d5 33%, #cfd1d1 50%, #cacccc 84%, #adb1b0 95%, #8e8e8e 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #efefef 0%, #dcdede 22%, #d3d5d5 33%, #cfd1d1 50%, #cacccc 84%, #adb1b0 95%, #8e8e8e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #efefef 0%, #dcdede 22%, #d3d5d5 33%, #cfd1d1 50%, #cacccc 84%, #adb1b0 95%, #8e8e8e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#8e8e8e', GradientType=0);
+  /* IE6-9 */
+}
+.c-login .formulario {
+  background-color: #ffffff;
+  padding: 20px;
+  display: block;
+  -webkit-box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.5);
+}

@@ -5,7 +5,6 @@ include_once 'concierto.php';
 
 class ModeloConcierto{
 
-    public $con = new Conexion();
   
     public function obtenerPosts(){
 
@@ -23,16 +22,16 @@ class ModeloConcierto{
         return $conciertos;
     }
 
-    function insertarConcierto($fecha, $arena, $ciudad, $disponible, $puntoventa) {
+    function insertarConcierto($fecha, $arena, $ciudad, $disponibilidad, $puntoventa) {
         $conciertos = array();
         $sql = sprintf(
-            "INSERT INTO `concierto` (`id`, `fecha`, `arena`, `ciudad`, `disponible`, `puntoventa`) VALUES (%s, %s, '%s', '%s', '%s', '%s')",
+            "INSERT INTO `concierto` (`id`, `fecha`, `arena`, `ciudad`, `disponibilidad`, `puntoventa`) VALUES (%s, %s, '%s', '%s', '%s', '%s')",
             "NULL",
             mysqli::real_escape_string ($fecha),
             mysqli::real_escape_string ($arena),
             mysqli::real_escape_string ($ciudad),
-            mysqli::real_escape_string ($disponible),
-            mysqli::real_escape_string ($puntoventa),
+            mysqli::real_escape_string ($disponibilidad),
+            mysqli::real_escape_string ($puntoventa)
         );
 
         $resul = mysqli_query($con, $sql) or die("No se han podido obtener los conciertos.");
@@ -42,18 +41,43 @@ class ModeloConcierto{
         }
         return $conciertos;
     }
-
-    function getEscuelas() {
-        $escuelas = array();
-        $textoIns = "select id_escu from escuelas;";
-
-        $resul = mysqli_query($this->mysqli, $textoIns) or die("No se han podido consultar los ID de escuela.");
-
-        while ($row = mysqli_fetch_array($resul, MYSQLI_ASSOC)) {
-            array_push($escuelas, $row['id_escu']);
-        }
-        return $escuelas;
-    }
+    
 }
 
+/* CONSULTAS */
+
+/* CREATE */
+$sql = sprintf(
+    "INSERT INTO `concierto` (`id`, `fecha`, `arena`, `ciudad`, `disponibilidad`, `puntoventa`) VALUES (%s, %s, `%s`, `%s`, `%s`, `%s`)",
+    "NULL",
+    mysqli::real_escape_string ($fecha),
+    mysqli::real_escape_string ($arena),
+    mysqli::real_escape_string ($ciudad),
+    mysqli::real_escape_string ($disponibilidad),
+    mysqli::real_escape_string ($puntoventa)
+);
+
+/* READ */
+$sql = "SELECT * FROM `concierto` ORDER BY `fecha` ASC";
+
+/* UPDATE */
+$sql = sprintf(
+    "UPDATE `concierto` SET `id`=%s, `fecha`=%s, `arena`=`%s`, `ciudad`=`%s`, `disponibilidad`=%s , `puntoventa`=%s  WHERE id=%s",
+    "NULL",
+    mysqli::real_escape_string ($fecha),
+    mysqli::real_escape_string ($arena),
+    mysqli::real_escape_string ($ciudad),
+    mysqli::real_escape_string ($disponibilidad),
+    mysqli::real_escape_string ($puntoventa)
+);
+
+/* DELETE */
+$sql = sprintf(
+    "DELETE FROM `concierto` WHERE id=%s",
+    mysqli::real_escape_string ($id)
+);
+
+
+
 ?>
+

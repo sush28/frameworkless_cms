@@ -6,7 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="MenuPrincipalResp">
       <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="index.php">Inicio</a>
         </li>
         <li class="nav-item">

@@ -7,7 +7,7 @@
 <body>
     <?php include 'includes/header.php'; ?>
 
-    <div class="container-fluid c-header c-header--zona-fan align-items-center">
+    <header class="container-fluid c-header c-header--zona-fan align-items-center">
         <div class="row h-100">
             <div class="col-12 h-100 c-cabecera-wrapper">
                 <div class="c-cabecera justify-content-center h-100">
@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
     <div class="container">
         <div class="c-desplegable">
@@ -75,75 +75,75 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container c-zonafan">
         <div class="row">
             <div class="col-12">
                 <div class="grid">
                     <div class="grid-sizer"></div>
                     <div class="grid-item">
+                        <div class="card fan-imagen"></div>
                         <div class="image-wrapper">
-                            <a href="../../assets/images/zona-fan/fan1.jpg" data-lightbox="zona-fan">
+                            <a href="../../assets/images/zona-fan/fan1.jpg" data-fancybox="zona-fan">
                                 <img class="img-fluid" src="../../assets/images/zona-fan/fan1.jpg" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="image-wrapper">
-                            <a href="../../assets/images/zona-fan/fan2.jpg" data-lightbox="zona-fan">
+                            <a href="../../assets/images/zona-fan/fan2.jpg" data-fancybox="zona-fan">
                                 <img class="img-fluid" src="../../assets/images/zona-fan/fan2.jpg" alt="">
                             </a>                        
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="image-wrapper">
-                            <a href="../../assets/images/zona-fan/fan3.jpg" data-lightbox="zona-fan">
+                            <a href="../../assets/images/zona-fan/fan3.jpg" data-fancybox="zona-fan">
                                 <img class="img-fluid" src="../../assets/images/zona-fan/fan3.jpg" alt="">
                             </a>                        
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="image-wrapper">
-                            <a href="../../assets/images/zona-fan/fan4.jpg" data-lightbox="zona-fan">
+                            <a href="../../assets/images/zona-fan/fan4.jpg" data-fancybox="zona-fan">
                                 <img class="img-fluid" src="../../assets/images/zona-fan/fan4.jpg" alt="">
                             </a>                        
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="image-wrapper">
-                            <a href="../../assets/images/zona-fan/fan1.jpg" data-lightbox="zona-fan">
+                            <a href="../../assets/images/zona-fan/fan1.jpg" data-fancybox="zona-fan">
                                 <img class="img-fluid" src="../../assets/images/zona-fan/fan1.jpg" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="image-wrapper">
-                            <a href="../../assets/images/zona-fan/fan2.jpg" data-lightbox="zona-fan">
+                            <a href="../../assets/images/zona-fan/fan2.jpg" data-fancybox="zona-fan">
                                 <img class="img-fluid" src="../../assets/images/zona-fan/fan2.jpg" alt="">
                             </a>                        
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="image-wrapper">
-                            <a href="../../assets/images/zona-fan/fan3.jpg" data-lightbox="zona-fan">
+                            <a href="../../assets/images/zona-fan/fan3.jpg" data-fancybox="zona-fan">
                                 <img class="img-fluid" src="../../assets/images/zona-fan/fan3.jpg" alt="">
                             </a>                        
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="image-wrapper">
-                            <a href="../../assets/images/zona-fan/fan4.jpg" data-lightbox="zona-fan">
+                            <a href="../../assets/images/zona-fan/fan4.jpg" data-fancybox="zona-fan">
                                 <img class="img-fluid" src="../../assets/images/zona-fan/fan4.jpg" alt="">
-                            </a>                        
+                            </a>
                         </div>
                     </div>
                     <div class="grid-item">
                         <div class="image-wrapper">
-                            <a href=".texto" data-lightbox="zona-fan">
+                            <a href=".texto" data-fancybox="zona-fan">
                                 <p class="texto">Hola me gustan mucho las patatas fritas y las aceitunas</p>
                             </a>                        
                         </div>
                     </div>
-                    
                     <div class="grid-item grid-item--width2"></div>
                 </div>
             </div> 

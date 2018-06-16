@@ -7,7 +7,7 @@
 <body>
     <?php include 'includes/header.php'; ?>
 
-    <div class="container-fluid c-header c-header--videos align-items-center">
+    <header class="container-fluid c-header c-header--videos align-items-center">
         <div class="row h-100">
             <div class="col-md-12 h-100 c-cabecera-wrapper">
                 <div class="c-cabecera justify-content-center h-100">
@@ -15,7 +15,16 @@
                 </div>
             </div>
         </div>
+    </header>
+
+    <div class="container c-video">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <iframe class="video-1" width="560" height="315" src="https://www.youtube.com/embed/sKyK1Mme9Sc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>            
+            </div>
+        </div>
     </div>
+
 
     <div class="container">
         <div class="row">

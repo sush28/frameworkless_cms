@@ -14,9 +14,18 @@
                     margin-bottom: 0;
                 }
             }
+            .concierto-fila{
+                display: table;
+                p{
+                    display: table-cell;
+                }
+            }
 
             &:hover{
                 background-color: rgba(170, 90, 41, 0.1);
+                .fecha, .arena, .ciudad, .disponibilidad{
+                    font-family: 'Gotham Medium', Helvetica, sans-serif; 
+                }
             }
             &:last-child{
                 border-bottom: none; 
@@ -24,4 +33,32 @@
             
         }
     }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {}
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+
+    .c-tour{
+        .conciertos{
+            .concierto{
+                .concierto-fila{
+                    display: table;
+                    .fecha, .arena{
+                        display: inline-block
+                    }
+                    .ciudad, .disponibilidad{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+
 }

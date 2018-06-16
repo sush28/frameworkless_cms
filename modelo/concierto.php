@@ -19,7 +19,6 @@ class Concierto {
         $this->disponibilidad = $disponibilidad;
         $this->puntoventa = $puntoventa;   
     }
-
 }
 
 ?>

@@ -3,10 +3,12 @@
   margin-bottom: 40px;
 }
 .c-pidetour .c-pidetour-container {
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-  -moz-box-shadow: 0 10px 6px -6px #777;
-  box-shadow: 0 10px 6px -6px #777;
+  border-top: 3px solid rgba(170, 90, 41, 0.3);
+  border-bottom: 3px solid rgba(170, 90, 41, 0.3);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .c-pidetour .c-pidetour-container .lead {
   font-family: 'Gotham Medium', Helvetica, sans-serif;
+  font-size: 25px;
 }

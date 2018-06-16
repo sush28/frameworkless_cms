@@ -1,13 +1,12 @@
 <?php
 
-include 'modelo/ModeloBlog.php';
+include 'modelo/ModeloConcierto.php';
 
-/**
- * Class Blog
- */
-class ControladorBlog {
 
-    // @todo Este controlador pone de acuerdo modelos y vistas... coge datos de los modelos y los muestra en las vistas...
+/* Class Tour */
+class ControladorGaleria {
+
+
 
     public function listado(){
         // @todo coger datos desde el modelo y guardarlos en un array (para pasarlo a la vista)
@@ -17,18 +16,11 @@ class ControladorBlog {
         // Este es un array guarrero...
         $posts = $blog->obtenerPosts();
 
-        // @todo una vista...
-        // La vista esta en: /vista/privado/Blog/listado.php
-
-        include 'vista/privado/Blog/entradas.php';
+        include 'vista/publico/tour.php';
         die();
     }
 
     public function crear(){
-
-    }
-
-    public function modificar($id){
 
     }
 

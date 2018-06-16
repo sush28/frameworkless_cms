@@ -110,4 +110,18 @@ $(document).ready(function(){
     })();
 
 
+    /* FANCYBOX PARA ZONA FAN */
+    $('[data-fancybox="zona-fan"]').fancybox({
+        buttons : [
+            'share',
+            'thumbs',
+            'close'
+          ]
+    });
+
+
+    /* SLICK SLIDER - MENU CATEGORIAS */
+  
+    
+
 });
