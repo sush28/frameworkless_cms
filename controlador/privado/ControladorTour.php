@@ -5,7 +5,7 @@ include_once 'modelo/utilities.php';
 include_once 'modelo/concierto.php';
 
 
-class ControladorTour { 
+class ControladorTour {   
 
     private $modeloConcierto;
 
@@ -36,7 +36,33 @@ class ControladorTour {
         $this->mostrarConciertos();
     }
 
-    public function modificar($id){
+    public function obtenerConciertoComoJSON(){
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+        } else {
+            die('Operación no permitida, falta el ID del concierto a modificar.');
+        }
+
+        $concierto = $this->modeloConcierto->obtenerConcierto($id);
+
+        // Devuelve JSON para jquery
+        header('Content-Type: application/json');
+        print_r(json_encode($concierto)); die;
+    }
+
+    public function modificar(){
+        $id = $_POST['id-concierto'];
+        $fecha = $_POST['modificar-fecha'];
+        $arena = $_POST['modificar-arena'];
+        $localizacion = $_POST['modificar-localizacion'];
+        $disponibilidad = $_POST['modificar-disponibilidad'];
+        $puntoventa = $_POST['modificar-puntoventa'];
+
+        $concierto = new Concierto($fecha, $arena, $localizacion, $disponibilidad, $puntoventa);
+        $concierto->id = $id;
+        $this->modeloConcierto->modificar($concierto);
+
+        $this->mostrarConciertos();
 
     }
 

@@ -37,6 +37,17 @@ class ModeloEntrada{
         return $entradas;
     } 
 
+    public function obtenerEntrada($id) {
+        $sql = sprintf(
+            "SELECT * FROM `entrada` WHERE id=%s",
+            mysqli_real_escape_string($this->conexion->getConexion(), $id)
+        );
+
+        $resultado = mysqli_query($this->conexion->getConexion(), $sql) or die("No se ha podido obtener la entrada.");
+
+        return mysqli_fetch_assoc($resultado);
+    }
+
     public function guardar($entrada) {
         $sql = sprintf(
             "INSERT INTO `entrada` (`id`, `titulo`, `contenido`, `id_usuario`, `imagen`, `altimagen`, `fecha`, `publico`, `slug`, `id_categoria`) 
@@ -58,17 +69,6 @@ class ModeloEntrada{
         // or die("No se han podido insertar la entrada.");
 
         return $resul;
-    }
-
-    public function obtenerEntrada($id) {
-        $sql = sprintf(
-            "SELECT * FROM `entrada` WHERE id=%s",
-            mysqli_real_escape_string($this->conexion->getConexion(), $id)
-        );
-
-        $resultado = mysqli_query($this->conexion->getConexion(), $sql) or die("No se ha podido obtener la entrada.");
-
-        return mysqli_fetch_assoc($resultado);
     }
 
     public function modificar($entrada) {

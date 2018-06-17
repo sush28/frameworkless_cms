@@ -4,8 +4,8 @@
     <?php include 'includes/head.php'; ?>
     <title>Tour | Gestor de contenido</title>
 </head>
-<body>
-    <?php include 'includes/header.php'; ?>
+<body id="tour">
+    <?php include 'includes/header.php'; ?> 
 
     <!-- Desplegable --> 
     <div class="container c-formulario c-formulario--tour">
@@ -36,7 +36,7 @@
 
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label for="localizacion">Ubicacion</label>
+                                            <label for="localizacion">Localización</label>
                                             <input class="form-control" type="text" name="localizacion" id="localizacion" required>
                                             <small class="text-muted">Inserta tanto la ciudad como el país (Ejemplo: Madrid, España).</small>
                                         </div>                                
@@ -94,7 +94,7 @@
                                 <td><?php echo $concierto->disponibilidad;?></td>
                                 <td><?php echo $concierto->puntoventa;?></td>
                                 <td>
-                                    <a href="#" data-toggle="modal" data-target="#modificarConcierto" class="modificar"><i class="far fa-edit"></i> Editar </a>
+                                    <a href="index.php?apartado=privado&controlador=tour&accion=obtenerConciertoComoJSON&id=<?php echo $concierto->id; ?>" data-toggle="modal" data-target="#modificarConcierto" class="boton-modificar modificar"><i class="far fa-edit"></i> Editar </a>
                                     <a href="index.php?apartado=privado&controlador=tour&accion=borrar&id=<?php echo $concierto->id;?>" class="boton-eliminar eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
                                 </td>
                             </tr>
@@ -149,16 +149,22 @@
             </div>
             <div class="modal-body">
                 <div id="form-container" class="container">
-                    <form action="crear-post.php" method="post" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="modificar-localizacion">Lugar</label>
-                            <input class="form-control" type="text" name="modificar-localizacion" id="modificar-localizacion" required>
-                            <small class="text-muted">Inserta tanto la ciudad como el país (Ejemplo: Madrid, España).</small>
-                        </div>
+                    <form action="index.php?apartado=privado&controlador=tour&accion=modificar" method="post" enctype="multipart/form-data" id="form-modificar">
+                        <input type="hidden" id="id-concierto" name="id-concierto" />
                         <div class="form-group">
                             <label for="modificar-fecha">Fecha</label>
                             <input class="form-control" type="date" name="modificar-fecha" id="modificar-fecha" required>
                         </div>  
+                        <div class="form-group">
+                            <label for="modificar-localizacion">Recinto</label>
+                            <input class="form-control" type="text" name="modificar-arena" id="modificar-arena" required>
+                            <small class="text-muted">(Ejemplo: Millenium Stadium).</small>
+                        </div> 
+                        <div class="form-group">
+                            <label for="modificar-localizacion">Localización</label>
+                            <input class="form-control" type="text" name="modificar-localizacion" id="modificar-localizacion" required>
+                            <small class="text-muted">Inserta tanto la ciudad como el país (Ejemplo: Madrid, España).</small>
+                        </div> 
                         <div class="form-group">
                             <label for="modificar-disponibilidad">Disponibilidad</label>
                             <select class="form-control" name="modificar-disponibilidad" id="modificar-disponibilidad">
@@ -168,18 +174,15 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="modificar-enlace">Enlace con el punto de venta</label>
-                            <input class="form-control" type="text" name="modificar-enlace" id="modificar-enlace"/>
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-primary btn-enviar" type="submit" name="submit">Añadir fecha</button>
+                            <label for="modificar-puntoventa">Enlace con el punto de venta</label>
+                            <input class="form-control" type="text" name="modificar-puntoventa" id="modificar-puntoventa"/>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Modificar</button>
+                <button type="button" class="btn btn-primary" id="submit-modificar">Modificar concierto</button>
             </div>
             </div>
         </div>

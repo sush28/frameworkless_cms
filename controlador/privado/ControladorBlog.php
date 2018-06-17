@@ -64,7 +64,7 @@ class ControladorBlog {
 
         $this->mostrarEntradas();
     }
-
+ 
     public function obtenerEntradaComoJSON(){
         if (isset($_GET['id'])) {
             $id = $_GET['id'];

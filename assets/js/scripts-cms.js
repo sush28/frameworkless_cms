@@ -73,6 +73,33 @@ $(document).ready(function(){
         });
     }
 
+    /* PAGINA DE TOUR */
+    if ($('#tour').length === 1) {
+        var $formulario = $('#form-modificar');
+
+        // Click en boton modificar
+        $('.boton-modificar').on('click', function(e) {
+            var $link = $(e.target).parent().find('a');
+            var url = $link.attr('href');
+            // @link http://api.jquery.com/jquery.ajax/
+            $.ajax({
+                url: url,
+                dataType: 'json'
+            }).done(function( data ) {
+
+                console.log(data);
+
+                // Rellenamos cada input del modal con los datos de la categoria
+                $formulario.find('#id-concierto').val(data.id);
+                $formulario.find('#modificar-fecha').val(data.fecha);
+                $formulario.find('#modificar-arena').val(data.arena);
+                $formulario.find('#modificar-localizacion').val(data.localizacion);
+                $formulario.find('#modificar-disponibilidad').val(data.disponibilidad);
+                $formulario.find('#modificar-puntoventa').val(data.puntoventa);
+            });
+        });
+    }
+
 
 
 

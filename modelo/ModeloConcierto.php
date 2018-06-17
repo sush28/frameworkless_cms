@@ -5,7 +5,7 @@ include_once 'modelo/concierto.php';
 
 class ModeloConcierto{
 
-    private $conexion;
+    private $conexion; 
 
     public function __construct() {
         $this->conexion = new Conexion();
@@ -27,7 +27,18 @@ class ModeloConcierto{
         return $conciertos;
     }
 
-    function guardar($concierto) {
+    public function obtenerConcierto($id) {
+        $sql = sprintf(
+            "SELECT * FROM `concierto` WHERE id=%s",
+            mysqli_real_escape_string($this->conexion->getConexion(), $id)
+        );
+
+        $resul = mysqli_query($this->conexion->getConexion(), $sql) or die("No se ha podido obtener el concierto.");
+
+        return mysqli_fetch_assoc($resul);
+    }
+
+    public function guardar($concierto) {
         $sql = sprintf(
             "INSERT INTO `concierto` (`id`, `fecha`, `arena`, `localizacion`, `disponibilidad`, `puntoventa`) VALUES (%s, '%s', '%s', '%s', '%s', '%s')",
             "NULL",
@@ -43,7 +54,23 @@ class ModeloConcierto{
         return $resul;
     }
 
-    function borrar($id){
+    public function modificar($concierto){
+        $sql = sprintf(
+            "UPDATE `concierto` SET `fecha`='%s', `arena`='%s', `localizacion`='%s', `disponibilidad`='%s', `puntoventa`='%s' WHERE id=%s",
+            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->fecha),
+            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->arena),
+            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->localizacion),
+            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->disponibilidad),
+            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->puntoventa),
+            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->id)
+        );
+
+        $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
+
+        return $resul;
+    }
+
+    public function borrar($id){
         $sql = sprintf(
             "DELETE FROM `concierto` WHERE id=%s",
             mysqli_real_escape_string($this->conexion->getConexion(), $id)
