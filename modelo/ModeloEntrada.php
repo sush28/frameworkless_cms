@@ -27,6 +27,28 @@ class ModeloEntrada{
         return $entradas;
     }
 
+    public function guardar($entrada) {
+        $sql = sprintf(
+            "INSERT INTO `entrada` (`id`, `titulo`, `contenido`, `id_usuario`, `imagen`, `altimagen`, `fecha`, `publico`, `slug`, `id_categoria`) 
+            VALUES (%s, '%s', '%s', %s, '%s', '%s', '%s', %s, '%s', %s)",
+            "NULL",
+            mysqli_real_escape_string($this->conexion->getConexion(), $entrada->titulo),
+            mysqli_real_escape_string($this->conexion->getConexion(), $entrada->contenido),
+            mysqli_real_escape_string($this->conexion->getConexion(), $entrada->id_usuario),
+            mysqli_real_escape_string($this->conexion->getConexion(), $entrada->imagen),
+            mysqli_real_escape_string($this->conexion->getConexion(), $entrada->altimagen),
+            mysqli_real_escape_string($this->conexion->getConexion(), $entrada->fecha),
+            mysqli_real_escape_string($this->conexion->getConexion(), $entrada->publico),
+            mysqli_real_escape_string($this->conexion->getConexion(), $entrada->slug),
+            mysqli_real_escape_string($this->conexion->getConexion(), $entrada->id_categoria)
+        );
+        // print_r($sql); die;
+        $result = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
+
+        // or die("No se han podido insertar la entrada.");
+
+        return $result;
+    }
 }
 
 

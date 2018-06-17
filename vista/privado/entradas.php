@@ -28,7 +28,7 @@
                                         <div class="col-xs-12 mx-auto">
                                             <div class="form-group">
                                                 <label for="categoria">Categoría</label>
-                                                <select class="form-control" id="categoria">
+                                                <select class="form-control" id="categoria" name="categoria">
                                                     <?php
                                                         foreach($categorias as $key => $categoria) {
                                                             ?>
@@ -59,7 +59,7 @@
                                                 </textarea>
                                             </div>
                                             <div class="form-group">
-                                                <input class="form-check-input" type="checkbox" value="" id="publico">
+                                                <input class="form-check-input" type="checkbox" value="" id="publico" name="publico">
                                                 <label class="form-check-label" for="publico">Público</label>
                                             </div>
                                             <div class="form-group text-right">

@@ -14,9 +14,7 @@ class Entrada {
     public $id_categoria;
 
 
-    public function __construct($id, $titulo, $contenido, $id_usuario, $imagen, $altimagen, $fecha, $publico, $slug, $id_categoria) {
-
-        $this->id = $id;
+    public function __construct($titulo, $contenido, $id_usuario, $imagen, $altimagen, $fecha, $publico, $slug, $id_categoria) {
         $this->titulo = $titulo;
         $this->contenido = $contenido;
         $this->id_usuario = $id_usuario;
@@ -28,7 +26,6 @@ class Entrada {
         $this->id_categoria = $id_categoria;
 
     }
-
 }
 
 ?>

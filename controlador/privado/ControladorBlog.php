@@ -2,6 +2,8 @@
 
 include 'modelo/ModeloEntrada.php';
 include 'modelo/ModeloCategoria.php';
+include 'modelo/utilerias.php';
+include 'modelo/entrada.php';
 
 /**
  * Class Blog
@@ -33,8 +35,28 @@ class ControladorBlog {
     }
 
     public function crear() {
+        $categoria = $_POST['categoria'];
+        $titulo = $_POST['titulo'];
+        $file = $_FILES['imagen'];
+        $alt = $_POST['altimagen'];
+        $contenido = $_POST['entrada'];
+        $esPublico = "false";
+        if (isset($_POST["publico"])) {
+            if ($_POST["publico"] == "público") {
+                $esPublico = "true";
+            }
+        }
 
+        // @todo Useeeer!
+        $entrada = new Entrada($titulo, $contenido, 1, $file["name"], $alt, fechaActual(), $esPublico, slugify($titulo), $categoria);
 
+        $modeloEntrada = new ModeloEntrada();
+
+        if (false !== $modeloEntrada->guardar($entrada)) {
+            guardarImagen($file);
+        }
+
+        $this->listado();
     }
 
     public function modificar($id){
