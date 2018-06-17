@@ -17,10 +17,17 @@ class ModeloEntrada{
         $this->modeloCategoria = new ModeloCategoria();
     }
     
-    public function obtenerEntradas() {
+    public function obtenerEntradas($categoria = null) {
         $entradas = array();
 
-        $sql = "SELECT * FROM `entrada` ORDER BY `fecha` ASC";
+        $sql = "SELECT * FROM `entrada`";
+
+        // Si se especifica categoria, where...
+        if ($categoria !== null) {
+            $sql .= " WHERE `id_categoria` = " . $categoria;
+        }
+
+        $sql .= " ORDER BY `fecha` ASC";
 
         $resul = mysqli_query($this->conexion->getConexion(), $sql) or die("No se han podido obtener las entradas.");
 
@@ -45,7 +52,13 @@ class ModeloEntrada{
 
         $resultado = mysqli_query($this->conexion->getConexion(), $sql) or die("No se ha podido obtener la entrada.");
 
-        return mysqli_fetch_assoc($resultado);
+        $row = mysqli_fetch_assoc($resultado);
+
+        $entrada = new Entrada($row['titulo'], $row['contenido'], $row['id_usuario'], $row['imagen'], $row['altimagen'], $row['fecha'], $row['publico'], $row['slug'], $row['id_categoria']);
+        $entrada->id = $row['id'];
+        $entrada->tituloCategoria = $this->modeloCategoria->obtenerNombreCategoria($row['id_categoria']);
+
+        return $entrada;
     }
 
     public function guardar($entrada) {

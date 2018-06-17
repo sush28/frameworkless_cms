@@ -14,8 +14,30 @@ class ControladorBlog {
     }
     
     public function mostrarBlog() {
-        $entradas = $this->modeloEntrada->obtenerEntradas();
+        if (isset($_GET['categoria'])) {
+            $categoria = $_GET['categoria'];
+        } else {
+            $categoria = null;
+        }
+
+        $categorias = $this->modeloCategoria->obtenerCategorias();
+        $entradas = $this->modeloEntrada->obtenerEntradas($categoria);
+
         include 'vista/publico/entradas.php';
+        die();
+    }
+
+    public function mostrarEntrada() {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+        } else {
+            die('Operación no permitida, falta el ID de la entrada a visualizar.');
+        }
+
+        $categorias = $this->modeloCategoria->obtenerCategorias();
+        $entrada = $this->modeloEntrada->obtenerEntrada($id);
+
+        include 'vista/publico/entrada.php';
         die();
     }
 }

@@ -16,42 +16,24 @@
             </div>
         </div>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light" id="MenuCategorias">
-      <div class="container">
-           <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Noticias</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Conciertos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Lanzamientos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Eventos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Personal</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    
+    <?php include 'includes/nav-categorias.php'; ?>
 
-   <div class="container c-entrada">
+    <div class="container c-entrada">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-12 c-blog-contenido">
                         <div class="datos-post">
-                            <div class="fecha"><span>23 mayo 2012</span></div>
-                            <div class="autor"><span>· Por</span> <a href="">Laura Vicente</a></div>
-                            <div class="categoria"><span>Categoria</span></div>
+                            <div class="fecha"><span><?php echo $entrada->fecha; ?></span></div>
+                            <div class="autor"><span>· Por</span> <a href=""><?php echo $entrada->id_usuario; ?></a></div>
+                            <div class="categoria"><span><?php echo $entrada->tituloCategoria; ?></span></div>
+                        </div>
+                        <div>
+                            <img class="img-fluid" src="almacenamiento/blog/<?php echo $entrada->imagen; ?>" />
                         </div>
                         <div class="contenido-post">
-                            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. o sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos.</p>
-                            <p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).</p>
+                            <?php echo $entrada->contenido; ?>
                         </div>
                     </div>
                 </div>

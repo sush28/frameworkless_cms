@@ -17,29 +17,8 @@
             </div>
         </div>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light" id="MenuCategorias">
-      <div class="container">
-           <ul class="navbar-nav mx-auto list-inline">
-            <li class="nav-item list-inline-item">
-                <a class="nav-link" href="#">Noticias</a>
-            </li>
-            <li class="nav-item list-inline-item">
-              <a class="nav-link" href="#">Conciertos</a>
-            </li>
-            <li class="nav-item list-inline-item">
-              <a class="nav-link" href="#">Lanzamientos</a>
-            </li>
-            <li class="nav-item list-inline-item">
-              <a class="nav-link" href="#">Eventos</a>
-            </li>
-            <li class="nav-item list-inline-item">
-              <a class="nav-link" href="#">Personal</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+    
+    <?php include 'includes/nav-categorias.php'; ?>
 
     <section class="container c-blog">
         <div class="row">
@@ -55,7 +34,7 @@
                             </div>
                             <div class="col-sm-12 col-md-8 col-lg-12 c-blog-contenido">
                                 <div class="categoria"><i class="fas fa-bullseye"></i><?php echo $entrada->tituloCategoria; ?></div>
-                                <div class="titulo"><a href=""><?php echo $entrada->titulo; ?></a></div>
+                                <div class="titulo"><a style="display: block;" href="index.php?apartado=publico&controlador=blog&accion=mostrarEntrada&id=<?php echo $entrada->id; ?>"><?php echo $entrada->titulo; ?></a></div>
                                 <div class="contenido"><?php echo substr($entrada->contenido, 0, 300); ?></div>
                             </div>
                         </div> 
