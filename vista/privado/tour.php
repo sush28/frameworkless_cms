@@ -83,8 +83,8 @@
                                 <td>A la venta</td>
                                 <td>Enlace</td>
                                 <td>
-                                    <a href="#" data-toggle="modal" data-target="#modificarConcierto"><i class="far fa-edit"></i> Editar </a>
-                                    <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                                    <a href="#" data-toggle="modal" data-target="#modificarConcierto" class="modificar"><i class="far fa-edit"></i> Editar </a>
+                                    <a href="eliminar-entrada.php" class="eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
                                 </td>
                             </tr>
                             <tr class="concierto">
@@ -94,8 +94,8 @@
                                 <td>Vendidas</td>
                                 <td>Enlace</td>
                                 <td>
-                                    <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
-                                    <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                                    <a href="#" data-toggle="modal" data-target="#modificarConcierto" class="modificar"><i class="far fa-edit"></i> Editar </a>
+                                    <a href="eliminar-entrada.php" class="eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
                                 </td>
                             </tr>
                             <tr class="concierto">
@@ -105,8 +105,8 @@
                                 <td>A la venta</td>
                                 <td>Enlace</td>
                                 <td>
-                                    <a href="modificar-entrada.php"><i class="far fa-edit"></i> Editar </a>
-                                    <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                                    <a href="#" data-toggle="modal" data-target="#modificarConcierto" class="modificar"><i class="far fa-edit"></i> Editar </a>
+                                    <a href="eliminar-entrada.php" class="eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -115,6 +115,30 @@
             </div>
         </div>
     </div>
+
+    <!-- Encuesta tours --> 
+    <div class="container c-tabla-cms c-tabla-cms--tour">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Ciudad</th>
+                                <th scope="col">Votos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Madrid</td>
+                                <td>3453454</td>
+                            </tr>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
 
 
     <!-- Modal --> 

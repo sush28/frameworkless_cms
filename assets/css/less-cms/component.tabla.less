@@ -1,0 +1,38 @@
+.c-tabla-cms{
+    .concierto{
+        .modificar, .eliminar{
+            display: inline-block;
+            background-color: @color_gris;
+            border-radius: 4px;
+            padding: 3px;
+            text-align: center; 
+            color: @color_texto;
+            &:hover{
+                color: @color_white;
+                text-decoration: none;
+                i{
+                    color: @color_white;
+                }
+            }
+        }
+        .modificar{
+            margin-bottom: 3px;
+            i{
+                color: @color_modificar;
+            }
+            &:hover{
+                background-color: @color_modificar;
+            }
+
+        }
+        .eliminar{
+            i{
+                color: @color_borrar;
+            }
+            &:hover{
+                background-color: @color_borrar;
+            }
+
+        }
+    }
+}

@@ -40,13 +40,13 @@
     </div>
     <div class="container c-listado c-listado--categorias">
         <div class="row justify-content-center">
-            <div class="col-md-7">
+            <div class="col-md-8">
                 <div class="c-listado-elemento categoria">   
                     <div class="row">
-                        <div class="col-9">
+                        <div class="col-md-12 col-lg-8">
                             <div class="titulo-cat">Categoría 1</div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-md-12 col-lg-4">
                             <div class="modificar modificar-post">
                                 <a href="#" data-toggle="modal" data-target="#modificarCategoria"><i class="far fa-edit"></i> Editar </a>
                             </div>

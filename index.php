@@ -1,22 +1,28 @@
 <?php
+// @link http://192.168.64.2/www/tfg-2018/index.php?apartado=publico&controlador=home&accion=index
 
 if (isset($_GET['apartado'])) {
     $apartado = $_GET['apartado'];
 } else {
     $apartado = 'publico';
 }
-/*
-$apartado    = $_GET['apartado'];
-$controlador = 'Controlador' . $_GET['controlador'];
-$accion      = $_GET['accion'];
 
-// http://192.168.64.2/www/tfg-2018/?apartado=privado&controlador=Blog&accion=listado
-// http://laura.lh/?apartado=privado&controlador=Blog&accion=listado
+if (isset($_GET['controlador'])) {
+    $controlador = $_GET['controlador'];
+} else {
+    $controlador = 'home';
+}
+$controlador = 'Controlador' . ucfirst($controlador);
+
+if (isset($_GET['accion'])) {
+    $accion = $_GET['accion'];
+} else {
+    $accion = 'index';
+}
 
 include 'controlador/' . $apartado . '/' . $controlador . '.php';
 
 $controlador = new $controlador();
 
 $controlador->$accion();
-*/
 ?>

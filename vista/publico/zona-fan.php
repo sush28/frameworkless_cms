@@ -31,11 +31,11 @@
                                         <div class="col-xs-12 mx-auto">
                                             <div class="form-group">
                                                 <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="radioTexto" name="radioTexto" class="custom-control-input">
+                                                    <input type="radio" id="radioTexto" name="tipoPost" class="custom-control-input">
                                                     <label class="custom-control-label" for="radioTexto">Texto</label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="radioImagen" name="radioImagen" class="custom-control-input">
+                                                    <input type="radio" id="radioImagen" name="tipoPost" class="custom-control-input">
                                                     <label class="custom-control-label" for="radioImagen">Imagen</label>
                                                 </div>
                                             </div>

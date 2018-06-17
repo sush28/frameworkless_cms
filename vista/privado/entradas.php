@@ -7,7 +7,7 @@
 <body>
     <?php include 'includes/header.php'; ?>
 
-    <div class="container c-formulario c-formulario--entradas">
+    <div class="container c-formulario c-formulario--entradas"> 
         <header class="header-cms">
             <div class="row">
                 <div class="col-12">

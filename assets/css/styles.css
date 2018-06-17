@@ -590,6 +590,7 @@ textarea::-webkit-input-placeholder {
     display: table;
   }
   .c-tour .conciertos .concierto .concierto-fila .fecha {
+    font-family: 'Gotham Medium', Helvetica, sans-serif;
     display: table-cell;
   }
   .c-tour .conciertos .concierto .concierto-fila .arena,
@@ -663,6 +664,6 @@ textarea::-webkit-input-placeholder {
     min-height: 0;
   }
   .c-spotify .titular {
-    font-size: 72px;
+    font-size: 40px;
   }
 }

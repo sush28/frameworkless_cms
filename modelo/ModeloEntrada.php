@@ -6,7 +6,7 @@
 class ModeloEntrada{
     
     public function obtenerPosts(){
-        
+    
         
     }
 

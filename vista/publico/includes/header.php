@@ -7,25 +7,25 @@
     <div class="collapse navbar-collapse" id="MenuPrincipalResp">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Inicio</a>
+          <a class="nav-link" href="index.php?apartado=publico&controlador=home&accion=index">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="biografia.php">Biografía</a>
+          <a class="nav-link" href="index.php?apartado=publico&controlador=biografia&accion=mostrarBiografia">Biografía</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="musica.php">Música</a>
+          <a class="nav-link" href="index.php?apartado=publico&controlador=musica&accion=mostrarMusica">Música</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="galeria.php">Galería</a>
+          <a class="nav-link" href="index.php?apartado=publico&controlador=galeria&accion=mostrarGaleria">Galería</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="index.php?apartado=publico&controlador=tour&accion=mostrarTour">Tour</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="tour.php">Tour</a>
+          <a class="nav-link" href="index.php?apartado=publico&controlador=zonaFan&accion=mostrarZonaFan">Zona fan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="zona-fan.php">Zona fan</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="blog.php">Blog</a>
+          <a class="nav-link" href="index.php?apartado=publico&controlador=blog&accion=mostrarBlog">Blog</a>
         </li>
       </ul>
       <div class="social">

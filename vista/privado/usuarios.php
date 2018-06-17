@@ -58,11 +58,11 @@
             <div class="col-md-7">
                 <div class="c-listado-elemento usuario">   
                     <div class="row">
-                        <div class="col-10">
+                        <div class="col-lg-10">
                             <div class="nombre-user">Two Door Cinema Club</div>
                             <div class="rol-user">Admin</div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-lg-2">
                             <div class="modificar modificar-post">
                                 <a href="#" data-toggle="modal" data-target="#modificarCategoria"><i class="far fa-edit"></i> Editar </a>
                             </div>
@@ -74,11 +74,11 @@
                 </div>
                 <div class="c-listado-elemento usuario">   
                     <div class="row">
-                        <div class="col-10">
+                        <div class="col-lg-10">
                             <div class="nombre-user">Sam Pérez</div>
                             <div class="rol-user">User</div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-lg-2">
                             <div class="modificar modificar-post">
                                 <a href="#" data-toggle="modal" data-target="#modificarCategoria"><i class="far fa-edit"></i> Editar</a>
                             </div>
