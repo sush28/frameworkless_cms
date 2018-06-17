@@ -32,6 +32,7 @@ class ControladorGaleria {
         }
 
         $this->mostrarGaleria();
+        
     }
 
     public function borrar($id){

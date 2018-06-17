@@ -73,7 +73,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
 
     <div class="container c-listado c-listado--blog">

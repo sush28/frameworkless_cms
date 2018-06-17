@@ -26,6 +26,6 @@ class Entrada {
         $this->id_categoria = $id_categoria;
 
     }
-}
+} 
 
 ?>

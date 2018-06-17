@@ -27,7 +27,7 @@
         </div>
         <div class="row c-miembro c-miembro--alex">
             <div class="col-md-4 imagen">
-                <img src="../../assets/images/miembros/alex-trimble.jpg" alt="Foto de Alex Trimble" class="img-fluid rounded-circle">
+                <img src="assets/images/miembros/alex-trimble.jpg" alt="Foto de Alex Trimble" class="img-fluid rounded-circle">
             </div>
             <div class="col-md-8 texto">
                 <h3 class="nombre">Alex Trimble</h2>
@@ -42,12 +42,12 @@
                 <p class="descripcion">Halliday nació en Southampton, Hampshire, Inglaterra, siendo sus padres, Timothy Champion y Sara Champion, ambos profesores de arqueología en la Universidad de Southampton, donde actualmente su padre sigue enseñando y solía ser Disc-jockey usando el nombre Champion Tunes. Tener dos padres profesores le llevó a inclinarse por la música. De joven, sus influencias musicales incluyeron a Tom Waits, Nick Cave y la música tradicional folk irlandesa, tocando flauta irlandesa. Antes unirse a Two Door Cinema Club, perteneció a un grupo llamado Fat Hamster.</p>
             </div>
             <div class="col-md-4 imagen">
-                <img src="../../assets/images/miembros/sam-halliday.jpg" alt="Foto de Sam Halliday" class="img-fluid rounded-circle">
+                <img src="assets/images/miembros/sam-halliday.jpg" alt="Foto de Sam Halliday" class="img-fluid rounded-circle">
             </div>
         </div>
         <div class="row c-miembro c-miembro--kevin">
             <div class="col-md-4 imagen">
-                <img src="../../assets/images/miembros/kevin-baird.jpg" alt="Foto de Kevin Baird" class="img-fluid rounded-circle">
+                <img src="assets/images/miembros/kevin-baird.jpg" alt="Foto de Kevin Baird" class="img-fluid rounded-circle">
             </div>
             <div class="col-md-8 texto">
                 <h3 class="nombre">Kevin Baird</h2>

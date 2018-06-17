@@ -25,7 +25,7 @@ class ModeloEntrada{
         }
 
         return $entradas;
-    }
+    } 
 
     public function guardar($entrada) {
         $sql = sprintf(

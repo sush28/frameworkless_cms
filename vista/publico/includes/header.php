@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="MenuPrincipal">
   <div class="container">
-    <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="../../assets/images/logo-nav.png" alt="Two Door Cinema Club" class="img-fluid"></a>
+    <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="assets/images/logo-nav.png" alt="Two Door Cinema Club" class="img-fluid"></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#MenuPrincipalResp" aria-controls="MenuPrincipalResp" aria-expanded="false" aria-label="Menú Principal">
     <span class="navbar-toggler-icon"></span>
     </button>

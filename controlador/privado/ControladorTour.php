@@ -1,41 +1,37 @@
 <?php
 
 include 'modelo/ModeloConcierto.php';
+include 'modelo/utilities.php';
+include 'modelo/concierto.php';
 
 
-/* Class Tour */
 class ControladorTour {
 
-
-    public function listadoCMS(){
+    public function mostrarConciertos(){
         // @todo coger datos desde el modelo y guardarlos en un array (para pasarlo a la vista)
-        // El modelo esta en: /modelo/Blog.php
-        $concierto = new ModeloConcierto();
 
-        // Este es un array guarrero...
-        $conciertos = $concierto->obtenerPosts();
+        $modeloConcierto = new ModeloConcierto();
 
-        // @todo una vista...
-        // La vista esta en: /vista/privado/Blog/listado.php
+        $conciertos = $modeloConcierto->obtenerConciertos();
 
-        include 'vista/privado/Blog/listado.php';
-        die();
-    }
-
-    public function listadoFront(){
-        // @todo coger datos desde el modelo y guardarlos en un array (para pasarlo a la vista)
-        // El modelo esta en: /modelo/Blog.php
-        $blog = new ModeloBlog();
-
-        // Este es un array guarrero...
-        $posts = $blog->obtenerPosts();
-
-        include 'vista/publico/tour.php';
+        include 'vista/privado/tour.php';
         die();
     }
 
     public function crear(){
+        $fecha = $_POST['fecha'];
+        $arena = $_POST['arena'];
+        $localizacion = $_POST['localizacion'];
+        $disponibilidad = $_POST['disponibilidad'];
+        $puntoventa = $_POST['puntoventa'];
 
+        $concierto = new Concierto($fecha, $arena, $localizacion, $disponibilidad, $puntoventa);
+
+        $modeloConcierto = new ModeloConcierto();
+
+        $modeloConcierto->guardar($concierto);
+
+        $this->mostrarConciertos();
     }
 
     public function modificar($id){

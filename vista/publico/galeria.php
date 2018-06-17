@@ -20,41 +20,20 @@
 
     <section class="container c-galeria">
         <div class="row text-center text-lg-left">
+        <?php
+        foreach ($imagenes as $key => $imagen) {
+            ?>
             <div class="col-lg-3 col-md-4 col-xs-6 c-galeria-item">
-                <a href="../../assets/images/zona-fan/fan4.jpg" class="d-block mb-4" data-lightbox="galeria">
+                <a href="almacenamiento/galeria/<?php echo $imagen['imagen']; ?>" class="d-block mb-4" data-lightbox="galeria">
                     <div class="mask">
-                        <img class="img-fluid" src="../../assets/images/zona-fan/fan4.jpg" alt="">
+                        <img class="img-fluid" src="almacenamiento/galeria/<?php echo $imagen['imagen']; ?>" alt="<?php echo $imagen['altimagen']; ?>">
                     </div>  
                 </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 c-galeria-item">
-                <a href="../../assets/images/zona-fan/fan2.jpg" class="d-block mb-4" data-lightbox="galeria">
-                    <div class="mask">
-                        <img class="img-fluid" src="../../assets/images/zona-fan/fan2.jpg" alt="">
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 c-galeria-item">
-                <a href="../../assets/images/zona-fan/fan3.jpg" class="d-block mb-4" data-lightbox="galeria">
-                    <div class="mask">
-                        <img class="img-fluid" src="../../assets/images/zona-fan/fan3.jpg" alt="">
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 c-galeria-item">
-                <a href="../../assets/images/zona-fan/fan1.jpg" class="d-block mb-4" data-lightbox="galeria">
-                    <div class="mask">
-                        <img class="img-fluid" src="../../assets/images/zona-fan/fan1.jpg" alt="">
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 c-galeria-item">
-                <a href="../../assets/images/zona-fan/fan2.jpg" class="d-block mb-4" data-lightbox="galeria">
-                    <div class="mask">
-                        <img class="img-fluid" src="../../assets/images/zona-fan/fan2.jpg" alt="">
-                    </div>
-                </a>
-            </div>
+
+        <?php
+            }
+            ?>
         </div>
     </section>
 

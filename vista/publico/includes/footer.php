@@ -26,7 +26,7 @@
                 </li>
             </ul>
             <div class="imagen">
-                <img src="../../assets/images/logo-gris-two-door.png" alt="Two Door Cinema Club">
+                <img src="assets/images/logo-gris-two-door.png" alt="Two Door Cinema Club">
             </div>
             <ul class="list-inline legales">
                 <li class="list-inline-item"><a href="aviso-legal.php">Aviso legal</a></li>
