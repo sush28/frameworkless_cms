@@ -106,8 +106,16 @@ class ControladorBlog {
         $this->mostrarEntradas();
     }
 
-    public function borrar($id){
+    public function borrar(){
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+        } else {
+            die('Operación no permitida, falta el ID de la entrada a eliminar.');
+        }
 
+        $this->modeloEntrada->borrar($id);
+        
+        $this->mostrarEntradas();
     } 
 
     public function moderarComentarios($id){

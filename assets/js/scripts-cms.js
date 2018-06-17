@@ -39,6 +39,12 @@ $(document).ready(function(){
             });
         });
 
+        $('.boton-eliminar').on('click', function(e) {
+            if (!confirm('¿Seguro que quieres eliminar esta entrada?')) {
+                e.preventDefault();
+            }
+        });
+
         $('#submit-modificar').on('click', function(e) {
             $formulario.submit();
         });

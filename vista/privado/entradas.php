@@ -91,10 +91,10 @@
                             </div>
                             <div class="col-md-2">
                                 <div class="modificar modificar-post">
-                                    <a href="index.php?apartado=privado&controlador=blog&accion=obtenerEntradaComoJSON&id=<?php echo $entrada['id']; ?>" data-toggle="modal" data-target="#modificarEntrada" class="boton-modificar" ><i class="far fa-edit"></i> Editar </a>
+                                    <a href="index.php?apartado=privado&controlador=blog&accion=obtenerEntradaComoJSON&id=<?php echo $entrada['id']; ?>" data-toggle="modal" data-target="#modificarEntrada" class="boton-modificar"><i class="far fa-edit"></i> Editar </a>
                                 </div>
                                 <div class="eliminar eliminar-post">
-                                    <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                                    <a href="index.php?apartado=privado&controlador=blog&accion=borrar&id=<?php echo $entrada['id']; ?>" class="boton-eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
                                 </div>
                             </div>
                         </div>
