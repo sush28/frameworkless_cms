@@ -28,11 +28,11 @@ class ModeloConcierto{
         $sql = sprintf(
             "INSERT INTO `concierto` (`id`, `fecha`, `arena`, `localizacion`, `disponibilidad`, `puntoventa`) VALUES (%s, '%s', '%s', '%s', '%s', '%s')",
             "NULL",
-            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->$fecha),
-            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->$arena),
-            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->$localizacion),
-            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->$disponibilidad),
-            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->$puntoventa)
+            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->fecha),
+            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->arena),
+            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->localizacion),
+            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->disponibilidad),
+            mysqli_real_escape_string($this->conexion->getConexion(), $concierto->puntoventa)
         );
 
         $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));

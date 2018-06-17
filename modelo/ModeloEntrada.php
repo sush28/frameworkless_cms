@@ -49,6 +49,55 @@ class ModeloEntrada{
 
         return $resul;
     }
+
+    public function obtenerEntrada($id) {
+        $sql = sprintf(
+            "SELECT * FROM `entrada` WHERE id=%s",
+            mysqli_real_escape_string($this->conexion->getConexion(), $id)
+        );
+
+        $resultado = mysqli_query($this->conexion->getConexion(), $sql) or die("No se han podido obtener las entradas.");
+
+        return mysqli_fetch_assoc($resultado);
+    }
+
+    public function modificar($entrada) {
+        
+        if ($entrada->imagen === "") {
+            $sql = sprintf(
+                "UPDATE `entrada` SET `titulo`='%s', `contenido`='%s', `id_usuario`=%s, `altimagen`='%s', `fecha`='%s', `publico`=%s, `slug`='%s', `id_categoria`=%s  WHERE id=%s",
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->titulo),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->contenido),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->id_usuario),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->altimagen),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->fecha),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->publico),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->slug),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->id_categoria),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->id)
+            );
+        } else {
+            $sql = sprintf(
+                "UPDATE `entrada` SET `titulo`='%s', `contenido`='%s', `id_usuario`=%s, `imagen`='%s', `altimagen`='%s', `fecha`='%s', `publico`=%s, `slug`='%s', `id_categoria`=%s  WHERE id=%s",
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->titulo),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->contenido),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->id_usuario),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->imagen),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->altimagen),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->fecha),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->publico),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->slug),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->id_categoria),
+                mysqli_real_escape_string($this->conexion->getConexion(), $entrada->id)
+            );
+        }
+
+        // print_r($sql); die;
+        
+        $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
+
+        return $resul;
+    }
 }
 
 
