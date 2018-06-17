@@ -1,8 +1,8 @@
 <?php
 
-include 'modelo/ModeloGaleria.php';
-include 'modelo/galeria.php';
-include 'modelo/utilities.php';
+include_once 'modelo/ModeloGaleria.php';
+include_once 'modelo/galeria.php';
+include_once 'modelo/utilities.php';
 
 class ControladorGaleria {
 

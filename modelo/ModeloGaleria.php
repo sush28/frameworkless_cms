@@ -1,6 +1,8 @@
 <?php
 
 include_once 'modelo/conexion.php';
+include_once 'modelo/ModeloGaleria.php';
+
 
 class ModeloGaleria{
 
@@ -16,7 +18,9 @@ class ModeloGaleria{
         $resul = mysqli_query($this->conexion->getConexion(), $sql) or die("No se han podido obtener las imágenes de la galería.");
 
         while ($row = mysqli_fetch_array($resul, MYSQLI_ASSOC)) {
-            array_push($imagenes, $row);
+            $imagen = new Galeria($row['imagen'], $row['altimagen'],$row['fecha']);
+            $imagen->id = $row['id'];
+            array_push($imagenes, $imagen);
         }
         return $imagenes;
     }

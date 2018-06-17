@@ -6,7 +6,7 @@ $(document).ready(function(){
         console.error( error );
     } );
 
-    // Pagina de modificar entradas
+    /* MOSTRAR ENTRADAS EN MODAL DE MODIFICAR */
     if ($('#entradas').length === 1) {
         var $formulario = $('#form-modificar');
 
@@ -22,8 +22,8 @@ $(document).ready(function(){
                     // No hacer nada
                 }
             }).done(function( data ) {
-                // Rellenamos cada input del modal...
-                
+
+                // Rellenamos cada input del modal con los datos de la entrada
                 $formulario.find('#id-entrada').val(data.id);
                 $formulario.find('#modificar-categoria').find("[value='" + data.id_categoria + "']").attr('selected', 'selected');
                 $formulario.find('#modificar-titulo').val(data.titulo);

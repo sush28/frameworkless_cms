@@ -1,18 +1,22 @@
 <?php
 
-include 'modelo/ModeloConcierto.php';
-include 'modelo/utilities.php';
-include 'modelo/concierto.php';
+include_once 'modelo/ModeloConcierto.php';
+include_once 'modelo/utilities.php';
+include_once 'modelo/concierto.php';
 
 
 class ControladorTour {
 
+    private $modeloConcierto;
+
+    public function __construct() {
+        $this->modeloConcierto = new ModeloConcierto();
+    }
+
     public function mostrarConciertos(){
         // @todo coger datos desde el modelo y guardarlos en un array (para pasarlo a la vista)
 
-        $modeloConcierto = new ModeloConcierto();
-
-        $conciertos = $modeloConcierto->obtenerConciertos();
+        $conciertos = $this->modeloConcierto->obtenerConciertos();
 
         include 'vista/privado/tour.php';
         die();
@@ -27,9 +31,7 @@ class ControladorTour {
 
         $concierto = new Concierto($fecha, $arena, $localizacion, $disponibilidad, $puntoventa);
 
-        $modeloConcierto = new ModeloConcierto();
-
-        $modeloConcierto->guardar($concierto);
+        $this->modeloConcierto->guardar($concierto);
 
         $this->mostrarConciertos();
     }

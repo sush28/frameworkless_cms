@@ -56,7 +56,7 @@
             ?>
             <div class="col-lg-3 col-md-4 col-xs-6 c-galeria-item">
                 <div class="col-12 imagen">
-                    <img class="img-fluid" src="almacenamiento/galeria/<?php echo $imagen['imagen']; ?>" alt="<?php echo $imagen['altimagen']; ?>">
+                    <img class="img-fluid" src="almacenamiento/galeria/<?php echo $imagen->imagen; ?>" alt="<?php echo $imagen->altimagen; ?>">
                 </div>
                 <div class="col-12">
                     <div class="borrar">

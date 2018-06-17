@@ -12,6 +12,7 @@ class Entrada {
     public $publico;
     public $slug;
     public $id_categoria;
+    public $tituloCategoria = ""; // Auxiliar
 
 
     public function __construct($titulo, $contenido, $id_usuario, $imagen, $altimagen, $fecha, $publico, $slug, $id_categoria) {

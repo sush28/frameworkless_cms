@@ -1,6 +1,8 @@
 <?php
 
 include_once 'modelo/conexion.php';
+include_once 'modelo/entrada.php';
+include_once 'modelo/ModeloCategoria.php';
 
 /**
  * Class Entrada
@@ -8,9 +10,11 @@ include_once 'modelo/conexion.php';
 class ModeloEntrada{
 
     private $conexion;
+    private $modeloCategoria;
 
     public function __construct() {
         $this->conexion = new Conexion();
+        $this->modeloCategoria = new ModeloCategoria();
     }
     
     public function obtenerEntradas() {
@@ -21,7 +25,13 @@ class ModeloEntrada{
         $resul = mysqli_query($this->conexion->getConexion(), $sql) or die("No se han podido obtener las entradas.");
 
         while ($row = mysqli_fetch_array($resul, MYSQLI_ASSOC)) {
-            array_push($entradas, $row);
+            // array_push($entradas, $row);
+
+            $entrada = new Entrada($row['titulo'], $row['contenido'], $row['id_usuario'], $row['imagen'], $row['altimagen'], $row['fecha'], $row['publico'], $row['slug'], $row['id_categoria']);
+            $entrada->id = $row['id'];
+            $entrada->tituloCategoria = $this->modeloCategoria->obtenerNombreCategoria($row['id_categoria']);
+
+            array_push($entradas, $entrada);
         }
 
         return $entradas;

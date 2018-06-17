@@ -1,6 +1,8 @@
 <?php
 
 include_once 'modelo/conexion.php';
+include_once 'modelo/categoria.php';
+
    
 class ModeloCategoria{
 
@@ -19,10 +21,26 @@ class ModeloCategoria{
         $resul = mysqli_query($this->conexion->getConexion(), $sql) or die("No se han podido obtener las categorías.");
 
         while ($row = mysqli_fetch_array($resul, MYSQLI_ASSOC)) {
-            array_push($categorias, $row);
+            $categoria = new Categoria($row['nombre'], $row['slug']);
+            $categoria->id = $row['id'];
+
+            array_push($categorias, $categoria);
         }
 
         return $categorias;
+    }
+
+    public function obtenerNombreCategoria($id) {
+        $sql = sprintf(
+            "SELECT `nombre` FROM `categoria` WHERE id=%s",
+            mysqli_real_escape_string($this->conexion->getConexion(), $id)
+        );
+
+        $resultado = mysqli_query($this->conexion->getConexion(), $sql) or die("No se han podido obtener la categoria.");
+
+        $resultados = mysqli_fetch_assoc($resultado);
+
+        return $resultados['nombre'];
     }
 
     function guardar($categoria) {

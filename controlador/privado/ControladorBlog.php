@@ -1,9 +1,9 @@
 <?php
 
-include 'modelo/ModeloEntrada.php';
-include 'modelo/ModeloCategoria.php';
-include 'modelo/utilities.php';
-include 'modelo/entrada.php';
+include_once 'modelo/ModeloEntrada.php';
+include_once 'modelo/ModeloCategoria.php';
+include_once 'modelo/utilities.php';
+include_once 'modelo/entrada.php';
 
 /**
  * Class Blog
@@ -114,7 +114,7 @@ class ControladorBlog {
         }
 
         $this->modeloEntrada->borrar($id);
-        
+
         $this->mostrarEntradas();
     } 
 

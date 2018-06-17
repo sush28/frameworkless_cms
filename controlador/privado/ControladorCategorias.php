@@ -1,8 +1,8 @@
 <?php
 
-include 'modelo/ModeloCategoria.php';
-include 'modelo/utilities.php';
-include 'modelo/categoria.php';
+include_once 'modelo/ModeloCategoria.php';
+include_once 'modelo/utilities.php';
+include_once 'modelo/categoria.php';
 
 
 class ControladorCategorias { 

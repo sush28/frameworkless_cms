@@ -24,9 +24,9 @@
         foreach ($imagenes as $key => $imagen) {
             ?>
             <div class="col-lg-3 col-md-4 col-xs-6 c-galeria-item">
-                <a href="almacenamiento/galeria/<?php echo $imagen['imagen']; ?>" class="d-block mb-4" data-lightbox="galeria">
+                <a href="almacenamiento/galeria/<?php echo $imagen->imagen; ?>" class="d-block mb-4" data-lightbox="galeria">
                     <div class="mask">
-                        <img class="img-fluid" src="almacenamiento/galeria/<?php echo $imagen['imagen']; ?>" alt="<?php echo $imagen['altimagen']; ?>">
+                        <img class="img-fluid" src="almacenamiento/galeria/<?php echo $imagen->imagen; ?>" alt="<?php echo $imagen->altimagen; ?>">
                     </div>  
                 </a>
             </div>

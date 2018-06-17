@@ -1,6 +1,7 @@
 <?php
 
 include_once 'modelo/conexion.php';
+include_once 'modelo/concierto.php';
 
 class ModeloConcierto{
 
@@ -18,7 +19,9 @@ class ModeloConcierto{
         $resul = mysqli_query($this->conexion->getConexion(), $sql) or die("No se han podido obtener los conciertos.");
 
         while ($row = mysqli_fetch_array($resul, MYSQLI_ASSOC)) {
-            array_push($conciertos, $row);
+            $concierto = new Concierto($row['fecha'], $row['arena'], $row['localizacion'], $row['disponibilidad'], $row['puntoventa']);
+            $concierto->id = $row['id'];
+            array_push($conciertos, $concierto);
         }
 
         return $conciertos;

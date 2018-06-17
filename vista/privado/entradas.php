@@ -32,7 +32,7 @@
                                                     <?php
                                                         foreach($categorias as $key => $categoria) {
                                                             ?>
-                                                                <option value="<?php echo $categoria['id']; ?>"><?php echo $categoria['nombre']; ?></option>
+                                                                <option value="<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></option>
                                                             <?php
                                                         }
                                                     ?>
@@ -85,16 +85,16 @@
                     <div class="c-listado-elemento entrada">
                         <div class="row">
                             <div class="col-md-10">
-                                <div class="fecha-post"><?php echo $entrada['fecha']; ?></div>
-                                <div class="titulo-post"><?php echo $entrada['titulo']; ?></div>
-                                <div class="desc-post"><?php echo $entrada['contenido']; ?></div>
+                                <div class="fecha-post"><?php echo $entrada->fecha; ?></div>
+                                <div class="titulo-post"><?php echo $entrada->titulo; ?></div>
+                                <div class="desc-post"><?php echo $entrada->contenido; ?></div>
                             </div>
                             <div class="col-md-2">
                                 <div class="modificar modificar-post">
-                                    <a href="index.php?apartado=privado&controlador=blog&accion=obtenerEntradaComoJSON&id=<?php echo $entrada['id']; ?>" data-toggle="modal" data-target="#modificarEntrada" class="boton-modificar"><i class="far fa-edit"></i> Editar </a>
+                                    <a href="index.php?apartado=privado&controlador=blog&accion=obtenerEntradaComoJSON&id=<?php echo $entrada->id; ?>" data-toggle="modal" data-target="#modificarEntrada" class="boton-modificar"><i class="far fa-edit"></i> Editar </a>
                                 </div>
                                 <div class="eliminar eliminar-post">
-                                    <a href="index.php?apartado=privado&controlador=blog&accion=borrar&id=<?php echo $entrada['id']; ?>" class="boton-eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
+                                    <a href="index.php?apartado=privado&controlador=blog&accion=borrar&id=<?php echo $entrada->id; ?>" class="boton-eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
                                 </div>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                                             <?php
                                                 foreach($categorias as $key => $categoria) {
                                                     ?>
-                                                        <option value="<?php echo $categoria['id']; ?>"><?php echo $categoria['nombre']; ?></option>
+                                                        <option value="<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></option>
                                                     <?php
                                                 }
                                             ?>

@@ -47,7 +47,7 @@
                 <div class="c-listado-elemento categoria">   
                     <div class="row">
                         <div class="col-md-12 col-lg-8">
-                            <div class="titulo-cat"><?php echo $categoria['nombre'];?> </div>
+                            <div class="titulo-cat"><?php echo $categoria->nombre;?> </div>
                         </div>
                         <div class="col-md-12 col-lg-4">
                             <div class="modificar modificar-post">
