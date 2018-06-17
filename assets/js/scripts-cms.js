@@ -1,15 +1,30 @@
 $(document).ready(function(){
 
+    /* CKEDITOR */
     ClassicEditor
     .create( document.querySelector( '#creacionEntrada #entrada' ) )
     .catch( error => {
         console.error( error );
     } );
 
-    /* MOSTRAR ENTRADAS EN MODAL DE MODIFICAR */
+    /* CONFIRMACION GENERICA DE BORRAR */
+    $('.boton-eliminar').on('click', function(e) {
+        if (!confirm('¿Seguro que quieres eliminar este elemento?\n Esta acción es permanente.')) {
+            e.preventDefault();
+        }
+    });
+
+    /* SUBMIT GENERICO */
+    $('#submit-modificar').on('click', function(e) {
+        $formulario.submit();
+    });
+
+
+    /* PAGINA DE ENTRADAS */
     if ($('#entradas').length === 1) {
         var $formulario = $('#form-modificar');
 
+        /* Click en boton modificar */
         $('.boton-modificar').on('click', function(e) {
             var $link = $(e.target).parent().find('a');
             var url = $link.attr('href');
@@ -17,10 +32,7 @@ $(document).ready(function(){
             // @link http://api.jquery.com/jquery.ajax/
             $.ajax({
                 url: url,
-                dataType: 'json',
-                beforeSend: function( xhr ) {
-                    // No hacer nada
-                }
+                dataType: 'json'
             }).done(function( data ) {
 
                 // Rellenamos cada input del modal con los datos de la entrada
@@ -38,17 +50,31 @@ $(document).ready(function(){
                 }
             });
         });
+    }
 
-        $('.boton-eliminar').on('click', function(e) {
-            if (!confirm('¿Seguro que quieres eliminar esta entrada?')) {
-                e.preventDefault();
-            }
-        });
+    /* PAGINA DE CATEGORIAS */
+    if ($('#categorias').length === 1) {
+        var $formulario = $('#form-modificar');
 
-        $('#submit-modificar').on('click', function(e) {
-            $formulario.submit();
+        // Click en boton modificar
+        $('.boton-modificar').on('click', function(e) {
+            var $link = $(e.target).parent().find('a');
+            var url = $link.attr('href');
+            // @link http://api.jquery.com/jquery.ajax/
+            $.ajax({
+                url: url,
+                dataType: 'json'
+            }).done(function( data ) {
+
+                // Rellenamos cada input del modal con los datos de la categoria
+                $formulario.find('#id-categoria').val(data.id);
+                $formulario.find('#modificar-nombre').val(data.nombre);
+            });
         });
     }
+
+
+
 
 
 });

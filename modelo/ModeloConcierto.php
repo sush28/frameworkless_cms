@@ -42,6 +42,17 @@ class ModeloConcierto{
 
         return $resul;
     }
+
+    function borrar($id){
+        $sql = sprintf(
+            "DELETE FROM `concierto` WHERE id=%s",
+            mysqli_real_escape_string($this->conexion->getConexion(), $id)
+        );
+
+        $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
+
+        return $resul;
+    }
     
 }
 

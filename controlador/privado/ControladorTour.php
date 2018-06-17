@@ -5,7 +5,7 @@ include_once 'modelo/utilities.php';
 include_once 'modelo/concierto.php';
 
 
-class ControladorTour {
+class ControladorTour { 
 
     private $modeloConcierto;
 
@@ -40,7 +40,16 @@ class ControladorTour {
 
     }
 
-    public function borrar($id){
+    public function borrar(){
+        if(isset($_GET['id'])){
+            $id = $_GET['id'];
+        } else {
+            die('Operación no permitida, falta el ID del concierto.');
+        }
+
+        $this->modeloConcierto->borrar($id);
+
+        $this->mostrarConciertos();
 
     } 
 

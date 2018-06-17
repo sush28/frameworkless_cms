@@ -30,20 +30,31 @@ class ModeloCategoria{
         return $categorias;
     }
 
+    public function obtenerCategoria($id){
+        $sql = sprintf(
+            "SELECT * FROM `categoria` WHERE id=%s",
+            mysqli_real_escape_string($this->conexion->getConexion(), $id)
+        );
+
+        $resultado = mysqli_query($this->conexion->getConexion(), $sql) or die("No se ha podido obtener la categoría.");
+
+        return mysqli_fetch_assoc($resultado);
+    }
+
     public function obtenerNombreCategoria($id) {
         $sql = sprintf(
             "SELECT `nombre` FROM `categoria` WHERE id=%s",
             mysqli_real_escape_string($this->conexion->getConexion(), $id)
         );
 
-        $resultado = mysqli_query($this->conexion->getConexion(), $sql) or die("No se han podido obtener la categoria.");
+        $resultado = mysqli_query($this->conexion->getConexion(), $sql) or die("No se ha podido obtener el nombre de la categoría.");
 
         $resultados = mysqli_fetch_assoc($resultado);
 
         return $resultados['nombre'];
     }
 
-    function guardar($categoria) {
+    public function guardar($categoria) {
         $sql = sprintf(
             "INSERT INTO `categoria` (`id`, `nombre`, `slug`) 
             VALUES (%s, '%s', '%s')",
@@ -57,14 +68,13 @@ class ModeloCategoria{
         return $resul;
     }
 
-    function modificar($categoria, $id) {
+    public function modificar($categoria) {
 
         $sql = sprintf(
-            "UPDATE `categoria` SET `id`=%s, `nombre`=%s, `slug`=%s WHERE id=%s",
-            "NULL",
-            mysqli_real_escape_string($this->conexion->getConexion(), $categoria->$nombre),
-            mysqli_real_escape_string($this->conexion->getConexion(), $categoria->$slug),
-            mysqli_real_escape_string($this->conexion->getConexion(), $id)
+            "UPDATE `categoria` SET `nombre`='%s', `slug`='%s' WHERE id=%s",
+            mysqli_real_escape_string($this->conexion->getConexion(), $categoria->nombre),
+            mysqli_real_escape_string($this->conexion->getConexion(), $categoria->slug),
+            mysqli_real_escape_string($this->conexion->getConexion(), $categoria->id)
         );
 
         $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
@@ -72,8 +82,15 @@ class ModeloCategoria{
         return $resul;
     }
 
-    function borrar($id) {
-        return;
+    public function borrar($id) {
+        $sql = sprintf(
+            "DELETE FROM `categoria` WHERE `id`=%s",
+            mysqli_real_escape_string($this->conexion->getConexion(), $id)
+        );
+
+        $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
+
+        return $resul;
     }
 
 }

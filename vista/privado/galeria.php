@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-12">
                     <div class="borrar">
-                        <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>     
+                        <a href="index.php?apartado=privado&controlador=galeria&accion=borrar&id=<?php echo $imagen->id; ?>" class="boton-eliminar"><i class="far fa-trash-alt"></i> Borrar</a>     
                     </div>
                 </div>
             </div>

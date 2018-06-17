@@ -84,39 +84,23 @@
                             </tr>
                         </thead>
                         <tbody>
+                        <?php 
+                        foreach ($conciertos as $key => $concierto) {
+                        ?>
                             <tr class="concierto">
-                                <td>24/07/18</td>
-                                <td>Madrid</td>
-                                <td>Madrid Arena</td>
-                                <td>A la venta</td>
-                                <td>Enlace</td>
+                                <td><?php echo $concierto->fecha; ?></td>
+                                <td><?php echo $concierto->localizacion; ?></td>
+                                <td><?php echo $concierto->arena; ?></td>
+                                <td><?php echo $concierto->disponibilidad;?></td>
+                                <td><?php echo $concierto->puntoventa;?></td>
                                 <td>
                                     <a href="#" data-toggle="modal" data-target="#modificarConcierto" class="modificar"><i class="far fa-edit"></i> Editar </a>
-                                    <a href="eliminar-entrada.php" class="eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
+                                    <a href="index.php?apartado=privado&controlador=tour&accion=borrar&id=<?php echo $concierto->id;?>" class="boton-eliminar eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
                                 </td>
                             </tr>
-                            <tr class="concierto">
-                                <td>24/07/18</td>
-                                <td>Bcn</td>
-                                <td>Millenium Stadium</td>
-                                <td>Vendidas</td>
-                                <td>Enlace</td>
-                                <td>
-                                    <a href="#" data-toggle="modal" data-target="#modificarConcierto" class="modificar"><i class="far fa-edit"></i> Editar </a>
-                                    <a href="eliminar-entrada.php" class="eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
-                                </td>
-                            </tr>
-                            <tr class="concierto">
-                                <td>24/07/18</td>
-                                <td>Kentucky</td>
-                                <td>Palacio de vistalegre</td>
-                                <td>A la venta</td>
-                                <td>Enlace</td>
-                                <td>
-                                    <a href="#" data-toggle="modal" data-target="#modificarConcierto" class="modificar"><i class="far fa-edit"></i> Editar </a>
-                                    <a href="eliminar-entrada.php" class="eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
-                                </td>
-                            </tr>
+                            <?php 
+                            }
+                        ?>
                         </tbody>
                     </table>
                 </div>
@@ -125,19 +109,23 @@
     </div>
 
     <!-- Encuesta tours --> 
-    <div class="container c-tabla-cms c-tabla-cms--tour">
+    <div class="container c-tabla-cms c-tabla-cms--tour my-5">
         <div class="row justify-content-center">
-            <div class="col-md-12">
+            <div class="col-md-8">
+                <h2 class="text-center">Encuesta de países</h2>
+                <p class="lead text-center">Estos son los resultados de los países que más han votado para tener un concierto.</p>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Ciudad</th>
+                                <th scope="col">Posición</th>
+                                <th scope="col">País</th>
                                 <th scope="col">Votos</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+                                <td></td>
                                 <td>Madrid</td>
                                 <td>3453454</td>
                             </tr>

@@ -12,5 +12,3 @@ class Categoria {
         $this->slug = $slug;
     }
 }
-
-?>

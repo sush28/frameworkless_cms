@@ -7,7 +7,7 @@ include_once 'modelo/ModeloGaleria.php';
 class ModeloGaleria{
 
     public function __construct() {
-        $this->conexion = new Conexion();
+        $this->conexion = new Conexion(); 
     } 
 
     public function obtenerImagenes(){
@@ -41,17 +41,21 @@ class ModeloGaleria{
         return $resul;
     }
 
+    public function borrar($id){
+        $sql = sprintf(
+             "DELETE FROM `galeria` WHERE id=%s",
+             mysqli_real_escape_string($this->conexion->getConexion(), $id)
+        );
+
+        $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
+
+        return $resul;
+    }
+
 }
 
 /* CONSULTAS */
 
-// /* CREATE */
-// $sql = sprintf(
-//     "INSERT INTO `galeria` (`id`, `imagen`, `altimagen`) VALUES (%s, `%s`, `%s`)",
-//     "NULL",
-//     mysqli::real_escape_string ($imagen),
-//     mysqli::real_escape_string ($altimagen)
-// );
 
 // /* READ */
 // $sql = "SELECT * FROM `galeria` ORDER BY `fecha` DESC";
@@ -62,12 +66,6 @@ class ModeloGaleria{
 //     "NULL",
 //     mysqli::real_escape_string ($imagen),
 //     mysqli::real_escape_string ($altimagen),
-//     mysqli::real_escape_string ($id)
-// );
-
-// /* DELETE */
-// $sql = sprintf(
-//     "DELETE FROM `galeria` WHERE id=%s",
 //     mysqli::real_escape_string ($id)
 // );
 

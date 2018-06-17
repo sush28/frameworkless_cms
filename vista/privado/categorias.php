@@ -4,7 +4,7 @@
     <?php include 'includes/head.php'; ?>
     <title>Categorías | Gestor de contenido</title>
 </head>
-<body>
+<body id="categorias">
     <?php include 'includes/header.php'; ?>
         
     <div class="container c-formulario c-formulario--categoria">
@@ -51,10 +51,10 @@
                         </div>
                         <div class="col-md-12 col-lg-4">
                             <div class="modificar modificar-post">
-                                <a href="#" data-toggle="modal" data-target="#modificarCategoria"><i class="far fa-edit"></i> Editar </a>
+                                <a href="index.php?apartado=privado&controlador=categorias&accion=obtenerCategoriaComoJSON&id=<?php echo $categoria->id; ?>" data-toggle="modal" data-target="#modificarCategoria" class="boton-modificar"><i class="far fa-edit"></i> Editar </a>
                             </div>
                             <div class="eliminar eliminar-post">
-                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                                <a href="index.php?apartado=privado&controlador=categorias&accion=borrar&id=<?php echo $categoria->id; ?>" class="boton-eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
                             </div>
                         </div>
                     </div>
@@ -70,27 +70,25 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title" id="modificarCategoriaLabel">Modificar entrada</h2>
+                    <h2 class="modal-title" id="modificarCategoriaLabel">Modificar categoría</h2>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div id="form-container" class="container">
-                        <form action="index.php?apartado=privado&controlador=categorias&accion=modificar" method="post" enctype="multipart/form-data">
+                        <form action="index.php?apartado=privado&controlador=categorias&accion=modificar" method="post" enctype="multipart/form-data" id="form-modificar">
+                            <input type="hidden" id="id-categoria" name="id-categoria" />
                             <div class="form-group">
                                 <label for="modificar-nombre">Nombre</label>
                                 <input class="form-control" type="text" name="modificar-nombre" id="modificar-nombre" required>
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-primary" type="submit" name="submit">Modificar categoría</button>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Modificar categoría</button>
+                    <button type="button" class="btn btn-primary" id="submit-modificar">Modificar categoría</button>
                 </div>
             </div>
         </div>

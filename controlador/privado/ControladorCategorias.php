@@ -7,6 +7,12 @@ include_once 'modelo/categoria.php';
 
 class ControladorCategorias { 
 
+    private $modeloCategoria;
+
+    public function __construct(){
+        $this->modeloCategoria = new ModeloCategoria();
+    }
+
     // @todo Este controlador pone de acuerdo modelos y vistas... coge datos de los modelos y los muestra en las vistas...
 
     public function mostrarCategorias(){
@@ -31,31 +37,51 @@ class ControladorCategorias {
     public function crear() {
         $nombre = $_POST['nombre'];
 
-        // @todo Useeeer!
         $categoria = new Categoria($nombre, slugify($nombre));
 
-        $modeloCategoria = new ModeloCategoria();
-
-        $modeloCategoria->guardar($categoria);
+        $this->modeloCategoria->guardar($categoria);
 
         $this->mostrarCategorias();
     }
 
-    public function modificar($id){
+    public function obtenerCategoriaComoJSON(){
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+        } else {
+            die('Operación no permitida, falta el Id de la categoria a modificar.');
+        }
+
+        $categoria = $this->modeloCategoria->obtenerCategoria($id);
+
+        // Devuelve JSON para jquery
+        header('Content-Type: application/json');
+        print_r(json_encode($categoria)); die;
+    }
+
+    public function modificar(){
+        $id = $_POST['id-categoria'];
         $nombre = $_POST['modificar-nombre'];
 
-        // @todo Useeeer!
+
         $categoria = new Categoria($nombre, slugify($nombre));
+        $categoria->id = $id;
 
-        $modeloCategoria = new ModeloCategoria();
-
-        $modeloCategoria->modificar($categoria);
+        $this->modeloCategoria->modificar($categoria);
 
         $this->mostrarCategorias();
 
     }
 
-    public function borrar($id){
+    public function borrar(){
+        if(isset($_GET['id'])){
+            $id = $_GET['id'];
+        } else {
+            die('Operación no permitida, falta el ID de la categoría.');
+        }
+
+        $this->modeloCategoria->borrar($id);
+
+        $this->mostrarCategorias();
 
     } 
 

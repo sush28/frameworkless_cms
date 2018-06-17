@@ -66,7 +66,7 @@ class ModeloEntrada{
             mysqli_real_escape_string($this->conexion->getConexion(), $id)
         );
 
-        $resultado = mysqli_query($this->conexion->getConexion(), $sql) or die("No se han podido obtener las entradas.");
+        $resultado = mysqli_query($this->conexion->getConexion(), $sql) or die("No se ha podido obtener la entrada.");
 
         return mysqli_fetch_assoc($resultado);
     }
@@ -111,7 +111,7 @@ class ModeloEntrada{
 
     public function borrar($id) {
         $sql = sprintf(
-            "DELETE FROM `entrada` WHERE id=%s",
+            "DELETE FROM `entrada` WHERE `id`=%s",
             mysqli_real_escape_string($this->conexion->getConexion(), $id)
         );
         

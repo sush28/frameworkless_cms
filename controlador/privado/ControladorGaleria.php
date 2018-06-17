@@ -7,6 +7,12 @@ include_once 'modelo/utilities.php';
 
 class ControladorGaleria {
 
+    private $modeloGaleria;
+
+    public function __construct() {
+        $this->modeloGaleria = new ModeloGaleria();
+    }
+
     public function mostrarGaleria(){
         // @todo coger datos desde el modelo y guardarlos en un array (para pasarlo a la vista)
         // El modelo esta en: /modelo/Blog.php
@@ -25,9 +31,7 @@ class ControladorGaleria {
 
         $imagen = new Galeria($archivo["name"], $altimagen, fechaActual());
 
-        $modeloGaleria = new ModeloGaleria();
-
-        if (false !== $modeloGaleria->guardar($imagen)) {
+        if (false !== $this->modeloGaleria->guardar($imagen)) {
             guardarImagen($archivo, "almacenamiento/galeria/");
         }
 
@@ -35,7 +39,16 @@ class ControladorGaleria {
         
     }
 
-    public function borrar($id){
+    public function borrar(){
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+        } else {
+            die('Operación no permitida, falta el ID de la imagen.');
+        }
+
+        $this->modeloGaleria->borrar($id);
+
+        $this->mostrarGaleria();
 
     } 
 
