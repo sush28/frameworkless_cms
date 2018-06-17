@@ -1,27 +1,37 @@
 <?php
 
-include 'modelo/ModeloConcierto.php';
+include 'modelo/ModeloGaleria.php';
+include 'modelo/galeria.php';
+include 'modelo/utilities.php';
 
 
-/* Class Tour */
 class ControladorGaleria {
 
-
-
-    public function listado(){
+    public function mostrarGaleria(){
         // @todo coger datos desde el modelo y guardarlos en un array (para pasarlo a la vista)
         // El modelo esta en: /modelo/Blog.php
-        $blog = new ModeloBlog();
+        $modeloGaleria = new ModeloGaleria();
 
-        // Este es un array guarrero...
-        $posts = $blog->obtenerPosts();
+        $imagenes = $modeloGaleria->obtenerImagenes();
 
-        include 'vista/publico/tour.php';
+        include 'vista/privado/galeria.php';
         die();
     }
 
     public function crear(){
 
+        $archivo = $_FILES['imagen'];
+        $altimagen = $_POST['altimagen'];
+
+        $imagen = new Galeria($archivo["name"], $altimagen, fechaActual());
+
+        $modeloGaleria = new ModeloGaleria();
+
+        if (false !== $modeloGaleria->guardar($imagen)) {
+            guardarImagen($archivo, "almacenamiento/galeria/");
+        }
+
+        $this->mostrarGaleria();
     }
 
     public function borrar($id){

@@ -2,7 +2,7 @@
 
 include 'modelo/ModeloEntrada.php';
 include 'modelo/ModeloCategoria.php';
-include 'modelo/utilerias.php';
+include 'modelo/utilities.php';
 include 'modelo/entrada.php';
 
 /**
@@ -12,7 +12,7 @@ class ControladorBlog {
 
     // @todo Este controlador pone de acuerdo modelos y vistas... coge datos de los modelos y los muestra en las vistas...
 
-    public function listado(){
+    public function mostrarEntradas(){
         // @todo Usar esto en todos los métodos de todos los controladores que estan en PRIVADO.
         // if (!isset($user)) {
         //     die('No tienes acceso, por favor <a href="login.php">inicia sesión<a>.');
@@ -37,7 +37,7 @@ class ControladorBlog {
     public function crear() {
         $categoria = $_POST['categoria'];
         $titulo = $_POST['titulo'];
-        $file = $_FILES['imagen'];
+        $archivo = $_FILES['imagen'];
         $alt = $_POST['altimagen'];
         $contenido = $_POST['entrada'];
         $esPublico = "false";
@@ -48,15 +48,15 @@ class ControladorBlog {
         }
 
         // @todo Useeeer!
-        $entrada = new Entrada($titulo, $contenido, 1, $file["name"], $alt, fechaActual(), $esPublico, slugify($titulo), $categoria);
+        $entrada = new Entrada($titulo, $contenido, 1, $archivo["name"], $alt, fechaActual(), $esPublico, slugify($titulo), $categoria);
 
         $modeloEntrada = new ModeloEntrada();
 
         if (false !== $modeloEntrada->guardar($entrada)) {
-            guardarImagen($file);
+            guardarImagen($archivo);
         }
 
-        $this->listado();
+        $this->mostrarEntradas();
     }
 
     public function modificar($id){

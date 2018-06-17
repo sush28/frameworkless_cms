@@ -1,16 +1,16 @@
 <?php
 
 class Galeria {
-  
-    public $id;
+
     public $imagen;
     public $altimagen;
+    public $fecha;
 
-    public function __construct($id, $imagen, $altimagen) {
+    public function __construct($imagen, $altimagen, $fecha) {
 
-        $this->id = $id;
         $this->imagen = $imagen;
         $this->altimagen = $altimagen;
+        $this->fecha = $fecha;
     }
 }
 

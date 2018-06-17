@@ -31,10 +31,11 @@ function fechaActual() {
     return date("Y-m-d H:i:s", $datetimeHoy->getTimestamp());
 }
 
+/* ALMACENAMIENTO DE IMAGENES */
 function guardarImagen($file, $carpeta = 'almacenamiento/blog/') {
-    // Mover archivo a /almacenamiento/blog/{nombre}
+    // Mover archivo a /almacenamiento/carpeta/nombre
     $imageBinaryData = file_get_contents($file["tmp_name"]);
-    // Crea el archivo en uploads, require 2 cosas: nombre de archivo, contenido
+    // Crea el archivo en almacenamiento con dos parámetros (nombre del archivo y el archivo en sí)
     file_put_contents($carpeta . $file["name"], $imageBinaryData);
 }
 

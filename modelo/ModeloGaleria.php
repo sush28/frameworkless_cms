@@ -1,60 +1,71 @@
 <?php
 
-include_once 'conexion.php';
-include_once 'concierto.php';
+include_once 'modelo/conexion.php';
 
-class ModeloConcierto{
+class ModeloGaleria{
 
-  
-    public function obtenerPosts(){
+    public function __construct() {
+        $this->conexion = new Conexion();
+    } 
 
-    }
+    public function obtenerImagenes(){
+        $imagenes = array();
 
-    function getConciertos() {
-        $conciertos = array();
-        $sql = "select * from concierto;";
+        $sql = "SELECT * FROM `galeria` ORDER BY fecha DESC";
 
-        $resul = mysqli_query($con, $sql) or die("No se han podido obtener los conciertos.");
+        $resul = mysqli_query($this->conexion->getConexion(), $sql) or die("No se han podido obtener las imágenes de la galería.");
 
         while ($row = mysqli_fetch_array($resul, MYSQLI_ASSOC)) {
-            array_push($conciertos, $row['id_escu']);
+            array_push($imagenes, $row);
         }
-        return $conciertos;
+        return $imagenes;
     }
 
-    function insertarImagen($id, $imagen, $altimagen) {
-        return;
+    public function guardar($imagen) {
+        $sql = sprintf(
+            "INSERT INTO `galeria` (`id`, `imagen`, `altimagen`, `fecha`) VALUES (%s, '%s', '%s', '%s')",
+            "NULL",
+            mysqli_real_escape_string($this->conexion->getConexion(), $imagen->imagen),
+            mysqli_real_escape_string($this->conexion->getConexion(), $imagen->altimagen),
+            mysqli_real_escape_string($this->conexion->getConexion(), $imagen->fecha)
+        );
+        // print_r($sql); die;
+        $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
+
+        // or die("No se han podido insertar la entrada.");
+
+        return $resul;
     }
 
 }
 
 /* CONSULTAS */
 
-/* CREATE */
-$sql = sprintf(
-    "INSERT INTO `galeria` (`id`, `imagen`, `altimagen`) VALUES (%s, `%s`, `%s`)",
-    "NULL",
-    mysqli::real_escape_string ($imagen),
-    mysqli::real_escape_string ($altimagen)
-);
+// /* CREATE */
+// $sql = sprintf(
+//     "INSERT INTO `galeria` (`id`, `imagen`, `altimagen`) VALUES (%s, `%s`, `%s`)",
+//     "NULL",
+//     mysqli::real_escape_string ($imagen),
+//     mysqli::real_escape_string ($altimagen)
+// );
 
-/* READ */
-$sql = "SELECT * FROM `galeria` ORDER BY `fecha` DESC";
+// /* READ */
+// $sql = "SELECT * FROM `galeria` ORDER BY `fecha` DESC";
 
-/* UPDATE */
-$sql = sprintf(
-    "UPDATE `galeria` SET `id`=%s, `imagen`=%s, `altimagen`=%s WHERE id=%s",
-    "NULL",
-    mysqli::real_escape_string ($imagen),
-    mysqli::real_escape_string ($altimagen),
-    mysqli::real_escape_string ($id)
-);
+// /* UPDATE */
+// $sql = sprintf(
+//     "UPDATE `galeria` SET `id`=%s, `imagen`=%s, `altimagen`=%s WHERE id=%s",
+//     "NULL",
+//     mysqli::real_escape_string ($imagen),
+//     mysqli::real_escape_string ($altimagen),
+//     mysqli::real_escape_string ($id)
+// );
 
-/* DELETE */
-$sql = sprintf(
-    "DELETE FROM `galeria` WHERE id=%s",
-    mysqli::real_escape_string ($id)
-);
+// /* DELETE */
+// $sql = sprintf(
+//     "DELETE FROM `galeria` WHERE id=%s",
+//     mysqli::real_escape_string ($id)
+// );
 
 
 ?>

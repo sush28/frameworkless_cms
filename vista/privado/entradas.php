@@ -85,9 +85,9 @@
                     <div class="c-listado-elemento entrada">
                         <div class="row">
                             <div class="col-md-10">
-                                <div class="fecha-post">12-3-18</div>
+                                <div class="fecha-post"><?php echo $entrada['fecha']; ?></div>
                                 <div class="titulo-post"><?php echo $entrada['titulo']; ?></div>
-                                <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
+                                <div class="desc-post"><?php echo $entrada['contenido']; ?></div>
                             </div>
                             <div class="col-md-2">
                                 <div class="modificar modificar-post">

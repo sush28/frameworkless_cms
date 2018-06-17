@@ -43,11 +43,11 @@ class ModeloEntrada{
             mysqli_real_escape_string($this->conexion->getConexion(), $entrada->id_categoria)
         );
         // print_r($sql); die;
-        $result = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
+        $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
 
         // or die("No se han podido insertar la entrada.");
 
-        return $result;
+        return $resul;
     }
 }
 

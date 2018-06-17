@@ -1,8 +1,7 @@
 <?php
 
 include_once 'modelo/conexion.php';
-include_once 'categoria.php';
-
+   
 class ModeloCategoria{
 
     private $conexion;
@@ -26,23 +25,36 @@ class ModeloCategoria{
         return $categorias;
     }
 
-    function getCategoria($id) {
-        return $categorias;
+    function guardar($categoria) {
+        $sql = sprintf(
+            "INSERT INTO `categoria` (`id`, `nombre`, `slug`) 
+            VALUES (%s, '%s', '%s')",
+            "NULL",
+            mysqli_real_escape_string($this->conexion->getConexion(), $categoria->nombre),
+            mysqli_real_escape_string($this->conexion->getConexion(), $categoria->slug)
+        );
+
+        $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
+
+        return $resul;
     }
 
-    function getListadoCategorias() {
-        return $categorias;
+    function modificar($categoria, $id) {
+
+        $sql = sprintf(
+            "UPDATE `categoria` SET `id`=%s, `nombre`=%s, `slug`=%s WHERE id=%s",
+            "NULL",
+            mysqli_real_escape_string($this->conexion->getConexion(), $categoria->$nombre),
+            mysqli_real_escape_string($this->conexion->getConexion(), $categoria->$slug),
+            mysqli_real_escape_string($this->conexion->getConexion(), $id)
+        );
+
+        $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
+
+        return $resul;
     }
 
-    function insertarCategoria($id, $nombre, $slug) {
-        return;
-    }
-
-    function modificarCategoria($id) {
-        return;
-    }
-
-    function borrarCategoria($id) {
+    function borrar($id) {
         return;
     }
 

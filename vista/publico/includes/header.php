@@ -17,7 +17,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php?apartado=publico&controlador=galeria&accion=mostrarGaleria">Galería</a>
-        </li> 
+        </li>  
         <li class="nav-item">
           <a class="nav-link" href="index.php?apartado=publico&controlador=tour&accion=mostrarTour">Tour</a>
         </li>

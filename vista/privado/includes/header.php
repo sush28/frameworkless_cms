@@ -10,21 +10,19 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="DropdownBlog" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
                 <div class="dropdown-menu" aria-labelledby="DropdownBlog">
-                    <a class="dropdown-item" href="entradas.php">Entradas</a>
+                    <a class="dropdown-item" href="index.php?apartado=privado&controlador=entradas&accion=mostrarEntradas">Entradas</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="comentarios.php">Comentarios</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="categorias.php">Categorías</a>
+                    <a class="dropdown-item" href="index.php?apartado=privado&controlador=categorias&accion=mostrarCategorias">Categorías</a>
                 </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="tour.php">Tour</a>
+              <a class="nav-link" href="index.php?apartado=privado&controlador=tour&accion=mostrarTour">Tour</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="zona-fan.php">Zona fan</a>
+              <a class="nav-link" href="index.php?apartado=privado&controlador=zonaFan&accion=mostrarZonaFan">Zona fan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="galeria.php">Galería</a>
+              <a class="nav-link" href="index.php?apartado=privado&controlador=galeria&accion=mostrarGaleria">Galería</a>
             </li>
           </ul>
         </div>
