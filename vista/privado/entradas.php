@@ -22,14 +22,20 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="collapse multi-collapse" id="creacionEntrada">
-                                <form action="crear-post.php" method="post" enctype="multipart/form-data">
+                                <form action="index.php?apartado=privado&controlador=blog&accion=crear" method="post" enctype="multipart/form-data">
                                     <h2 class="text-center">Crear post</h2>
                                     <div class="row">
                                         <div class="col-xs-12 mx-auto">
                                             <div class="form-group">
                                                 <label for="categoria">Categoría</label>
                                                 <select class="form-control" id="categoria">
-                                                    <option value="">Categoría 1</option>
+                                                    <?php
+                                                        foreach($categorias as $key => $categoria) {
+                                                            ?>
+                                                                <option value="<?php echo $categoria['id']; ?>"><?php echo $categoria['nombre']; ?></option>
+                                                            <?php
+                                                        }
+                                                    ?>
                                                 </select>
                                             </div>
                                             <div class="form-group">
@@ -69,88 +75,35 @@
             </div>
         </div>
     </div>
+
     <div class="container c-listado c-listado--blog">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <div class="c-listado-elemento entrada">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <div class="fecha-post">12-3-18</div>
-                            <div class="titulo-post">Blablabla</div>
-                            <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="modificar modificar-post">
-                                <a href="modificar-entrada.php" data-toggle="modal" data-target="#modificarEntrada"><i class="far fa-edit"></i> Editar </a>
+    <?php
+        foreach ($entradas as $key => $entrada) {
+            ?>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="c-listado-elemento entrada">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="fecha-post">12-3-18</div>
+                                <div class="titulo-post"><?php echo $entrada['titulo']; ?></div>
+                                <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
                             </div>
-                            <div class="eliminar eliminar-post">
-                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <div class="c-listado-elemento entrada">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <div class="titulo-post">Blablabla</div>
-                            <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="modificar modificar-post">
-                                <a href="modificar-entrada.php" data-toggle="modal" data-target="#modificarEntrada"><i class="far fa-edit"></i> Editar </a>
-                            </div>
-                            <div class="eliminar eliminar-post">
-                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                            <div class="col-md-2">
+                                <div class="modificar modificar-post">
+                                    <a href="modificar-entrada.php" data-toggle="modal" data-target="#modificarEntrada"><i class="far fa-edit"></i> Editar </a>
+                                </div>
+                                <div class="eliminar eliminar-post">
+                                    <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <div class="c-listado-elemento entrada">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <div class="titulo-post">Blablabla</div>
-                            <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="modificar modificar-post">
-                                <a href="modificar-entrada.php" data-toggle="modal" data-target="#modificarEntrada"><i class="far fa-edit"></i> Editar </a>
-                            </div>
-                            <div class="eliminar eliminar-post">
-                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <div class="c-listado-elemento entrada">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <div class="titulo-post">Blablabla</div>
-                            <div class="desc-post">Post sobre cosas muy interesantes bla bla bla bla bla bala </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="modificar modificar-post">
-                                <a href="modificar-entrada.php" data-toggle="modal" data-target="#modificarEntrada"><i class="far fa-edit"></i> Editar </a>
-                            </div>
-                            <div class="eliminar eliminar-post">
-                                <a href="eliminar-entrada.php"><i class="far fa-trash-alt"></i> Borrar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <?php
+        }
+    ?>
     </div>
 
     <div class="modal fade" id="modificarEntrada" tabindex="-1" role="dialog" aria-labelledby="modificarEntradaLabel" aria-hidden="true">
