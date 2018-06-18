@@ -4,6 +4,7 @@ include_once 'modelo/ModeloEntrada.php';
 include_once 'modelo/ModeloCategoria.php';
 include_once 'modelo/utilities.php';
 include_once 'modelo/entrada.php';
+include_once 'controlador/privado/ControladorLogin.php';
 
 /**
  * Class Blog
@@ -12,20 +13,18 @@ class ControladorBlog {
 
     private $modeloEntrada;
     private $modeloCategoria;
+    private $controladorLogin;
 
     public function __construct() {
         $this->modeloEntrada = new ModeloEntrada();
         $this->modeloCategoria = new ModeloCategoria();
+        $this->controladorLogin = new ControladorLogin();
     }
 
-    // @todo Este controlador pone de acuerdo modelos y vistas... coge datos de los modelos y los muestra en las vistas...
-
     public function mostrarEntradas(){
-        // @todo Usar esto en todos los métodos de todos los controladores que estan en PRIVADO.
-        // if (!isset($user)) {
-        //     die('No tienes acceso, por favor <a href="login.php">inicia sesión<a>.');
-        // }
-
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para mostrar entradas, por favor inicia sesión.');
+        }
         
         $entradas = $this->modeloEntrada->obtenerEntradas();
         $categorias = $this->modeloCategoria->obtenerCategorias();
@@ -35,6 +34,10 @@ class ControladorBlog {
     }
 
     public function crear() {
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para crear entradas, por favor inicia sesión.');
+        }
+
         $categoria = $_POST['categoria'];
         $titulo = $_POST['titulo'];
         $archivo = $_FILES['imagen'];
@@ -50,7 +53,6 @@ class ControladorBlog {
         // @todo Useeeer!
         $entrada = new Entrada($titulo, $contenido, 1, $archivo["name"], $alt, fechaActual(), $esPublico, slugify($titulo), $categoria);
 
-
         if (false !== $this->modeloEntrada->guardar($entrada)) {
             guardarImagen($archivo);
         }
@@ -59,6 +61,10 @@ class ControladorBlog {
     }
  
     public function obtenerEntradaComoJSON(){
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para obtener entrada como JSON, por favor inicia sesión.');
+        }
+
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
         } else {
@@ -73,6 +79,10 @@ class ControladorBlog {
     }
 
     public function modificar() {
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para modificar entradas, por favor inicia sesión.');
+        }
+
         $id = $_POST['id-entrada'];
         $categoria = $_POST['modificar-categoria'];
         $titulo = $_POST['modificar-titulo'];
@@ -86,7 +96,6 @@ class ControladorBlog {
             }
         }
 
-        // @todo Useeeer!
         $entrada = new Entrada($titulo, $contenido, 1, $archivo["name"], $alt, fechaActual(), $esPublico, slugify($titulo), $categoria);
         $entrada->id = $id;
 
@@ -100,6 +109,10 @@ class ControladorBlog {
     }
 
     public function borrar(){
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para borrar entradas, por favor inicia sesión.');
+        }
+
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
         } else {
@@ -112,19 +125,18 @@ class ControladorBlog {
     } 
 
     public function borrarComentario(){
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para borrar comentarios, por favor inicia sesión.');
+        }
+
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
         } else {
             die('Operación no permitida, falta el ID del comentario a eliminar.');
         }
 
-        $this->modeloComentario->borrar($id);  
-        
+        $this->modeloComentario->borrar($id);
 
         $this->mostrarEntrada();
-    }  
-
-    public function moderarComentarios($id){
-
     }
 }

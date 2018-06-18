@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Gestor de contenido | Two Door Cinema Club</title>
-    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/css/styles-cms.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles-cms.css">
 
 
     <?php
-
     /*
     session_start();
+
 
     if (isset($_POST["login"])) {
         $user = "laura";
@@ -43,8 +43,13 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-lg-4 mx-auto mt-4">
-                <form action="index.php" method="post" enctype="multipart/form-data" class="formulario">
+                <form action="index.php?apartado=privado&controlador=login&accion=autenticar" method="post" enctype="multipart/form-data" class="formulario">
                     <h2 class="text-center">Inicia sesión</h2>
+                    <?php
+                        // if(isset($mensajeLogin)) {
+                        //     ?><h3><?php echo $mensajeLogin; ?></h3><?php
+                        // }
+                    ?>
                     <hr>
                     <div class="form-group">
                         <label for="usuario">Usuario</label>

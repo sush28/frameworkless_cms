@@ -47,7 +47,7 @@
                         <div class="col-md-12 c-comentarios">
                             <h2 class="titulo">Comentarios</h2>
                             <div class="comentar">
-                                <form action="index.php?apartado=publico&controlador=Blog&accion=crearComentario&id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
+                                <form action="index.php?apartado=publico&controlador=blog&accion=crearComentario&id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
                                     <h3 class="lead">Deja un comentario</h3>
                                     <div class"form-group">
                                         <label for="nombre-padre">Nombre</label>
@@ -79,7 +79,7 @@
                                             <div class="col-md-11">
                                                 <div class="collapse multi-collapse py-3" id="responderComentario<?php echo $comentario['objeto']->id; ?>">
                                                     <h4 class="lead">Responder comentario</h4>
-                                                    <form action="index.php?apartado=privado&controlador=Blog&accion=responderComentario&id=<?php echo $id; ?>&id_comentario=<?php echo $comentario['objeto']->id; ?>" method="post" enctype="multipart/form-data">
+                                                    <form action="index.php?apartado=privado&controlador=blog&accion=responderComentario&id=<?php echo $id; ?>&id_comentario=<?php echo $comentario['objeto']->id; ?>" method="post" enctype="multipart/form-data">
                                                         <div class="form-group">
                                                             <label for="nombre-hijo">Nombre</label>
                                                             <input class="form-control" type="text" name="nombre-hijo" id="nombre-hijo-<?php echo $comentario['objeto']->id; ?>" required>

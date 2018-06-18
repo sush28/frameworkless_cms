@@ -22,7 +22,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="collapse multi-collapse" id="creacionCategoria">
-                                <form action="index.php?apartado=privado&controlador=categorias&accion=crear" method="post" enctype="multipart/form-data">
+                                <form action="index.php?apartado=privado&controlador=categorias&accion=crear" method="post">
                                     <div class="form-group">
                                         <label for="nombre">Nombre</label>
                                         <input class="form-control" type="text" name="nombre" id="nombre" required>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="modal-body">
                     <div id="form-container" class="container">
-                        <form action="index.php?apartado=privado&controlador=categorias&accion=modificar" method="post" enctype="multipart/form-data" id="form-modificar">
+                        <form action="index.php?apartado=privado&controlador=categorias&accion=modificar" method="post" id="form-modificar">
                             <input type="hidden" id="id-categoria" name="id-categoria" />
                             <div class="form-group">
                                 <label for="modificar-nombre">Nombre</label>

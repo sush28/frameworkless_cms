@@ -119,19 +119,46 @@
                                             </div>
                                             <div class="col-md-2">
                                                 <div class="row">
-                                                    <div class="eliminar eliminar-comentariot">
-                                                        <a href="index.php?apartado=privado&controlador=blog&accion=borrar&id=<?php echo $entrada->id; ?>" class="boton-eliminar"><i class="far fa-trash-alt" aria-hidden="true"></i> Eliminar</a>
+                                                    <div class="eliminar eliminar-comentario">
+                                                        <a href="index.php?apartado=privado&controlador=blog&accion=responderComentario&id=<?php echo $id; ?>&id_comentario=<?php echo $comentario['objeto']->id; ?>" class="boton-eliminar"><i class="far fa-trash-alt" aria-hidden="true"></i> Eliminar</a>
                                                     </div>
+                                                    <div class="validar validar-comentario">
+                                                        <form action="index.php?apartado=privado&controlador=blog&accion=crear" method="post">
+                                                            <div class="form-group text-center">
+                                                                <input class="form-check-input" type="checkbox" value="publico" id="publico" name="publico">
+                                                                <label class="form-check-label" for="publico">Público</label>
+                                                            </div>
+                                                        </form>
+                                                    </div>    
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row comentario comentario-hijo pl-4">
-                                            <div class="col-md-12">
-                                                <p class="comentador"><strong>Nombre usuario</strong></p>
-                                                <span class="fecha-hora">12-04-18 12:34</span>
+                                        <div class="row comentario comentario-hijo justify-content-end">
+                                            <div class="col-md-9">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <p class="comentador"><strong>Nombre usuario</strong></p>
+                                                        <span class="fecha-hora">12-04-18 12:34</span>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <p class="contenido-comentario">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-md-12">
-                                                <p class="contenido-comentario">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                                            <div class="col-md-2">
+                                                <div class="row">
+                                                    <div class="eliminar eliminar-comentario">
+                                                        <a href="index.php?apartado=privado&controlador=blog&accion=responderComentario&id=<?php echo $id; ?>&id_comentario=<?php echo $comentario['objeto']->id; ?>" class="boton-eliminar"><i class="far fa-trash-alt" aria-hidden="true"></i> Eliminar</a>
+                                                    </div>
+                                                    <div class="validar validar-comentario">
+                                                        <form action="index.php?apartado=privado&controlador=blog&accion=crear" method="post">
+                                                            <div class="form-group text-center">
+                                                                <input class="form-check-input" type="checkbox" value="publico" id="publico" name="publico">
+                                                                <label class="form-check-label" for="publico">Público</label>
+                                                            </div>
+                                                        </form>
+                                                    </div>    
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

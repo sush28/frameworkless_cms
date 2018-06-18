@@ -3,26 +3,24 @@
 include_once 'modelo/ModeloCategoria.php';
 include_once 'modelo/utilities.php';
 include_once 'modelo/categoria.php';
+include_once 'controlador/privado/ControladorLogin.php';
 
 
 class ControladorCategorias { 
 
     private $modeloCategoria;
+    private $controladorLogin;
 
     public function __construct(){
         $this->modeloCategoria = new ModeloCategoria();
+        $this->controladorLogin = new ControladorLogin();
     }
 
-    // @todo Este controlador pone de acuerdo modelos y vistas... coge datos de los modelos y los muestra en las vistas...
-
     public function mostrarCategorias(){
-        // @todo Usar esto en todos los métodos de todos los controladores que estan en PRIVADO.
-        // if (!isset($user)) {
-        //     die('No tienes acceso, por favor <a href="login.php">inicia sesión<a>.');
-        // }
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para mostrar categorias, por favor inicia sesión.');
+        }
 
-        // @todo coger datos desde el modelo y guardarlos en un array (para pasarlo a la vista)
-        // El modelo esta en: /modelo/Blog.php
         $modeloCategoria = new ModeloCategoria();
 
         $categorias = $modeloCategoria->obtenerCategorias();
@@ -35,6 +33,10 @@ class ControladorCategorias {
     }
 
     public function crear() {
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para crear categorias, por favor inicia sesión.');
+        }
+
         $nombre = $_POST['nombre'];
 
         $categoria = new Categoria($nombre, slugify($nombre));
@@ -45,6 +47,10 @@ class ControladorCategorias {
     }
 
     public function obtenerCategoriaComoJSON(){
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para obtener categoria como JSON, por favor inicia sesión.');
+        }
+
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
         } else {
@@ -59,6 +65,10 @@ class ControladorCategorias {
     }
 
     public function modificar(){
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para modificar categorias, por favor inicia sesión.');
+        }
+
         $id = $_POST['id-categoria'];
         $nombre = $_POST['modificar-nombre'];
 
@@ -73,6 +83,10 @@ class ControladorCategorias {
     }
 
     public function borrar(){
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para borrar categorias, por favor inicia sesión.');
+        }
+
         if(isset($_GET['id'])){
             $id = $_GET['id'];
         } else {
@@ -84,8 +98,4 @@ class ControladorCategorias {
         $this->mostrarCategorias();
 
     } 
-
-    public function moderarComentarios($id){
-
-    }
 }

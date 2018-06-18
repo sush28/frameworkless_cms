@@ -7,12 +7,24 @@ include_once 'modelo/ModeloUsuario.php';
 /**
  * Class Usuario
  */
-class ModeloUsuario{
+class ModeloUsuario {
 
     private $conexion;
 
     public function __construct() {
         $this->conexion = new Conexion();
+    }
+
+    public function login($user, $pass) {
+        $sql = sprintf(
+            "SELECT * FROM `usuario` WHERE `user`='%s' AND `pass`='%s'",
+            mysqli_real_escape_string($this->conexion->getConexion(), $user),
+            mysqli_real_escape_string($this->conexion->getConexion(), $pass)
+        );
+
+        $resultado = mysqli_query($this->conexion->getConexion(), $sql);
+
+        return mysqli_fetch_assoc($resultado);
     }
 
     public function obtenerUsuarios(){

@@ -26,9 +26,9 @@
     <div class="dropdown">
       <button type="button" class="dropdown-toggle" id="DropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="usuario"><i class="fas fa-user"></i></button>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="DropdownUser">
-          <p class="dropdown-header">Nombre de usuario</p>
+          <p class="dropdown-header"><?php echo $_SESSION['autor']; ?></p>
           <a class="dropdown-item" href="index.php?apartado=privado&controlador=usuarios&accion=mostrarUsuarios">Gestión de usuarios</a>
-          <a class="dropdown-item" href="logout.php"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Salir</a>
+          <a class="dropdown-item" href="index.php?apartado=privado&controlador=login&accion=cerrarSesion"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Salir</a>
       </div>
     </div>
   </div>

@@ -4,18 +4,23 @@ include_once 'modelo/ModeloConcierto.php';
 include_once 'modelo/utilities.php';
 include_once 'modelo/concierto.php';
 include_once 'modelo/encuesta.php';
+include_once 'controlador/privado/ControladorLogin.php';
 
 
 class ControladorTour {   
 
     private $modeloConcierto;
+    private $controladorLogin;
 
     public function __construct() { 
         $this->modeloConcierto = new ModeloConcierto();
+        $this->controladorLogin = new ControladorLogin();
     }
 
     public function mostrarConciertos(){
-        // @todo coger datos desde el modelo y guardarlos en un array (para pasarlo a la vista)
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para mostrar conciertos, por favor inicia sesión.');
+        }
 
         $conciertos = $this->modeloConcierto->obtenerConciertos();
         $encuesta = $this->modeloConcierto->obtenerEncuesta();
@@ -25,6 +30,10 @@ class ControladorTour {
     }
 
     public function crear(){
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para crear conciertos, por favor inicia sesión.');
+        }
+
         $fecha = $_POST['fecha'];
         $arena = $_POST['arena'];
         $localizacion = $_POST['localizacion'];
@@ -39,6 +48,10 @@ class ControladorTour {
     }
 
     public function obtenerConciertoComoJSON(){
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para obtenerConcierto como JSON conciertos, por favor inicia sesión.');
+        }
+
         if (isset($_GET['id'])) {
             $id = $_GET['id']; 
         } else {
@@ -53,6 +66,10 @@ class ControladorTour {
     }
 
     public function modificar(){
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para modificar conciertos, por favor inicia sesión.');
+        }
+
         $id = $_POST['id-concierto'];
         $fecha = $_POST['modificar-fecha'];
         $arena = $_POST['modificar-arena'];
@@ -69,6 +86,10 @@ class ControladorTour {
     }
 
     public function borrar(){
+        if (!$this->controladorLogin->logeado()) {
+            $this->controladorLogin->login('No tienes acceso para borrar conciertos, por favor inicia sesión.');
+        }
+
         if(isset($_GET['id'])){
             $id = $_GET['id'];
         } else {
