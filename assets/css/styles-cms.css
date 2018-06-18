@@ -51,7 +51,7 @@ form textarea:focus {
 form .form-control:focus {
   box-shadow: none;
 }
-form .ck-focused {
+form .ck-content {
   min-height: 250px;
 }
 .c-galeria .c-galeria-item {
@@ -90,25 +90,38 @@ form .ck-focused {
   border-bottom: 1px solid #dee2e6;
 }
 .c-listado .c-listado-elemento .modificar,
-.c-listado .c-listado-elemento .eliminar {
+.c-listado .c-listado-elemento .eliminar,
+.c-listado .c-listado-elemento .moderar {
   background-color: #e8e8e8;
   border-radius: 4px;
   padding: 3px;
 }
 .c-listado .c-listado-elemento .modificar a,
-.c-listado .c-listado-elemento .eliminar a {
+.c-listado .c-listado-elemento .eliminar a,
+.c-listado .c-listado-elemento .moderar a {
   display: block;
   text-align: center;
   color: #212529;
 }
 .c-listado .c-listado-elemento .modificar:hover a,
-.c-listado .c-listado-elemento .eliminar:hover a {
+.c-listado .c-listado-elemento .eliminar:hover a,
+.c-listado .c-listado-elemento .moderar:hover a {
   color: #ffffff;
   text-decoration: none;
 }
 .c-listado .c-listado-elemento .modificar:hover a i,
-.c-listado .c-listado-elemento .eliminar:hover a i {
+.c-listado .c-listado-elemento .eliminar:hover a i,
+.c-listado .c-listado-elemento .moderar:hover a i {
   color: #ffffff;
+}
+.c-listado .c-listado-elemento .moderar {
+  margin-bottom: 4px;
+}
+.c-listado .c-listado-elemento .moderar a i {
+  color: #085a8a;
+}
+.c-listado .c-listado-elemento .moderar:hover {
+  background-color: #085a8a;
 }
 .c-listado .c-listado-elemento .modificar {
   margin-bottom: 4px;
@@ -134,6 +147,11 @@ form .ck-focused {
 }
 .c-listado .usuario .nombre-user {
   font-weight: bold;
+}
+.c-listado .c-moderacion-comentarios .moderar-comentarios {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #dee2e6;
 }
 .c-login header {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#efefef+0,dcdede+22,d3d5d5+33,cfd1d1+50,cacccc+84,adb1b0+95,8e8e8e+100 */

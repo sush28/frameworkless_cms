@@ -1,11 +1,6 @@
 $(document).ready(function(){
 
-    /* CKEDITOR */
-    ClassicEditor
-    .create( document.querySelector( '#creacionEntrada #entrada' ) )
-    .catch( error => {
-        console.error( error );
-    } );
+    
 
     /* CONFIRMACION GENERICA DE BORRAR */
     $('.boton-eliminar').on('click', function(e) {
@@ -22,14 +17,28 @@ $(document).ready(function(){
 
     /* PAGINA DE ENTRADAS */
     if ($('#entradas').length === 1) {
+
+        /* CKEDITOR */
+        ClassicEditor
+        .create( document.querySelector( '#creacionEntrada #entrada' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+
+        ClassicEditor
+        .create( document.querySelector( '#form-modificar #modificar-entrada' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+
         var $formulario = $('#form-modificar');
 
-        /* Click en boton modificar */
+        // Click en boton modificar
         $('.boton-modificar').on('click', function(e) {
             var $link = $(e.target).parent().find('a');
             var url = $link.attr('href');
 
-            // @link http://api.jquery.com/jquery.ajax/
+            // Fuente: http://api.jquery.com/jquery.ajax/
             $.ajax({
                 url: url,
                 dataType: 'json'
@@ -60,7 +69,8 @@ $(document).ready(function(){
         $('.boton-modificar').on('click', function(e) {
             var $link = $(e.target).parent().find('a');
             var url = $link.attr('href');
-            // @link http://api.jquery.com/jquery.ajax/
+
+            // Fuente: http://api.jquery.com/jquery.ajax/
             $.ajax({
                 url: url,
                 dataType: 'json'
@@ -81,7 +91,34 @@ $(document).ready(function(){
         $('.boton-modificar').on('click', function(e) {
             var $link = $(e.target).parent().find('a');
             var url = $link.attr('href');
-            // @link http://api.jquery.com/jquery.ajax/
+
+            // Fuente: http://api.jquery.com/jquery.ajax/
+            $.ajax({
+                url: url,
+                dataType: 'json'
+            }).done(function( data ) {
+
+                // Rellenamos cada input del modal con los datos de concierto
+                $formulario.find('#id-concierto').val(data.id);
+                $formulario.find('#modificar-fecha').val(data.fecha);
+                $formulario.find('#modificar-arena').val(data.arena);
+                $formulario.find('#modificar-localizacion').val(data.localizacion);
+                $formulario.find('#modificar-disponibilidad').val(data.disponibilidad);
+                $formulario.find('#modificar-puntoventa').val(data.puntoventa);
+            });
+        });
+    }
+
+    /* PAGINA DE USUARIOS */
+    if ($('#usuarios').length === 1) {
+        var $formulario = $('#form-modificar');
+
+        // Click en boton modificar
+        $('.boton-modificar').on('click', function(e) {
+            var $link = $(e.target).parent().find('a');
+            var url = $link.attr('href');
+            
+            // Fuente: http://api.jquery.com/jquery.ajax/
             $.ajax({
                 url: url,
                 dataType: 'json'
@@ -89,13 +126,12 @@ $(document).ready(function(){
 
                 console.log(data);
 
-                // Rellenamos cada input del modal con los datos de la categoria
-                $formulario.find('#id-concierto').val(data.id);
-                $formulario.find('#modificar-fecha').val(data.fecha);
-                $formulario.find('#modificar-arena').val(data.arena);
-                $formulario.find('#modificar-localizacion').val(data.localizacion);
-                $formulario.find('#modificar-disponibilidad').val(data.disponibilidad);
-                $formulario.find('#modificar-puntoventa').val(data.puntoventa);
+                // Rellenamos cada input del modal con los datos de usuarios
+                $formulario.find('#id-usuario').val(data.id);
+                $formulario.find('#modificar-user').val(data.user);
+                $formulario.find('#modificar-pass').val(data.pass);
+                $formulario.find('#modificar-rol').val(data.rol);
+                $formulario.find('#modificar-autor').val(data.autor);
             });
         });
     }

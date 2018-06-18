@@ -113,6 +113,7 @@ textarea::-webkit-input-placeholder {
 .form-control {
   border-radius: 0;
   border-color: #bfbfbf;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .form-control:focus {
   box-shadow: none;
@@ -211,10 +212,12 @@ textarea::-webkit-input-placeholder {
   color: #07b9e0;
   margin-right: 5px;
 }
-.c-blog .c-blog-post .c-blog-contenido .titulo p {
+.c-blog .c-blog-post .c-blog-contenido .titulo a {
   font-family: 'Gotham Medium', Helvetica, sans-serif;
   font-weight: bold;
   font-size: 16px;
+  display: block;
+  color: #333333;
 }
 /* RESPONSIVE */
 @media (max-width: 992px) {

@@ -138,7 +138,7 @@
 
 
     <!-- Modal --> 
-    <div class="modal fade" id="modificarConcierto" tabindex="-1" role="dialog" aria-labelledby="modificarConciertoLabel" aria-hidden="true">
+    <div class="modal fade" id="modificarConcierto" tabindex="-1" role="dialog" aria-labelledby="modificarConciertoLabel" aria-hidden="true"  data-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -156,7 +156,7 @@
                             <input class="form-control" type="date" name="modificar-fecha" id="modificar-fecha" required>
                         </div>  
                         <div class="form-group">
-                            <label for="modificar-localizacion">Recinto</label>
+                            <label for="modificar-arena">Recinto</label>
                             <input class="form-control" type="text" name="modificar-arena" id="modificar-arena" required>
                             <small class="text-muted">(Ejemplo: Millenium Stadium).</small>
                         </div> 

@@ -26,16 +26,9 @@ class ControladorBlog {
         //     die('No tienes acceso, por favor <a href="login.php">inicia sesión<a>.');
         // }
 
-        // @todo coger datos desde el modelo y guardarlos en un array (para pasarlo a la vista)
-        // El modelo esta en: /modelo/Blog.php
         
-
-        // Este es un array guarrero...
         $entradas = $this->modeloEntrada->obtenerEntradas();
         $categorias = $this->modeloCategoria->obtenerCategorias();
-
-        // @todo una vista...
-        // La vista esta en: /vista/privado/Blog/listado.php
 
         include 'vista/privado/entradas.php';
         die();

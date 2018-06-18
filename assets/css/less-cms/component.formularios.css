@@ -6,6 +6,6 @@ form textarea:focus {
 form .form-control:focus {
   box-shadow: none;
 }
-form .ck-focused {
+form .ck-content {
   min-height: 250px;
 }

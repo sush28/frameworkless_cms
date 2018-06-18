@@ -28,30 +28,6 @@
           <a class="nav-link" href="index.php?apartado=publico&controlador=blog&accion=mostrarBlog">Blog</a>
         </li>
       </ul>
-      <div class="social">
-      <ul class="list-inline list-unstyled">
-        <li class="list-inline-item social--spotify">
-          <a href="https://open.spotify.com/artist/536BYVgOnRky0xjsPT96zl" target="_blank" aria-label="spotify">
-            <i class="fab fa-spotify"></i>
-          </a>
-        </li>
-        <li class="list-inline-item social--instagram">
-          <a href="https://www.instagram.com/twodoorcinemaclub" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </li>
-        <li class="list-inline-item social--facebook">
-          <a href="https://es-la.facebook.com/twodoorcinemaclub/" target="_blank" aria-label="Facebook">
-            <i class="fab fa-facebook"></i>
-          </a>
-        </li>
-        <li class="list-inline-item social--twitter">
-          <a href="https://twitter.com/tdcinemaclub" target="_blank" aria-label="Twitter">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
     </div>
   </div>
 </nav>

@@ -2,7 +2,7 @@
     .c-listado-elemento{
         padding: 10px;
         border-bottom: 1px solid @color_border; 
-        .modificar, .eliminar{
+        .modificar, .eliminar, .moderar{
             background-color: @color_gris;
             border-radius: 4px;
             padding: 3px;
@@ -20,6 +20,17 @@
                         color: @color_white;
                     }
                 }
+            }
+        }
+        .moderar{         
+            margin-bottom: 4px;
+            a{ 
+                i{
+                    color: @color_moderar;
+                }
+            }
+            &:hover{
+                background-color: @color_moderar;
             }
         }
         .modificar{         
@@ -58,6 +69,14 @@
         .nombre-user{
             font-weight: bold;
         }
+    }
+
+    .c-moderacion-comentarios{
+        .moderar-comentarios{
+            background-color: @color_white;
+            padding: 20px;
+            border: 1px solid @color_border;
+        } 
     }
 
 }

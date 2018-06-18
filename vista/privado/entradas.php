@@ -58,7 +58,7 @@
                                                 <textarea class="form-control" name="entrada" id="entrada" required>                   
                                                 </textarea>
                                             </div>
-                                            <div class="form-group">
+                                            <div class="form-group text-right">
                                                 <input class="form-check-input" type="checkbox" value="publico" id="publico" name="publico">
                                                 <label class="form-check-label" for="publico">Público</label>
                                             </div>
@@ -87,14 +87,54 @@
                             <div class="col-md-10">
                                 <div class="fecha-post"><?php echo $entrada->fecha; ?></div>
                                 <div class="titulo-post"><?php echo $entrada->titulo; ?></div>
-                                <div class="desc-post"><?php echo $entrada->contenido; ?></div>
+                                <div class="desc-post"><?php echo substr($entrada->contenido, 0, 200);?></div>
                             </div>
                             <div class="col-md-2">
+                                <div class="moderar moderar-comentarios">
+                                    <a href="#moderarComentarios<?php echo $entrada->id; ?>" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="moderarComentarios-<?php echo $entrada->id; ?>" class="boton-moderar"><i class="far fa-comment" aria-hidden="true"></i> Moderar</a>
+                                </div>
                                 <div class="modificar modificar-post">
-                                    <a href="index.php?apartado=privado&controlador=blog&accion=obtenerEntradaComoJSON&id=<?php echo $entrada->id; ?>" data-toggle="modal" data-target="#modificarEntrada" class="boton-modificar"><i class="far fa-edit"></i> Editar </a>
+                                    <a href="index.php?apartado=privado&controlador=blog&accion=obtenerEntradaComoJSON&id=<?php echo $entrada->id; ?>" data-toggle="modal" data-target="#modificarEntrada" class="boton-modificar"><i class="far fa-edit" aria-hidden="true"></i> Editar</a>
                                 </div>
                                 <div class="eliminar eliminar-post">
-                                    <a href="index.php?apartado=privado&controlador=blog&accion=borrar&id=<?php echo $entrada->id; ?>" class="boton-eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
+                                    <a href="index.php?apartado=privado&controlador=blog&accion=borrar&id=<?php echo $entrada->id; ?>" class="boton-eliminar"><i class="far fa-trash-alt" aria-hidden="true"></i> Borrar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end pt-5 c-moderacion-comentarios">
+                            <div class="col-md-11">
+                                <div class="collapse multi-collapse moderar-comentarios" id="moderarComentarios<?php echo $entrada->id; ?>">
+                                    <div class="c-comentario">
+                                        <div class="row comentario comentario-padre justify-content-end">
+                                            <div class="col-md-10">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <p class="comentador"><strong>Nombre usuario</strong></p>
+                                                        <span class="fecha-hora">12-04-18 12:34</span>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <p class="contenido-comentario">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="row">
+                                                    <div class="eliminar eliminar-comentariot">
+                                                        <a href="index.php?apartado=privado&controlador=blog&accion=borrar&id=<?php echo $entrada->id; ?>" class="boton-eliminar"><i class="far fa-trash-alt" aria-hidden="true"></i> Eliminar</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row comentario comentario-hijo pl-4">
+                                            <div class="col-md-12">
+                                                <p class="comentador"><strong>Nombre usuario</strong></p>
+                                                <span class="fecha-hora">12-04-18 12:34</span>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <p class="contenido-comentario">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +146,7 @@
     ?>
     </div>
 
-    <div class="modal fade" id="modificarEntrada" tabindex="-1" role="dialog" aria-labelledby="modificarEntradaLabel" aria-hidden="true">
+    <div class="modal fade" id="modificarEntrada" tabindex="-1" role="dialog" aria-labelledby="modificarEntradaLabel" aria-hidden="true" data-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -153,7 +193,7 @@
                                         <textarea class="form-control" name="modificar-entrada" id="modificar-entrada" required>                   
                                         </textarea>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group text-right">
                                         <input class="form-check-input" type="checkbox" value="publico" id="modificar-publico">
                                         <label class="form-check-label" for="modificar-publico">Público</label>
                                     </div>
@@ -163,7 +203,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary boton-cerrar" data-dismiss="modal">Cerrar</button>
                     <button type="button" class="btn btn-primary" id="submit-modificar">Modificar entrada</button>
                 </div>
             </div>
