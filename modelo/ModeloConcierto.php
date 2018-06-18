@@ -29,6 +29,19 @@ class ModeloConcierto{
         return $conciertos;
     }
 
+    public function obtenerEncuesta() {
+        $filas = array();
+        $sql = "SELECT count(`pais`) as `total`, `pais` FROM `encuesta` GROUP BY `pais` ORDER BY count(`pais`) DESC";
+
+        $resul = mysqli_query($this->conexion->getConexion(), $sql) or die("No se ha podido obtener el concierto.");
+        
+        while ($row = mysqli_fetch_array($resul, MYSQLI_ASSOC)) {
+            array_push($filas, $row);
+        }
+        
+        return $filas;
+    }
+
     public function obtenerConcierto($id) {
         $sql = sprintf(
             "SELECT * FROM `concierto` WHERE id=%s",
@@ -91,7 +104,7 @@ class ModeloConcierto{
 
     public function guardarEncuesta($encuesta){
         $sql = sprintf(
-            "INSERT INTO `concierto` (`id`, `pais`) VALUES (%s, '%s')",
+            "INSERT INTO `encuesta` (`id`, `pais`) VALUES (%s, '%s')",
             "NULL",
             mysqli_real_escape_string($this->conexion->getConexion(), $encuesta->pais)
         );

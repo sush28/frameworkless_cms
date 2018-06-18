@@ -124,11 +124,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td></td>
-                                <td>Madrid</td>
-                                <td>3453454</td>
-                            </tr>
+                            <?php
+                                foreach($encuesta as $key => $valor) {
+                                    ?>
+                                    <tr>
+                                        <td><?php echo ++$key; ?></td>
+                                        <td><?php echo $valor['pais']; ?></td>
+                                        <td><?php echo $valor['total']; ?></td>
+                                    </tr>
+                                    <?php
+                                }
+                            ?>
                         </tbody>
                 </table>
             </div>

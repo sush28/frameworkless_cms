@@ -18,15 +18,10 @@ class ControladorTour {
         // @todo coger datos desde el modelo y guardarlos en un array (para pasarlo a la vista)
 
         $conciertos = $this->modeloConcierto->obtenerConciertos();
+        $encuesta = $this->modeloConcierto->obtenerEncuesta();
 
         include 'vista/privado/tour.php';
         die();
-    }
-
-    public function mostrarEncuesta(){
-
-        $encuesta = $this->modeloConcierto->obtenerEncuesta();
-        
     }
 
     public function crear(){
