@@ -111,7 +111,18 @@ class ControladorBlog {
         $this->mostrarEntradas();
     } 
 
-   
+    public function borrarComentario(){
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+        } else {
+            die('Operación no permitida, falta el ID del comentario a eliminar.');
+        }
+
+        $this->modeloComentario->borrar($id);  
+        
+
+        $this->mostrarEntrada();
+    }  
 
     public function moderarComentarios($id){
 

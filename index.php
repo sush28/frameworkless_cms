@@ -1,5 +1,5 @@
 <?php
-// @link http://192.168.64.2/www/tfg-2018/index.php?apartado=publico&controlador=home&accion=index
+// enlace http://192.168.64.2/www/tfg-2018/index.php?apartado=publico&controlador=home&accion=index
 
 if (isset($_GET['apartado'])) {
     $apartado = $_GET['apartado'];

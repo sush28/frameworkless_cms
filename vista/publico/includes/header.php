@@ -22,9 +22,6 @@
           <a class="nav-link" href="index.php?apartado=publico&controlador=tour&accion=mostrarTour">Tour</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?apartado=publico&controlador=zonaFan&accion=mostrarZonaFan">Zona fan</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="index.php?apartado=publico&controlador=blog&accion=mostrarBlog">Blog</a>
         </li>
       </ul>

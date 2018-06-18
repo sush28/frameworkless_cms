@@ -19,9 +19,6 @@
           <a class="nav-link" href="index.php?apartado=privado&controlador=tour&accion=mostrarConciertos">Tour</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?apartado=privado&controlador=zonaFan&accion=mostrarZonaFan">Zona fan</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="index.php?apartado=privado&controlador=galeria&accion=mostrarGaleria">Galería</a>
         </li>
       </ul>

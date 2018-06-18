@@ -30,14 +30,14 @@
                 <img src="assets/images/miembros/alex-trimble.jpg" alt="Foto de Alex Trimble" class="img-fluid rounded-circle">
             </div>
             <div class="col-md-8 texto">
-                <h3 class="nombre">Alex Trimble</h2>
+                <h3 class="nombre">Alex Trimble</h3>
                 <p class="rol lead">Voz, guitarra, ritmos y sintetizador</p>
                 <p class="descripcion">Alex Trimble nació el 3 de octubre de 1989 en el poblado de Whitestone, ubicado en el condado Devon de Inglaterra cerca de su capital, Exeter. Siendo el mayor de 5 hijos en el seno de una familia conservadora del matrimonio de su padre, Anthony Martin, un contable y magistrado originario del distrito Countess Wear, actualmente jubilado y su madre Alison Martin es católica, profesora de música actualmente dedicada a la musicoterapia. Es tataranieto de William Willett y según algunas fuentes también es pariente lejano de Winston Churchill por sus primos, quienes son hijos de su nieto, Julian Sandys con su tía Elizabeth.</p>
             </div>
         </div>
         <div class="row c-miembro c-miembro--sam">
             <div class="col-md-8 texto text-right">
-                <h3 class="nombre">Sam Halliday</h2>
+                <h3 class="nombre">Sam Halliday</h3>
                 <p class="rol lead">Guitarra principal y coros</p>
                 <p class="descripcion">Halliday nació en Southampton, Hampshire, Inglaterra, siendo sus padres, Timothy Champion y Sara Champion, ambos profesores de arqueología en la Universidad de Southampton, donde actualmente su padre sigue enseñando y solía ser Disc-jockey usando el nombre Champion Tunes. Tener dos padres profesores le llevó a inclinarse por la música. De joven, sus influencias musicales incluyeron a Tom Waits, Nick Cave y la música tradicional folk irlandesa, tocando flauta irlandesa. Antes unirse a Two Door Cinema Club, perteneció a un grupo llamado Fat Hamster.</p>
             </div>
@@ -50,7 +50,7 @@
                 <img src="assets/images/miembros/kevin-baird.jpg" alt="Foto de Kevin Baird" class="img-fluid rounded-circle">
             </div>
             <div class="col-md-8 texto">
-                <h3 class="nombre">Kevin Baird</h2>
+                <h3 class="nombre">Kevin Baird</h3>
                 <p class="rol lead">Bajo, sintetizador y coros</p>
                 <p class="descripcion">Kevin Baird nació en Kirkcaldy, en la región de Fife, Escocia, hijo del ingeniero inglés Rupert  Baird y de Elizabeth Renni Grant, una maestra escocesa. Comenzó sus estudios en la Edinburgh Academy ubicada en Edimburgo. Tiene un hermano menor llamado Mark, que trabaja como chef. Se trasladó a Kent, Inglaterra a la edad de doce años, asistió a Kent College, una prestigiosa escuela privada. Toca el bajo desde que tenía dieciséis. Creció escuchando música Groove (música) y Funk. Antes de la formación de Two Door Cinema Club en la University College London, Baird se encontraba en una banda llamada Time Out, mientras estaba todavía en la escuela.</p>
             </div>

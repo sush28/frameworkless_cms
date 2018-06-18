@@ -20,6 +20,9 @@
 .c-tour .conciertos .concierto .concierto-fila p {
   display: table-cell;
 }
+.c-tour .conciertos .concierto .concierto-fila a {
+  display: block;
+}
 .c-tour .conciertos .concierto:hover {
   background-color: rgba(170, 90, 41, 0.1);
 }

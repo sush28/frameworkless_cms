@@ -38,7 +38,7 @@
                                     if($concierto->disponibilidad === "Proximamente"){
                                         echo $concierto->disponibilidad;
                                     }else{
-                                        ?><a target="_blank" style="display: block;" href="<?php echo $concierto->puntoventa; ?>"><?php echo $concierto->disponibilidad; ?></a><?php
+                                        ?><a target="_blank" href="<?php echo $concierto->puntoventa; ?>"><?php echo $concierto->disponibilidad; ?></a><?php
                                     }
                                 ?>
                             </p>
@@ -57,7 +57,7 @@
             <div class="col-md-8">
                 <div class="row c-pidetour-container">
                     <div class="col-md-12">
-                        <p class="lead">¿No hay ningún concierto en tu país?</p>
+                        <h3 class="lead">¿No hay ningún concierto en tu país?</h3>
                         <p class="subtitulo">Dinos a dónde quieres que vayamos.</p>
                     </div>
                     <div class="col-md-12 c-pidetour-form">
@@ -66,7 +66,8 @@
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="pais" class="sr-only">País</label>
-                                        <select class="form-control" type="text" name="pais" id="pais" required>
+                                        <select class="form-control" name="pais" id="pais" required>
+                                        <option value="">Elige un país</option>
                                         <option value="Afganistán">Afganistán</option>
                                         <option value="Albania">Albania</option>
                                         <option value="Alemania">Alemania</option>

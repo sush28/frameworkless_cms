@@ -1,18 +1,7 @@
 $(document).ready(function(){
 
-    console.log("\n %c Hecho con ♥ por Buleboo Estudio %c %c 🐼  %c https://buleboo.es/ %c %c \n\n","color: #fff; background: #7ab31e; padding:5px 0;","background: #fff; padding:5px 0;","background: #fff; padding:5px 0;","color: #fff; background: #1c1c1c; padding:5px 0;","background: #fff; padding:5px 0;","color: #7ab31e; background: #fff; padding:5px 0;");
+    console.log("\n Hecho con ♥ por Laura Vicente Martín");
 
-    /* ISOTOPE - ZONA FAN */
-    $('.grid').isotope({
-        // set itemSelector so .grid-sizer is not used in layout
-        itemSelector: '.grid-item',
-        horizontalOrder: true,
-        percentPosition: true,
-        masonry: {
-            //columnWidth: '.grid-sizer',
-            gutter: 15
-        }
-    })
 
     /* MENU POSICION SEGUN STICKY */
     var altomenu = $('#MenuPrincipal').outerHeight() + 25;
@@ -21,11 +10,11 @@ $(document).ready(function(){
         console.log($(window).scrollTop());
         console.log('alto menu: ' + altomenu);
         if($(window).scrollTop() > altomenu){
-            console.log("es mas alto");
+            //console.log("Es más alto");
             $('#MenuPrincipal').addClass('is-fixed');
 
         }else{
-            console.log("es menos alto");
+            //console.log("Es menos alto");
             $('#MenuPrincipal').removeClass('is-fixed');
         }
     });
@@ -110,18 +99,6 @@ $(document).ready(function(){
     })();
 
 
-    /* FANCYBOX PARA ZONA FAN */
-    $('[data-fancybox="zona-fan"]').fancybox({
-        buttons : [
-            'share',
-            'thumbs',
-            'close'
-          ]
-    });
-
-
-    /* SLICK SLIDER - MENU CATEGORIAS */
-  
-    
+      
 
 });

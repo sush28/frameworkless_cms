@@ -88,18 +88,5 @@ class ControladorBlog {
         $comentario = new Comentario($id_padre, $id_entrada, $nombre, $texto, fechaActual(), $validado);
         
     }
-
-    public function borrar(){
-        if (isset($_GET['id'])) {
-            $id = $_GET['id'];
-        } else {
-            die('Operación no permitida, falta el ID del comentario a eliminar.');
-        }
-
-        $this->modeloComentario->borrar($id);
-
-        $this->mostrarEntrada();
-    } 
-
     
 }

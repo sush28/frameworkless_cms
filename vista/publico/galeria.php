@@ -18,7 +18,7 @@
         </div>
     </header>
 
-    <section class="container c-galeria">
+    <div class="container c-galeria">
         <div class="row text-center text-lg-left">
         <?php
         foreach ($imagenes as $key => $imagen) {
@@ -35,8 +35,9 @@
             }
             ?>
         </div>
-    </section>
+    </div>
 
     <?php include 'includes/footer.php'; ?>
+    <script src="assets/vendor/lightbox/js/lightbox.min.js"></script>
 </body>
 </html>
