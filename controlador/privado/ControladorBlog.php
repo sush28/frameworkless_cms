@@ -111,6 +111,8 @@ class ControladorBlog {
         $this->mostrarEntradas();
     } 
 
+   
+
     public function moderarComentarios($id){
 
     }

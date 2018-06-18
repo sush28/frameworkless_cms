@@ -34,14 +34,14 @@
                             <p class="arena"><?php echo $concierto->arena; ?></p>
                             <p class="ciudad"><?php echo $concierto->localizacion; ?></p>
                             <p class="disponibilidad">
-                            <?php 
-                                if($concierto->disponibilidad === "Proximamente"){
-                                    echo $concierto->disponibilidad;
-                                }else{
-                                    echo $concierto->disponibilidad;
-                                }
+                                <?php 
+                                    if($concierto->disponibilidad === "Proximamente"){
+                                        echo $concierto->disponibilidad;
+                                    }else{
+                                        ?><a target="_blank" style="display: block;" href="<?php echo $concierto->puntoventa; ?>"><?php echo $concierto->disponibilidad; ?></a><?php
+                                    }
                                 ?>
-                                </p>
+                            </p>
                         </div>
                     </div>
                 <?php
@@ -57,7 +57,7 @@
             <div class="col-md-8">
                 <div class="row c-pidetour-container">
                     <div class="col-md-12">
-                        <p class="lead">¿No hay ningún concierto en tu ciudad?</p>
+                        <p class="lead">¿No hay ningún concierto en tu país?</p>
                         <p class="subtitulo">Dinos a dónde quieres que vayamos.</p>
                     </div>
                     <div class="col-md-12 c-pidetour-form">
@@ -65,7 +65,7 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
-                                        <label for="ciudad" class="sr-only">Ciudad</label>
+                                        <label for="pais" class="sr-only">País</label>
                                         <select class="form-control" type="text" name="pais" id="pais" required>
                                         <option value="Afganistán">Afganistán</option>
                                         <option value="Albania">Albania</option>

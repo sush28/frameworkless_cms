@@ -16,6 +16,7 @@ class ControladorBlog {
     public function __construct() {
         $this->modeloEntrada = new ModeloEntrada();
         $this->modeloCategoria = new ModeloCategoria();
+        $this->modeloComentario = new ModeloComentario();
     }
     
     public function mostrarBlog() {
@@ -41,30 +42,51 @@ class ControladorBlog {
 
         $categorias = $this->modeloCategoria->obtenerCategorias();
         $entrada = $this->modeloEntrada->obtenerEntrada($id);
+        $comentarios = $this->modeloComentario->obtenerComentarios($id);
 
         include 'vista/publico/entrada.php';
         die();
     }
 
 
-    public function crearComentario(){
+    public function crearComentario() {
+
         if (isset($_GET['id'])) {
             $id_entrada = $_GET['id'];
         } else {
-            die('Operación no permitida, falta el ID de la entrada a visualizar.');
+            die('Operación no permitida, falta el ID de la entrada a comentar.');
         }
+
         $nombre = $_POST['nombre-padre'];
         $texto = $_POST['texto-padre'];
         $validado = 0;
 
         $comentario = new Comentario("NULL", $id_entrada, $nombre, $texto, fechaActual(), $validado);
-        
+
+        $this->modeloComentario->guardar($comentario);
+
+        $this->mostrarEntrada();
     }
 
     public function responderComentario(){
-        $nombre = $_POST['nombre-hijo'];
-        $texto = $_POST['texto-hijo'];
-        $validado = 0;
+
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+        } else {
+            die('Operación no permitida, falta el ID de la entrada a comentar.');
+        }
+        
+        if (isset($_GET['id_comentario'])) {
+            $nombre = $_POST['nombre-hijo'];
+            $texto = $_POST['texto-hijo'];
+            $validado = 0;
+            $id_padre = $_GET['id_comentario'];
+        } else {
+            die('Operación no permitida, falta el ID del comentario a contestar.');
+        }
+
+        $comentario = new Comentario($id_padre, $id_entrada, $nombre, $texto, fechaActual(), $validado);
+        
     }
 
     public function borrar(){

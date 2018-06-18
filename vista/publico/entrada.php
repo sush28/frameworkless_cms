@@ -47,7 +47,7 @@
                         <div class="col-md-12 c-comentarios">
                             <h2 class="titulo">Comentarios</h2>
                             <div class="comentar">
-                                <form action="index.php?apartado=privado&controlador=Blog&accion=crearComentario" method="post" enctype="multipart/form-data">
+                                <form action="index.php?apartado=publico&controlador=Blog&accion=crearComentario&id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
                                     <h3 class="lead">Deja un comentario</h3>
                                     <div class"form-group">
                                         <label for="nombre-padre">Nombre</label>
@@ -62,45 +62,60 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="c-comentario">
-                                <div class="row comentario comentario-padre justify-content-end">
-                                    <div class="col-md-12">
-                                        <p class="comentador">Nombre usuario</p>
-                                        <span class="fecha-hora">12-04-18 12:34</span>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <p class="contenido-comentario">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                        <a href="#responderComentario" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="responderComentario"><i class="fas fa-reply" aria-hidden="true"></i> Responder</a>
-                                    </div>
-                                    <div class="col-md-11">
-                                        <div class="collapse multi-collapse py-3" id="responderComentario">
-                                            <h4 class="lead">Responder comentario</h4>
-                                            <form action="index.php?apartado=privado&controlador=Blog&accion=responderComentario" method="post" enctype="multipart/form-data">
-                                                <div class="form-group">
-                                                    <label for="nombre-hijo">Nombre</label>
-                                                    <input class="form-control" type="text" name="nombre-hijo" id="nombre-hijo" required>
+                            <?php
+
+                            foreach($comentarios as $key => $comentario) {
+                                ?>
+                                    <div class="c-comentario py-1">
+                                        <div class="row comentario comentario-padre justify-content-end">
+                                            <div class="col-md-12">
+                                                <p class="comentador"><?php echo $comentario['objeto']->nombre; ?></p>
+                                                <span class="fecha-hora"><?php echo $comentario['objeto']->fecha; ?></span>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <p class="contenido-comentario"><?php echo $comentario['objeto']->texto; ?></p>
+                                                <a href="#responderComentario<?php echo $comentario['objeto']->id; ?>" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="responderComentario" class="btn-responder"> Responder <i class="fas fa-reply" aria-hidden="true"></i></a>
+                                            </div>
+                                            <div class="col-md-11">
+                                                <div class="collapse multi-collapse py-3" id="responderComentario<?php echo $comentario['objeto']->id; ?>">
+                                                    <h4 class="lead">Responder comentario</h4>
+                                                    <form action="index.php?apartado=privado&controlador=Blog&accion=responderComentario&id=<?php echo $id; ?>&id_comentario=<?php echo $comentario['objeto']->id; ?>" method="post" enctype="multipart/form-data">
+                                                        <div class="form-group">
+                                                            <label for="nombre-hijo">Nombre</label>
+                                                            <input class="form-control" type="text" name="nombre-hijo" id="nombre-hijo-<?php echo $comentario['objeto']->id; ?>" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="texto-hijo">Comentario</label>
+                                                            <textarea class="form-control" name="texto-hijo" id="texto-hijo-<?php echo $comentario['objeto']->id; ?>"></textarea>
+                                                        </div>
+                                                        <div class="form-group text-right">
+                                                            <button class="btn btn-basico" type="submit" name="submit">Enviar</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="texto-hijo">Comentario</label>
-                                                    <textarea class="form-control" name="texto-hijo" id="texto-hijo"></textarea>
-                                                </div>
-                                                <div class="form-group text-right">
-                                                    <button class="btn btn-basico" type="submit" name="submit">Responder</button>
-                                                </div>
-                                            </form>
+                                            </div>
                                         </div>
+                                        <?php
+                                            if (! empty($comentario['hijos'])) {
+                                                foreach($comentario['hijos'] as $keyHijo => $comentarioHijo) {
+                                                    ?>
+                                                        <div class="row comentario comentario-hijo">
+                                                            <div class="col-md-12">
+                                                                <p class="comentador"><?php echo $comentarioHijo->nombre; ?></p>
+                                                                <span class="fecha-hora"><?php echo $comentarioHijo->fecha; ?></span>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <p class="contenido-comentario"><?php echo $comentarioHijo->texto; ?></p>
+                                                            </div>
+                                                        </div>
+                                                    <?php
+                                                }
+                                            }
+                                        ?>
                                     </div>
-                                </div>
-                                <div class="row comentario comentario-hijo">
-                                    <div class="col-md-12">
-                                        <p class="comentador">Nombre usuario</p>
-                                        <span class="fecha-hora">12-04-18 12:34</span>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <p class="contenido-comentario">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                    </div>
-                                </div>
-                            </div>
+                                <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

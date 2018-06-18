@@ -294,6 +294,14 @@ textarea::-webkit-input-placeholder {
 .c-entrada-comentarios .c-comentarios-wrapper .c-comentarios .c-comentario .comentario .contenido-comentario {
   margin-bottom: 0;
 }
+.c-entrada-comentarios .c-comentarios-wrapper .c-comentarios .c-comentario .comentario .btn-responder {
+  display: block;
+  color: #aa5a29;
+}
+.c-entrada-comentarios .c-comentarios-wrapper .c-comentarios .c-comentario .comentario .btn-responder:hover {
+  text-decoration: none;
+  color: #712910;
+}
 .c-entrada-comentarios .c-comentarios-wrapper .c-comentarios .c-comentario .comentario-hijo {
   margin-left: 30px;
   border-left: 3px solid #aa5a29;
