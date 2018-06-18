@@ -3,13 +3,14 @@
 include_once 'modelo/ModeloConcierto.php';
 include_once 'modelo/utilities.php';
 include_once 'modelo/concierto.php';
+include_once 'modelo/encuesta.php';
 
 
 class ControladorTour {   
 
     private $modeloConcierto;
 
-    public function __construct() {
+    public function __construct() { 
         $this->modeloConcierto = new ModeloConcierto();
     }
 
@@ -20,6 +21,12 @@ class ControladorTour {
 
         include 'vista/privado/tour.php';
         die();
+    }
+
+    public function mostrarEncuesta(){
+
+        $encuesta = $this->modeloConcierto->obtenerEncuesta();
+        
     }
 
     public function crear(){
@@ -38,7 +45,7 @@ class ControladorTour {
 
     public function obtenerConciertoComoJSON(){
         if (isset($_GET['id'])) {
-            $id = $_GET['id'];
+            $id = $_GET['id']; 
         } else {
             die('Operación no permitida, falta el ID del concierto a modificar.');
         }
@@ -79,7 +86,4 @@ class ControladorTour {
 
     } 
 
-    public function moderarComentarios($id){
-
-    }
 }

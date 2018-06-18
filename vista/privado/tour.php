@@ -168,9 +168,9 @@
                         <div class="form-group">
                             <label for="modificar-disponibilidad">Disponibilidad</label>
                             <select class="form-control" name="modificar-disponibilidad" id="modificar-disponibilidad">
-                                <option value="disponibles">A la venta</option>
-                                <option value="vendidas">Vendidas</option>
-                                <option value="disponible">Próximamente</option>
+                                <option value="Disponibles">A la venta</option>
+                                <option value="Vendidas">Vendidas</option>
+                                <option value="Proximamente">Próximamente</option>
                             </select>
                         </div>
                         <div class="form-group">

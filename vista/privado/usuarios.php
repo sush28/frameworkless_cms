@@ -22,7 +22,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="collapse multi-collapse" id="creacionUsuario">
-                                <form action="index.php?apartado=privado&controlador=usuarios&accion=crear" method="post" enctype="multipart/form-data">
+                                <form action="index.php?apartado=privado&controlador=usuarios&accion=crear" method="post" enctype="multipart/form-data" id="form-crear-usuario">
                                     <div class="form-group">
                                         <label for="user">Usuario</label>
                                         <input class="form-control" type="text" name="user" id="user" required>
@@ -72,7 +72,7 @@
                         </div>
                         <div class="col-md-3 p-1">
                             <div class="modificar modificar-post">
-                                <a href="index.php?apartado=privado&controlador=usuarios&accion=obtenerUsuarioComoJSON&id=<?php echo $usuario->id; ?>" data-toggle="modal" data-target="#modificarCategoria" class="boton-modificar"><i class="far fa-edit"></i> Editar </a>
+                                <a href="index.php?apartado=privado&controlador=usuarios&accion=obtenerUsuarioComoJSON&id=<?php echo $usuario->id; ?>" data-toggle="modal" data-target="#modificarUsuario" class="boton-modificar"><i class="far fa-edit"></i> Editar </a>
                             </div>
                             <div class="eliminar eliminar-post">
                                 <a href="index.php?apartado=privado&controlador=usuarios&accion=borrar&id=<?php echo $usuario->id; ?>" class="boton-eliminar"><i class="far fa-trash-alt"></i> Borrar</a>
@@ -106,11 +106,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="modificar-pass">Contraseña</label>
-                                <input class="form-control" type="pass" name="modificar-pass" id="modificar-pass" required>
+                                <input class="form-control" type="password" name="modificar-pass" id="modificar-pass" required>
                             </div>
                             <div class="form-group">
                                 <label for="modificar-confirm-pass">Repita la contraseña</label>
-                                <input class="form-control" type="pass" name="modificar-confirm-pass" id="modificar-confirm-pass" required>
+                                <input class="form-control" type="password" name="modificar-confirm-pass" id="modificar-confirm-pass" required>
                             </div>
                             <div class="form-group">
                                 <label for="modificar-rol">Rol</label>

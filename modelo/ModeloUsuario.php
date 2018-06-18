@@ -67,7 +67,8 @@ class ModeloUsuario{
             mysqli_real_escape_string($this->conexion->getConexion(), $usuario->user),
             mysqli_real_escape_string($this->conexion->getConexion(), $usuario->pass),
             mysqli_real_escape_string($this->conexion->getConexion(), $usuario->rol),
-            mysqli_real_escape_string($this->conexion->getConexion(), $usuario->autor)
+            mysqli_real_escape_string($this->conexion->getConexion(), $usuario->autor),
+            mysqli_real_escape_string($this->conexion->getConexion(), $usuario->id)
         );
 
         $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));

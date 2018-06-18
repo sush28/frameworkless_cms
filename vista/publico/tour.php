@@ -25,46 +25,28 @@
         </div>
         <div class="row conciertos justify-content-center">
             <div class="col-md-12">
-                <div class="row concierto">
-                    <div class="col-sm-12 align-items-center concierto-fila">
-                        <p class="fecha">20/05/18</p>
-                        <p class="arena">Wizink Center</p>
-                        <p class="ciudad">Madrid, España</p>
-                        <p class="disponibilidad">Vendido</p>
+                <?php 
+                foreach ($conciertos as $key => $concierto) {
+                ?>
+                    <div class="row concierto">
+                        <div class="col-sm-12 align-items-center concierto-fila">
+                            <p class="fecha"><?php echo $concierto->fecha; ?></p>
+                            <p class="arena"><?php echo $concierto->arena; ?></p>
+                            <p class="ciudad"><?php echo $concierto->localizacion; ?></p>
+                            <p class="disponibilidad">
+                            <?php 
+                                if($concierto->disponibilidad === "Proximamente"){
+                                    echo $concierto->disponibilidad;
+                                }else{
+                                    echo $concierto->disponibilidad;
+                                }
+                                ?>
+                                </p>
+                        </div>
                     </div>
-                </div>
-                <div class="row concierto">
-                    <div class="col-sm-12 align-items-center concierto-fila">
-                        <p class="fecha">20/05/18</p>
-                        <p class="arena">Wizink Center</p>
-                        <p class="ciudad">Madrid, España</p>
-                        <p class="disponibilidad">Vendido</p>
-                    </div>
-                </div>
-                <div class="row concierto">
-                    <div class="col-sm-12 align-items-center concierto-fila">
-                        <p class="fecha">20/05/18</p>
-                        <p class="arena">Wizink Center</p>
-                        <p class="ciudad">Madrid, España</p>
-                        <p class="disponibilidad">Vendido</p>
-                    </div>
-                </div>
-                <div class="row concierto">
-                    <div class="col-sm-12 align-items-center concierto-fila">
-                        <p class="fecha">20/05/18</p>
-                        <p class="arena">Wizink Center</p>
-                        <p class="ciudad">Madrid, España</p>
-                        <p class="disponibilidad">Vendido</p>
-                    </div>
-                </div>
-                <div class="row concierto">
-                    <div class="col-sm-12 align-items-center concierto-fila">
-                        <p class="fecha">20/05/18</p>
-                        <p class="arena">Wizink Center</p>
-                        <p class="ciudad">Madrid, España</p>
-                        <p class="disponibilidad">Vendido</p>
-                    </div>
-                </div>
+                <?php
+                }
+                ?>
             </div>            
         </div>
     </section>
@@ -79,7 +61,7 @@
                         <p class="subtitulo">Dinos a dónde quieres que vayamos.</p>
                     </div>
                     <div class="col-md-12 c-pidetour-form">
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form action="index.php?apartado=publico&controlador=tour&accion=crearEncuesta" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
@@ -319,7 +301,7 @@
                                             <option value="YU">Yugoslavia</option>
                                             <option value="ZM">Zambia</option>
                                             <option value="ZW">Zimbabue</option>
-                                        </select
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -334,9 +316,6 @@
             </div>
         </div>
     </div>
-
-
-
 
     <?php include 'includes/footer.php'; ?>
 </body>

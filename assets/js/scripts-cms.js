@@ -11,7 +11,19 @@ $(document).ready(function(){
 
     /* SUBMIT GENERICO */
     $('#submit-modificar').on('click', function(e) {
-        $formulario.submit();
+
+        if ($('#usuarios').length === 1) {
+            var pass1 = $formulario.find('#modificar-pass').val();
+            var pass2 = $formulario.find('#modificar-confirm-pass').val();
+
+            if (pass1 !== pass2) {
+                alert('Las contraseñas no coinciden');
+            } else {
+                $formulario.submit();
+            }
+        } else {
+            $formulario.submit();
+        }
     });
 
 
@@ -133,6 +145,21 @@ $(document).ready(function(){
                 $formulario.find('#modificar-rol').val(data.rol);
                 $formulario.find('#modificar-autor').val(data.autor);
             });
+        });
+
+        var $formularioCrear = $('#form-crear-usuario');
+        
+        $formularioCrear.on('submit', function(e) {
+            var pass1 = $formularioCrear.find('#pass').val();
+            var pass2 = $formularioCrear.find('#confirm-pass').val();
+
+            if (pass1 !== pass2) {
+                alert('Las contraseñas no coinciden');
+                
+                e.preventDefault();
+            } else {
+                $formulario.submit();
+            }
         });
     }
 

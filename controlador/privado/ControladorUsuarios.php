@@ -48,13 +48,14 @@ class ControladorUsuarios{
     }
     
     public function modificar(){
-        $user = $_POST['id-usuario'];
+        $id = $_POST['id-usuario'];
+        $user = $_POST['modificar-user'];
         $pass = $_POST['modificar-pass'];
         $rol = $_POST['modificar-rol'];
         $autor = $_POST['modificar-autor'];
 
         $usuario = new Usuario($user, $pass, $rol, $autor);
-        $entrada->id = $id;
+        $usuario->id = $id;
 
         $this->modeloUsuario->modificar($usuario);
 

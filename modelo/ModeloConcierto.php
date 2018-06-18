@@ -2,6 +2,8 @@
 
 include_once 'modelo/conexion.php';
 include_once 'modelo/concierto.php';
+include_once 'modelo/encuesta.php';
+
 
 class ModeloConcierto{
 
@@ -74,6 +76,24 @@ class ModeloConcierto{
         $sql = sprintf(
             "DELETE FROM `concierto` WHERE id=%s",
             mysqli_real_escape_string($this->conexion->getConexion(), $id)
+        );
+
+        $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
+
+        return $resul;
+    }
+
+    // public function consultarEncuesta(){
+    //     $sql = sprintf(
+    //         "SELECT * FROM `concierto` (`id`, `pais`) VALUES (%s, '%s')",
+    //     );
+    // }
+
+    public function guardarEncuesta($encuesta){
+        $sql = sprintf(
+            "INSERT INTO `concierto` (`id`, `pais`) VALUES (%s, '%s')",
+            "NULL",
+            mysqli_real_escape_string($this->conexion->getConexion(), $encuesta->pais)
         );
 
         $resul = mysqli_query($this->conexion->getConexion(), $sql) or die(mysqli_error($this->conexion->getConexion()));
